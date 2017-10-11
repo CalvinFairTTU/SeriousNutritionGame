@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Good_Food
+  - Bad_Food
+  - BadFood
+  - GoodFood
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Background
+  - Objects
+  - UI Objects
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4196603679
+    locked: 0
+  - name: NE Assets
+    uniqueID: 1569499485
+    locked: 0
+  - name: UI
+    uniqueID: 3903362491
+    locked: 0
+  - name: Player
+    uniqueID: 2616673981
+    locked: 0
+  - name: Flash
+    uniqueID: 1308299317
+    locked: 0
+  - name: SE
+    uniqueID: 1832332095
+    locked: 0
+  - name: Text
+    uniqueID: 1422644535
+    locked: 0
