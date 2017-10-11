@@ -15,7 +15,7 @@ public class PlayerCamera : MonoBehaviour
     private Vector3 offset;
     private Vector3 newOffset;
     private Vector3 adjustment;
-    private float zAxis;
+    //private float zAxis;
     
 
     // Use this for initialization
@@ -23,7 +23,7 @@ public class PlayerCamera : MonoBehaviour
     {
         offset = transform.position - player.transform.position;
         transform.position = player.transform.position + offset;
-        zAxis = offset.z;
+        //zAxis = offset.z;
         adjustment = new Vector3();
     }
 
@@ -50,7 +50,5 @@ public class PlayerCamera : MonoBehaviour
         }
         transform.position = transform.position + adjustment;
         //transform.position = player.transform.position + offset;
-        Debug.Log("newOffset = " + newOffset);
-        Debug.Log("adjustment = " + adjustment);
     }
 }

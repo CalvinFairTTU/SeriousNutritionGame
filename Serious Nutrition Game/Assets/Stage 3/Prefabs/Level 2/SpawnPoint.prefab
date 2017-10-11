@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1759094926312072}
+  m_IsPrefabParent: 1
+--- !u!1 &1759094926312072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4778236126238876}
+  - component: {fileID: 212514513696861768}
+  - component: {fileID: 114527460829800278}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4778236126238876
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1759094926312072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.10502505, y: 9.146592, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114527460829800278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1759094926312072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10219482aa19be24b9671a9a15169382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foods:
+  - {fileID: 1627020177936068, guid: a59e1360d49490645af4574457ae1094, type: 2}
+  - {fileID: 1685551314475154, guid: faf96baf4c33c3b4b92a1e885294a799, type: 2}
+  - {fileID: 1442419246955002, guid: 7c0eadb2019f7ef468221aad869a1d8f, type: 2}
+  - {fileID: 1992802932191214, guid: a239deca621843149b29619e73410ca5, type: 2}
+  - {fileID: 1657359002842000, guid: 77aa922b39fccc7439b29f364dc9e065, type: 2}
+  - {fileID: 1734177794745698, guid: cdeba98ed22618e49b173d2c05b775b8, type: 2}
+  - {fileID: 1475314604020042, guid: 3c86c331fe9c7b047bfc461c3b7c9000, type: 2}
+  - {fileID: 1066403083539150, guid: 8600d5c1e66cfc9419cc1678cdfe3426, type: 2}
+  - {fileID: 1931206123828092, guid: c207db33d55134e4e8def1ff5cb8585a, type: 2}
+  - {fileID: 1223185116291746, guid: 8170b1b06159eda46a2aa96ca945f2e5, type: 2}
+  - {fileID: 1623788688770884, guid: 20e80d1d691b8a744b2ce3fb9045de90, type: 2}
+  - {fileID: 1753459440817502, guid: e1ee62d8799bbd848a1166f6c6292d98, type: 2}
+  - {fileID: 1047598897356582, guid: b661dcf9ecba5a9489baeeb946bb9639, type: 2}
+  - {fileID: 1246555732678584, guid: 91fd865f8e8f4574995c4facda4b5b1a, type: 2}
+  - {fileID: 1732115292671860, guid: 6f468439893ed114b90094d82ace0668, type: 2}
+  - {fileID: 1739780534973562, guid: 05f3a083352009c4a9e447420b13d356, type: 2}
+  - {fileID: 1788643722748196, guid: 7d6fbd46f3e97654199f534b50ae79b8, type: 2}
+  - {fileID: 1094250986871116, guid: 918bab3f2320c80429068d1385eb4666, type: 2}
+--- !u!212 &212514513696861768
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1759094926312072}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 24daab1f173e2f54ab2fb1bc53af9f05, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.38, y: 1.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
