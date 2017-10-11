@@ -8,6 +8,7 @@ public class FrogMovement : MonoBehaviour {
     public float speed;
     public float targetCatch;
     public Rigidbody2D rb2d;
+    public Animator anim;
     //public AudioClip goodSound;
 
 
@@ -23,6 +24,7 @@ public class FrogMovement : MonoBehaviour {
     void Start () {
         rb2d = GetComponent<Rigidbody2D>();
         target = new Vector2(transform.position.y, transform.position.x);
+        anim.SetInteger("State", 0);
     }
 
     void FixedUpdate()
@@ -38,14 +40,19 @@ public class FrogMovement : MonoBehaviour {
             targetAngle = (Mathf.Atan2(offset.y, offset.x) - (Mathf.PI / 2)) * Mathf.Rad2Deg;
             rb2d.rotation = targetAngle;
             rb2d.velocity = new Vector2(offset.x, offset.y);
+            anim.SetInteger("State", 1);
         }
         offset = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
         epsilon = Mathf.Sqrt((offset.x * offset.x) + (offset.y * offset.y));
         if (epsilon < targetCatch)
         {
             rb2d.velocity = new Vector2(0f, 0f);
+            anim.SetInteger("State", 0);
         }
-
+        else
+        {
+            anim.SetInteger("State", 1);
+        }
     }
 }
 
