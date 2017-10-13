@@ -23,7 +23,8 @@ public class MeatMarketSpawnScript : MonoBehaviour
         INITIAL,
         NOFOOD,
         FOODSPAWNED,
-        FOODSPAWNED_PRE,
+        FOODSPAWNED_DELAY,
+        FOODSPAWNED_INC,
         FINAL
     };
 
@@ -56,6 +57,7 @@ public class MeatMarketSpawnScript : MonoBehaviour
                 break;
 
             case Mstates.FOODSPAWNED:
+
                 if (SpawnedFood.activeSelf == false)
                 {
                     Destroy(SpawnedFood);
@@ -76,7 +78,7 @@ public class MeatMarketSpawnScript : MonoBehaviour
                 {
                     SpawnedFood = Instantiate(foods[Random.Range(0, foods.Length)], transform.position, transform.rotation) as GameObject;
                     Debug.Log("****************************************************************************FOOD SPAWNED IN " + this);
-                    state = Mstates.FOODSPAWNED_PRE;
+                    state = Mstates.FOODSPAWNED_DELAY;
                 }
                 
                 //if (progressPoints >= 1f)
@@ -85,13 +87,19 @@ public class MeatMarketSpawnScript : MonoBehaviour
                 //}
                 break;
 
-            case Mstates.FOODSPAWNED_PRE:
+            case Mstates.FOODSPAWNED_DELAY:
+
+                state = Mstates.FOODSPAWNED_INC; // Delay for one cycle so that all the SpawnPoints can pick up the counter and spawn food.
+                break;
+
+            case Mstates.FOODSPAWNED_INC:
 
                 counterScript.IncrementCounter();
                 state = Mstates.FOODSPAWNED;
                 break;
 
             case Mstates.FINAL:
+
                 if (!SpawnedFood.Equals(null))
                 {
                     Destroy(SpawnedFood);

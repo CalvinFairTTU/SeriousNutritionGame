@@ -26,7 +26,7 @@ public class SpawnCounterScript : MonoBehaviour {
         return this.destCounter;
     }
 
-    public void DecrementCounter()
+    public void DecrementCounter(Collider2D food)
     {
         this.destCounter -= 1;
         Debug.Log("DecrementCounter() destCounter = " + this.destCounter);
