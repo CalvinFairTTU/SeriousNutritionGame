@@ -46,7 +46,6 @@ public class FrogEat : MonoBehaviour {
         progressBar.value = progressPoints;
         if (progressBar.value >= 1f)
         {
-            Debug.Log("Victory!");
             gameObject.GetComponent<FrogWins>().SetVictory();
         }
     }
