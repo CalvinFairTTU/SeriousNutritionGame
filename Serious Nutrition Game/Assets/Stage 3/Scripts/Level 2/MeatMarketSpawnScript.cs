@@ -73,11 +73,11 @@ public class MeatMarketSpawnScript : MonoBehaviour
             case Mstates.NOFOOD:
 
                 counterCheck = counterScript.GetCounter();
-                Debug.Log("counterCheck in " + this + " = " + counterCheck);
+                //Debug.Log("counterCheck in " + this + " = " + counterCheck);
                 if (counterCheck == 0)
                 {
                     SpawnedFood = Instantiate(foods[Random.Range(0, foods.Length)], transform.position, transform.rotation) as GameObject;
-                    Debug.Log("****************************************************************************FOOD SPAWNED IN " + this);
+                    //Debug.Log("****************************************************************************FOOD SPAWNED IN " + this);
                     state = Mstates.FOODSPAWNED_DELAY;
                 }
                 

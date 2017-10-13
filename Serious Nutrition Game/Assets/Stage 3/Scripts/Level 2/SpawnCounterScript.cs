@@ -29,19 +29,19 @@ public class SpawnCounterScript : MonoBehaviour {
     public void DecrementCounter(Collider2D food)
     {
         this.destCounter -= 1;
-        Debug.Log("DecrementCounter() destCounter = " + this.destCounter);
+        //Debug.Log("DecrementCounter() destCounter = " + this.destCounter);
     }
 
     public void IncrementCounter()
     {
         this.destCounter += 1;
-        Debug.Log("IncrementCounter() destCounter = " + this.destCounter);
+        //Debug.Log("IncrementCounter() destCounter = " + this.destCounter);
     }
 
     public void SetCounter(int target)
     {
         this.destCounter = target;
-        Debug.Log("SetCounter(" + target + ") destCounter = " + this.destCounter);        
+        // Debug.Log("SetCounter(" + target + ") destCounter = " + this.destCounter);        
     }
     
     //void LateUpdate()
