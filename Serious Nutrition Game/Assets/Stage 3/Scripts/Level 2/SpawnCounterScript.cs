@@ -10,7 +10,7 @@ public class SpawnCounterScript : MonoBehaviour {
     private float progressPoints;
     public Slider ProgressBar;
 
-    AudioSource gameAudio;
+    public AudioSource gameAudio;
     public AudioClip goodSound;
     public AudioClip badSound;
     
@@ -21,7 +21,7 @@ public class SpawnCounterScript : MonoBehaviour {
         this.destCounter = 0;
         progressPoints = 0f;
         ProgressBar.value = progressPoints;
-        gameAudio = gameObject.GetComponent<AudioSource>();
+        //gameAudio = gameObject.GetComponent<AudioSource>();
     }
 	
 	public int GetCounter()
@@ -38,6 +38,7 @@ public class SpawnCounterScript : MonoBehaviour {
             case "catchBox":
                 gameAudio.volume = 0.8f;
                 gameAudio.clip = badSound;
+                gameAudio.Play();
                 progressPoints -= 0.05f;
                 break;
             case "goodBox":
@@ -45,12 +46,14 @@ public class SpawnCounterScript : MonoBehaviour {
                 {
                     gameAudio.volume = 0.8f;
                     gameAudio.clip = goodSound;
+                    gameAudio.Play();
                     progressPoints += 0.05f;
                 }
                 else if (food.tag == "Bad_Food")
                 {
                     gameAudio.volume = 0.8f;
                     gameAudio.clip = badSound;
+                    gameAudio.Play();
                     progressPoints -= 0.05f;
                 }
                 break;
@@ -59,12 +62,14 @@ public class SpawnCounterScript : MonoBehaviour {
                 {
                     gameAudio.volume = 0.8f;
                     gameAudio.clip = badSound;
+                    gameAudio.Play();
                     progressPoints -= 0.05f;
                 }
                 else if (food.tag == "Bad_Food")
                 {
                     gameAudio.volume = 0.8f;
                     gameAudio.clip = goodSound;
+                    gameAudio.Play();
                     progressPoints += 0.05f;
                 }
                 break;

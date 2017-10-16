@@ -9,9 +9,6 @@ public class FrogMovement : MonoBehaviour {
     public float targetCatch;
     public Rigidbody2D rb2d;
     public Animator anim;
-    //public AudioClip goodSound;
-
-
 
     private Vector2 target;
     private Vector2 offset;
