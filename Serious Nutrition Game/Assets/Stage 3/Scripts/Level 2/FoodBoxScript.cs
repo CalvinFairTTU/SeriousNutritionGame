@@ -10,6 +10,7 @@ public class FoodBoxScript : MonoBehaviour {
     private SmileyFaceScript faceScript;
     
     private bool isForGoodFood;
+    private string thisBox;
 
     enum faceStates
     {
@@ -27,17 +28,20 @@ public class FoodBoxScript : MonoBehaviour {
         if (this.tag == "For_Good_Food")
         {
             isForGoodFood = true;
+            thisBox = "goodBox";
         }
         else if (this.tag == "For_Bad_Food")
         {
             isForGoodFood = false;
+            thisBox = "badBox";
         }
         faceScript = face.GetComponent<SmileyFaceScript>();
     }
 
     private void OnTriggerStay2D(Collider2D food)
     {
-        script.DecrementCounter(food);
+
+        script.DecrementCounter(food,thisBox);
 
         if (isForGoodFood)
         {

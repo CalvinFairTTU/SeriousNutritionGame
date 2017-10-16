@@ -15,6 +15,6 @@ public class CatchFoodScript : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D food)
     {
         food.gameObject.SetActive(false);
-        script.DecrementCounter(food);
+        script.DecrementCounter(food,"catchBox");
     }
 }

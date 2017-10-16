@@ -80,11 +80,9 @@ public class SmileyFaceScript : MonoBehaviour {
         {
             case 0:
                 this.state = faceStates.CONFUSED;
-                //Debug.Log("Switched to CONFUSED: " + this.tag);
                 break;
             case 1:
                 this.state = faceStates.CHEER;
-                //Debug.Log("Switched to CHEER: " + this.tag);
                 break;
             default:
                 break;
