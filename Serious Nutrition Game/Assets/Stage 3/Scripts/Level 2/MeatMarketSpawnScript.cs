@@ -103,8 +103,7 @@ public class MeatMarketSpawnScript : MonoBehaviour
                 break;
 
             case Mstates.FINAL:
-
-                Debug.Log("FINAL STATE on " + this);
+                
                 if (!SpawnedFood.Equals(null))
                 {
                     Destroy(SpawnedFood);

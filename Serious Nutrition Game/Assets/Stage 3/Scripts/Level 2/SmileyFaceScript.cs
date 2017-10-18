@@ -35,14 +35,12 @@ public class SmileyFaceScript : MonoBehaviour {
                 if (sr.sprite != happyFace)
                 {
                     sr.sprite = happyFace;
-                    //Debug.Log("HAPPY: " + this.tag);
                 }
                 break;
             case faceStates.CONFUSED:
                 if (sr.sprite != confusedFace)
                 {
                     sr.sprite = confusedFace;
-                    //Debug.Log("CONFUSED: " + this.tag);
                 }
                 if (cycleCounter > 0)
                 {
@@ -57,7 +55,6 @@ public class SmileyFaceScript : MonoBehaviour {
                 if (sr.sprite != cheerFace)
                 {
                     sr.sprite = cheerFace;
-                    //Debug.Log("CHEER: " + this.tag);
                 }
                 if (cycleCounter > 0)
                 {

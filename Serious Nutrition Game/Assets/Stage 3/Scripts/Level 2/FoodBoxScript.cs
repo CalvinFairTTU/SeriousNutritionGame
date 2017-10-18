@@ -71,6 +71,5 @@ public class FoodBoxScript : MonoBehaviour {
         }
         
         food.gameObject.SetActive(false);
-        Debug.Log("///////////////////////////////////////// food deactivated.");
     }
 }

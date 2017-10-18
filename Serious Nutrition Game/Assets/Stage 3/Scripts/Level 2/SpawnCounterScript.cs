@@ -3,25 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class SpawnCounterScript : MonoBehaviour {
-
-    private int destCounter;   
-    private float progressPoints;
+    
     public Slider ProgressBar;
-
     public AudioSource gameAudio;
     public AudioClip goodSound;
     public AudioClip badSound;
+    public int waitExitCycles;
     
 
-	// Use this for initialization
-	void Start ()
+    private int destCounter;
+    private float progressPoints;
+    private int exitCounter;
+
+
+
+    // Use this for initialization
+    void Start ()
     {
         this.destCounter = 0;
         progressPoints = 0f;
         ProgressBar.value = progressPoints;
-        //gameAudio = gameObject.GetComponent<AudioSource>();
+        exitCounter = 0;
     }
 	
 	public int GetCounter()
@@ -99,9 +104,14 @@ public class SpawnCounterScript : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (progressPoints >= 1)
+        if (progressPoints >= 1 && exitCounter < waitExitCycles)
         {
-            Debug.Log("VICTORY!!!!!!!!!!!!!!");
+            exitCounter++;
+            Debug.Log("exitCounter = " + exitCounter);
+        }
+        else if (progressPoints >= 1 && exitCounter >= waitExitCycles)
+        {
+            SceneManager.LoadSceneAsync(3);
         }
     }
 }
