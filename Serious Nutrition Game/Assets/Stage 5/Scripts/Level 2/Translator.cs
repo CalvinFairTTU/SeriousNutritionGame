@@ -5,54 +5,22 @@ using UnityEngine;
 public class Translator : MonoBehaviour {
     private int spawnIndex;
     private SpriteRenderer sprite;
+    private bool spawn = true;
 
     void Start ()
     {
-        sprite = GetComponent<SpriteRenderer>();
+        sprite = this.GetComponent<SpriteRenderer>();
     }
 
 	// Update is called once per frame
 	void Update ()
     {
-        if (transform.position.x == -2.0)
-            spawnIndex = 0;
-        if (transform.position.x == 2.05)
-            spawnIndex = 1;
-        if (transform.position.x == -1.5)
-            spawnIndex = 2;
-        if (transform.position.x > 1.5 && transform.position.x < 2.0)
-            spawnIndex = 3;
-        
-        switch (spawnIndex)
-        {
-            case 0:
-                sprite.sortingLayerName = "Foreground 01";
-                if (transform.position.y < -1.5)
-                    transform.Translate(new Vector3(0, 5, 0) * Time.deltaTime);
-                Invoke("DespawnFood", 5f);
-                break;
-            case 1:
-                sprite.sortingLayerName = "Foreground 01";
-                if (transform.position.y < -1.5)
-                    transform.Translate(new Vector3(0, 5, 0) * Time.deltaTime);
-                Invoke("DespawnFood", 5f);
-                break;
-            case 2:
-                sprite.sortingLayerName = "Foreground 02";
-                if (transform.position.y < 0.03)
-                    transform.Translate(new Vector3(0, 5, 0) * Time.deltaTime);
-                Invoke("DespawnFood", 5f);
-                break;
-            case 3:
-                sprite.sortingLayerName = "Foreground 02";
-                if (transform.position.y < 0.03)
-                    transform.Translate(new Vector3(0, 5, 0) * Time.deltaTime);
-                Invoke("DespawnFood", 5f);
-                break;
-        }
+        if(spawn)
+            SpawnFood();
+        StartCoroutine(DespawnFood());
 	}
 
-    void DespawnFood ()
+    void SpawnFood ()
     {
         if (transform.position.x == -2.0)
             spawnIndex = 0;
@@ -66,24 +34,72 @@ public class Translator : MonoBehaviour {
         switch (spawnIndex)
         {
             case 0:
-                if (transform.position.y > -2.908023)
-                    transform.Translate(new Vector3(0, -5, 0) * Time.deltaTime);
+                sprite.sortingLayerName = "Foreground 01";
+                if (transform.position.y < -1.75)
+                    transform.Translate(new Vector3(0, 5, 0) * Time.deltaTime);
                 break;
             case 1:
-                if (transform.position.y > -2.908023)
-                    transform.Translate(new Vector3(0, -5, 0) * Time.deltaTime);
+                sprite.sortingLayerName = "Foreground 01";
+                if (transform.position.y < -1.75)
+                    transform.Translate(new Vector3(0, 5, 0) * Time.deltaTime);
                 break;
             case 2:
-                if (transform.position.y > -1.068023)
-                    transform.Translate(new Vector3(0, -5, 0) * Time.deltaTime);
+                sprite.sortingLayerName = "Foreground 02";
+                if (transform.position.y < 0.03)
+                    transform.Translate(new Vector3(0, 5, 0) * Time.deltaTime);
                 break;
             case 3:
-                if (transform.position.y > -1.068023)
+                sprite.sortingLayerName = "Foreground 02";
+                if (transform.position.y < 0.03)
+                    transform.Translate(new Vector3(0, 5, 0) * Time.deltaTime);
+                break;
+        }
+    }
+
+    IEnumerator GoBackDown ()
+    {
+        switch (spawnIndex)
+        {
+            case 0:
+                sprite.sortingLayerName = "Foreground 01";
+                if (transform.position.y > -2.9)
+                {
                     transform.Translate(new Vector3(0, -5, 0) * Time.deltaTime);
-                Invoke("DespawnFood", 5f);
+                }
+                break;
+            case 1:
+                sprite.sortingLayerName = "Foreground 01";
+                if (transform.position.y > -2.9)
+                {
+                    transform.Translate(new Vector3(0, -5, 0) * Time.deltaTime);
+                }
+                break;
+            case 2:
+                sprite.sortingLayerName = "Foreground 02";
+                if (transform.position.y > -1.2)
+                {
+                    transform.Translate(new Vector3(0, -5, 0) * Time.deltaTime);
+                }
+                break;
+            case 3:
+                sprite.sortingLayerName = "Foreground 02";
+                if (transform.position.y > -1.2)
+                {
+                    transform.Translate(new Vector3(0, -5, 0) * Time.deltaTime);
+                }
                 break;
         }
 
+        yield return null;
+    }
+
+    IEnumerator DespawnFood ()
+    {
+        yield return new WaitForSeconds(5f);
+        spawn = false;
+        yield return StartCoroutine(GoBackDown());
+        yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
+        spawn = true;
     }
 }

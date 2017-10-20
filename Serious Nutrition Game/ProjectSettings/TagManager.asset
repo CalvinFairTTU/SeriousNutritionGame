@@ -48,6 +48,12 @@ TagManager:
   - name: Background
     uniqueID: 4196603679
     locked: 0
+  - name: Foreground 02
+    uniqueID: 1366203289
+    locked: 0
+  - name: Foreground 01
+    uniqueID: 1865482195
+    locked: 0
   - name: NE Assets
     uniqueID: 1569499485
     locked: 0
