@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 60066893093467236}
   - component: {fileID: 114221774632719942}
   m_Layer: 0
-  m_Name: turkey
-  m_TagString: Good_Food
+  m_Name: chicken
+  m_TagString: Chicken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

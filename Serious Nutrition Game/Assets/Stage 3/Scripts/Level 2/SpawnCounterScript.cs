@@ -34,7 +34,7 @@ public class SpawnCounterScript : MonoBehaviour {
         return this.destCounter;
     }
 
-    public void DecrementCounter(Collider2D food,string box)
+    public void DecrementCounter(Collider2D food,string box,string boxTag)
     {
         this.destCounter -= 1;
         Debug.Log("DecrementCounter() destCounter = " + this.destCounter + " on " + box);
@@ -47,30 +47,30 @@ public class SpawnCounterScript : MonoBehaviour {
                 progressPoints -= 0.05f;
                 break;
             case "goodBox":
-                if (food.tag == "Good_Food")
+                if (boxTag == food.tag)
                 {
                     gameAudio.volume = 0.8f;
                     gameAudio.clip = goodSound;
                     gameAudio.Play();
                     progressPoints += 0.05f;
                 }
-                else if (food.tag == "Bad_Food")
+                else
                 {
                     gameAudio.volume = 0.8f;
                     gameAudio.clip = badSound;
                     gameAudio.Play();
                     progressPoints -= 0.05f;
                 }
-                break;
+                break;            
             case "badBox":
-                if (food.tag == "Good_Food")
+                if (food.tag != "Bad_Food")
                 {
                     gameAudio.volume = 0.8f;
                     gameAudio.clip = badSound;
                     gameAudio.Play();
                     progressPoints -= 0.05f;
                 }
-                else if (food.tag == "Bad_Food")
+                else
                 {
                     gameAudio.volume = 0.8f;
                     gameAudio.clip = goodSound;
@@ -107,7 +107,6 @@ public class SpawnCounterScript : MonoBehaviour {
         if (progressPoints >= 1 && exitCounter < waitExitCycles)
         {
             exitCounter++;
-            Debug.Log("exitCounter = " + exitCounter);
         }
         else if (progressPoints >= 1 && exitCounter >= waitExitCycles)
         {

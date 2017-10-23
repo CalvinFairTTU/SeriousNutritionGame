@@ -9,8 +9,8 @@ public class FoodBoxScript : MonoBehaviour {
     private SpawnCounterScript script;
     private SmileyFaceScript faceScript;
     
-    private bool isForGoodFood;
     private string thisBox;
+    private int isEqual;
 
     enum faceStates
     {
@@ -25,51 +25,36 @@ public class FoodBoxScript : MonoBehaviour {
     void Start ()
     {
         script = Counter.GetComponent<SpawnCounterScript>();
-        if (this.tag == "For_Good_Food")
+        if (this.tag == "Bad_Food")
         {
-            isForGoodFood = true;
-            thisBox = "goodBox";
-        }
-        else if (this.tag == "For_Bad_Food")
-        {
-            isForGoodFood = false;
             thisBox = "badBox";
         }
+        else 
+        {
+            thisBox = "goodBox";
+        }
         faceScript = face.GetComponent<SmileyFaceScript>();
+        Debug.Log("thisBox = " + thisBox + " on " + this);
     }
 
     private void OnTriggerStay2D(Collider2D food)
     {
 
-        script.DecrementCounter(food,thisBox);
+        script.DecrementCounter(food,thisBox,this.tag);        
 
-        if (isForGoodFood)
+        isEqual = string.Compare(this.tag, food.tag, false);
+
+        if(isEqual == 0)
         {
-            if (food.tag == "Good_Food")
-            {
-                // Do something that indicates the right action was taken.
-                faceScript.SetFaceState(1);
-            }
-            else
-            {
-                // Do something that indicates the wrong action was taken.
-                faceScript.SetFaceState(0);
-            }
+            //Do something that indicates the right action was taken.
+            faceScript.SetFaceState(1);
         }
         else
         {
-            if (food.tag == "Good_Food")
-            {
-                // Do something that indicates the wrong action was taken.
-                faceScript.SetFaceState(0);
-            }
-            else
-            {
-                // Do something that indicates the right action was taken.
-                faceScript.SetFaceState(1);
-            }
+            //Do something that indicates the wrong action was taken.
+            faceScript.SetFaceState(0);
         }
-        
+
         food.gameObject.SetActive(false);
     }
 }
