@@ -44,7 +44,10 @@ public class SpawnCounterScript : MonoBehaviour {
                 gameAudio.volume = 0.8f;
                 gameAudio.clip = badSound;
                 gameAudio.Play();
-                progressPoints -= 0.05f;
+                if (progressPoints > 0f)
+                {
+                   progressPoints -= 0.05f;
+                }
                 break;
             case "goodBox":
                 if (boxTag == food.tag)
@@ -59,7 +62,10 @@ public class SpawnCounterScript : MonoBehaviour {
                     gameAudio.volume = 0.8f;
                     gameAudio.clip = badSound;
                     gameAudio.Play();
-                    progressPoints -= 0.05f;
+                    if (progressPoints > 0f)
+                    {
+                        progressPoints -= 0.05f;
+                    }
                 }
                 break;            
             case "badBox":
@@ -68,7 +74,10 @@ public class SpawnCounterScript : MonoBehaviour {
                     gameAudio.volume = 0.8f;
                     gameAudio.clip = badSound;
                     gameAudio.Play();
-                    progressPoints -= 0.05f;
+                    if (progressPoints > 0f)
+                    {
+                        progressPoints -= 0.05f;
+                    }
                 }
                 else
                 {
