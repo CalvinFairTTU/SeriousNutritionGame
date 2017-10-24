@@ -5,8 +5,7 @@ using UnityEngine;
 public class FoodSpawn : MonoBehaviour {
     public GameObject[] foods;
     public Transform[] spawns;
-
-    private float timer;
+    
     private int foodIndex;
     private int spawnIndex;
 
