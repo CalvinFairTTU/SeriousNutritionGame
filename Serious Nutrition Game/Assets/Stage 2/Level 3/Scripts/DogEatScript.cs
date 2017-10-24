@@ -6,15 +6,28 @@ using System.IO;
 
 public class DogEatScript : MonoBehaviour {
 
-    public ProgressBar pB;
+	public Slider progressBar;
+	float progressPoints;
    
     void OnTriggerStay2D(Collider2D food) {
         if (food.tag == "Good_Food") {
-            pB.progressUp();
+			if (progressPoints < 1f) {
+				progressPoints += 0.05f;
+			}
         }
         else {
-            pB.progressDown();
+			if (progressPoints > 0f) {
+				progressPoints -= 0.05f;
+			}
         }
+
+		progressBar.value = progressPoints;
         Destroy(food.gameObject);
+
+		if (progressBar.value >= 1f) {
+			Debug.Log ("You won the game!");
+			//gameObject.GetComponent<WinGame> ().Win ();
+			//gameObject.GetComponent<EdgeCollider2D> ().enabled = false;
+		}
     }
 }
