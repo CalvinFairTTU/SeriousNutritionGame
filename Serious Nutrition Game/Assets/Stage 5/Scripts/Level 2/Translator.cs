@@ -16,11 +16,11 @@ public class Translator : MonoBehaviour {
 	void Update ()
     {
         if(spawn)
-            SpawnFood();
-        StartCoroutine(DespawnFood());
+            MoveUp();
+        StartCoroutine(Wait());
 	}
 
-    void SpawnFood ()
+    void MoveUp ()
     {
         if (transform.position.x == -2.0)
             spawnIndex = 0;
@@ -56,7 +56,7 @@ public class Translator : MonoBehaviour {
         }
     }
 
-    IEnumerator GoBackDown ()
+    IEnumerator MoveDown ()
     {
         switch (spawnIndex)
         {
@@ -93,11 +93,11 @@ public class Translator : MonoBehaviour {
         yield return null;
     }
 
-    IEnumerator DespawnFood ()
+    IEnumerator Wait ()
     {
         yield return new WaitForSeconds(5f);
         spawn = false;
-        yield return StartCoroutine(GoBackDown());
+        yield return StartCoroutine(MoveDown());
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
         spawn = true;

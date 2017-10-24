@@ -28,9 +28,4 @@ public class FoodSpawn : MonoBehaviour {
         spawnIndex = Random.Range(0, 4);
         Instantiate(foods[foodIndex], spawns[spawnIndex].position, spawns[spawnIndex].rotation);
     }
-
-    public int getSpawnIndex()
-    {
-        return spawnIndex;
-    }
 }
