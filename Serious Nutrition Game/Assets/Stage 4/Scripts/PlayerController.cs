@@ -24,9 +24,8 @@ public class PlayerController : MonoBehaviour {
 		
 	}
 
-	void onTriggerEnter2D (Collider2D other) {
+	void OnTriggerEnter2D (Collider2D other) {
 		if (other.gameObject.CompareTag ("BadFood"))
-			gameObject.SetActive (false);
-		
+			other.gameObject.SetActive (false);
 	}
 }
