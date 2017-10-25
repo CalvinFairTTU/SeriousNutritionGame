@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public class FrogMovement : MonoBehaviour {
     public Rigidbody2D rb2d;
     public Animator anim;
     public GameObject PauseButton;
+    public Camera cam;
 
     private Vector2 target;
     private Vector2 offset;
@@ -32,17 +34,18 @@ public class FrogMovement : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("pos = " + RT.InverseTransformPoint(RT.position));
-            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(target);
-            offset = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
-            hypontenuse = Mathf.Sqrt((offset.x * offset.x) + (offset.y * offset.y));
-            offset.x = (offset.x / hypontenuse) * speed;
-            offset.y = (offset.y / hypontenuse) * speed;
-            targetAngle = (Mathf.Atan2(offset.y, offset.x) - (Mathf.PI / 2)) * Mathf.Rad2Deg;
-            rb2d.rotation = targetAngle;
-            rb2d.velocity = new Vector2(offset.x, offset.y);
-            anim.SetInteger("State", 1);
+            if (!RectTransformUtility.RectangleContainsScreenPoint(RT, Input.mousePosition, cam))
+            {
+                target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                offset = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
+                hypontenuse = Mathf.Sqrt((offset.x * offset.x) + (offset.y * offset.y));
+                offset.x = (offset.x / hypontenuse) * speed;
+                offset.y = (offset.y / hypontenuse) * speed;
+                targetAngle = (Mathf.Atan2(offset.y, offset.x) - (Mathf.PI / 2)) * Mathf.Rad2Deg;
+                rb2d.rotation = targetAngle;
+                rb2d.velocity = new Vector2(offset.x, offset.y);
+                anim.SetInteger("State", 1);
+            }
         }
         offset = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
         epsilon = Mathf.Sqrt((offset.x * offset.x) + (offset.y * offset.y));
@@ -57,13 +60,6 @@ public class FrogMovement : MonoBehaviour {
         }
     }
 
-    private bool IsInside(Vector2 target,RectTransform RT)
-    {
-        if (Mathf.Abs(target.x - RT.rect.x) < RT.rect.width && Mathf.Abs(target.y - RT.rect.y) < RT.rect.height)
-            return true;
-        else
-            return false;
-    }
 }
 
 
