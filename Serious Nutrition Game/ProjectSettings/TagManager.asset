@@ -16,6 +16,7 @@ TagManager:
   - Beef
   - Pork
   - CatchBox
+  - PauseController
   layers:
   - Default
   - TransparentFX

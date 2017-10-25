@@ -1298,6 +1298,7 @@ MonoBehaviour:
   targetCatch: 0.5
   rb2d: {fileID: 666788502}
   anim: {fileID: 666788508}
+  PauseButton: {fileID: 1732345260}
 --- !u!60 &666788501
 PolygonCollider2D:
   m_ObjectHideFlags: 0

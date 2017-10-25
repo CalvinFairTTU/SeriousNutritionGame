@@ -9,12 +9,14 @@ public class FrogMovement : MonoBehaviour {
     public float targetCatch;
     public Rigidbody2D rb2d;
     public Animator anim;
+    public GameObject PauseButton;
 
     private Vector2 target;
     private Vector2 offset;
     private float hypontenuse;
     private float epsilon;
     private float targetAngle;
+    private RectTransform RT;
 
 
     // Use this for initialization
@@ -22,6 +24,7 @@ public class FrogMovement : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();
         target = new Vector2(transform.position.y, transform.position.x);
         anim.SetInteger("State", 0);
+        RT = PauseButton.GetComponent<RectTransform>();
     }
 
     void FixedUpdate()
@@ -29,7 +32,9 @@ public class FrogMovement : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("pos = " + RT.InverseTransformPoint(RT.position));
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Debug.Log(target);
             offset = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
             hypontenuse = Mathf.Sqrt((offset.x * offset.x) + (offset.y * offset.y));
             offset.x = (offset.x / hypontenuse) * speed;
@@ -50,6 +55,14 @@ public class FrogMovement : MonoBehaviour {
         {
             anim.SetInteger("State", 1);
         }
+    }
+
+    private bool IsInside(Vector2 target,RectTransform RT)
+    {
+        if (Mathf.Abs(target.x - RT.rect.x) < RT.rect.width && Mathf.Abs(target.y - RT.rect.y) < RT.rect.height)
+            return true;
+        else
+            return false;
     }
 }
 
