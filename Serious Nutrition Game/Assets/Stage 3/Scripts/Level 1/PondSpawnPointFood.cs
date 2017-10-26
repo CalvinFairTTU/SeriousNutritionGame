@@ -9,13 +9,13 @@ public class PondSpawnPointFood : MonoBehaviour {
     public GameObject[] foods;
     public int minWaitSpawn, maxWaitSpawn, minWaitDestroy, maxWaitDestroy, initialWaitRange;
     public Slider progressBar;
+    public GameObject player;
+    public float minSpawnRange;
+
     private float progressPoints;
     private int WaitCyclesSpawn, WaitCyclesDestroy, initialWait;
     private GameObject SpawnedFood;
     private int cycleCounter;
-
-    public GameObject player;
-    public float minSpawnRange;
     private Vector2 trackPlayer;
     private float hypotenuse;
 

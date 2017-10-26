@@ -22,7 +22,6 @@ public class FrogWins : MonoBehaviour {
     public void SetVictory()
     {
         this.victory = true;
-        Debug.Log("victory = " + victory);
     }
 
     public void Win()
@@ -39,7 +38,6 @@ public class FrogWins : MonoBehaviour {
         }
         else if (victory && cycleCounter == waitToExit)
         {
-            Debug.Log("ran it");
             Win();
         }
     }
