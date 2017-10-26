@@ -492,7 +492,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 228990158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58627f355a3f9ff49b8f1f61033cf6ef, type: 3}
+  m_Script: {fileID: 11500000, guid: cd4d6a0b66e61e545aaa68488ef227e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
@@ -4030,7 +4030,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 915917919}
   m_FillRect: {fileID: 1549156569}
   m_HandleRect: {fileID: 0}

@@ -29,6 +29,7 @@ public class PauseScript : MonoBehaviour {
 
     public void exitGame () {
         SceneManager.LoadScene(0);
+		Time.timeScale = 1;
     }
 
     public void openSettings() {
