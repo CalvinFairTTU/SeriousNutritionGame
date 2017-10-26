@@ -8,8 +8,6 @@ public class MeatMarketSpawnScript : MonoBehaviour
 {
 
     public GameObject[] foods;
-    //public Slider progressBar;
-    //private float progressPoints;
     public GameObject Counter;
     private SpawnCounterScript counterScript;
 
@@ -23,7 +21,8 @@ public class MeatMarketSpawnScript : MonoBehaviour
         INITIAL,
         NOFOOD,
         FOODSPAWNED,
-        FOODSPAWNED_PRE,
+        FOODSPAWNED_DELAY,
+        FOODSPAWNED_INC,
         FINAL
     };
 
@@ -34,8 +33,6 @@ public class MeatMarketSpawnScript : MonoBehaviour
     {
         counterScript = Counter.GetComponent<SpawnCounterScript>();
         state = Mstates.INITIAL;
-        
-        //progressPoints = progressBar.value;
     }
 
     private void FixedUpdate()
@@ -48,50 +45,65 @@ public class MeatMarketSpawnScript : MonoBehaviour
                 SpawnedFood = Instantiate(foods[Random.Range(0, foods.Length)], transform.position, transform.rotation) as GameObject;
                 state = Mstates.FOODSPAWNED;
                 counterScript.IncrementCounter();
-                  
-                //if (progressPoints >= 1f)
-                //{
-                //    state = Mstates.FINAL;
-                //}
+
+                if (counterScript.GetPoints() >= 1f)
+                {
+                    state = Mstates.FINAL;
+                }
                 break;
 
             case Mstates.FOODSPAWNED:
+
                 if (SpawnedFood.activeSelf == false)
                 {
                     Destroy(SpawnedFood);
                     state = Mstates.NOFOOD;
                 }
-                
-                //if (progressPoints >= 1f)
-                //{
-                //    state = Mstates.FINAL;
-                //}
+
+                if (counterScript.GetPoints() >= 1f)
+                {
+                    state = Mstates.FINAL;
+                }
                 break;
 
             case Mstates.NOFOOD:
 
                 counterCheck = counterScript.GetCounter();
-                Debug.Log("counterCheck in " + this + " = " + counterCheck);
                 if (counterCheck == 0)
                 {
                     SpawnedFood = Instantiate(foods[Random.Range(0, foods.Length)], transform.position, transform.rotation) as GameObject;
-                    Debug.Log("****************************************************************************FOOD SPAWNED IN " + this);
-                    state = Mstates.FOODSPAWNED_PRE;
+                    state = Mstates.FOODSPAWNED_DELAY;
                 }
-                
-                //if (progressPoints >= 1f)
-                //{
-                //    state = Mstates.FINAL;
-                //}
+
+                if (counterScript.GetPoints() >= 1f)
+                {
+                    state = Mstates.FINAL;
+                }
                 break;
 
-            case Mstates.FOODSPAWNED_PRE:
+            case Mstates.FOODSPAWNED_DELAY:
 
-                counterScript.IncrementCounter();
+                state = Mstates.FOODSPAWNED_INC; // Delay for one cycle so that all the SpawnPoints can pick up the counter and spawn food.
+
+                if (counterScript.GetPoints() >= 1f)
+                {
+                    state = Mstates.FINAL;
+                }
+                break;
+
+            case Mstates.FOODSPAWNED_INC:
+
+                counterScript.IncrementCounter(); // Increment the counter to account for the newly spawned food object.
                 state = Mstates.FOODSPAWNED;
+
+                if (counterScript.GetPoints() >= 1f)
+                {
+                    state = Mstates.FINAL;
+                }
                 break;
 
             case Mstates.FINAL:
+                
                 if (!SpawnedFood.Equals(null))
                 {
                     Destroy(SpawnedFood);

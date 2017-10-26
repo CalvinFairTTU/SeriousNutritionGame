@@ -8,6 +8,15 @@ TagManager:
   - Bad_Food
   - BadFood
   - GoodFood
+  - For_Good_Food
+  - For_Bad_Food
+  - Chicken
+  - Fish
+  - Turkey
+  - Beef
+  - Pork
+  - CatchBox
+  - PauseController
   layers:
   - Default
   - TransparentFX

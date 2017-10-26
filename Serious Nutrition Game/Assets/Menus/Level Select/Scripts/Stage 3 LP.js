@@ -5,7 +5,7 @@ function playLevelOne(){
 }
 
 function playLevelTwo(){
-    Application.LoadLevel(3);
+    Application.LoadLevel(17);
 }
 
 function playLevelThree(){

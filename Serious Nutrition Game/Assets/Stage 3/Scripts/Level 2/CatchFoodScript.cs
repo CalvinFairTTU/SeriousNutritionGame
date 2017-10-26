@@ -5,10 +5,16 @@ using UnityEngine;
 public class CatchFoodScript : MonoBehaviour {
 
     public GameObject Counter;
+    private SpawnCounterScript script;
+
+    private void Start()
+    {
+        script = Counter.GetComponent<SpawnCounterScript>();
+    }
 
     private void OnTriggerStay2D(Collider2D food)
     {
         food.gameObject.SetActive(false);
-        Counter.GetComponent<SpawnCounterScript>().DecrementCounter();
+        script.DecrementCounter(food,"catchBox",this.tag);
     }
 }

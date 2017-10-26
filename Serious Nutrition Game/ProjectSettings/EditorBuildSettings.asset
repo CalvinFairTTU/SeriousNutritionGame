@@ -18,25 +18,25 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Level Select/S1LS.unity
+    path: Assets/Menus/Level Select/S1LS.unity
     guid: 5fdbc43aef47fc34c8d8253707f32249
   - enabled: 1
-    path: Assets/Level Select/S2LS.unity
+    path: Assets/Menus/Level Select/S2LS.unity
     guid: 88517ae6343abc24c81cf4230a28e5e2
   - enabled: 1
-    path: Assets/Level Select/S3LS.unity
+    path: Assets/Menus/Level Select/S3LS.unity
     guid: 50e16a8a8fdc91a4cad7981767e75e5b
   - enabled: 1
-    path: Assets/Level Select/S4LS.unity
+    path: Assets/Menus/Level Select/S4LS.unity
     guid: 07cdc3261b1d07644b8c15e24cdf36cb
   - enabled: 1
-    path: Assets/Level Select/S5LS.unity
+    path: Assets/Menus/Level Select/S5LS.unity
     guid: 014ee3039e3cac34eae0f16117ab1d9c
   - enabled: 1
-    path: Assets/Stage 2/Scene/Level 2.unity
+    path: Assets/Stage 2/Level 2/Level 2.unity
     guid: 26b2e0395e649f84fbf613b9f9099ba7
   - enabled: 1
-    path: Assets/Stage 2/Scene/Level 3.unity
+    path: Assets/Stage 2/Level 3/Level 3.unity
     guid: 310ffec366cd0994ab0ff0a926df13c0
   - enabled: 1
     path: Assets/Stage 3/Scene/Frog-In-The-Pond.unity
@@ -54,26 +54,29 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Level Select/S1LS.unity
+    path: Assets/Menus/Level Select/S1LS.unity
     guid: 5fdbc43aef47fc34c8d8253707f32249
   - enabled: 1
-    path: Assets/Level Select/S2LS.unity
+    path: Assets/Menus/Level Select/S2LS.unity
     guid: 88517ae6343abc24c81cf4230a28e5e2
   - enabled: 1
-    path: Assets/Level Select/S3LS.unity
+    path: Assets/Menus/Level Select/S3LS.unity
     guid: 50e16a8a8fdc91a4cad7981767e75e5b
   - enabled: 1
-    path: Assets/Level Select/S4LS.unity
+    path: Assets/Menus/Level Select/S4LS.unity
     guid: 07cdc3261b1d07644b8c15e24cdf36cb
   - enabled: 1
-    path: Assets/Level Select/S5LS.unity
+    path: Assets/Menus/Level Select/S5LS.unity
     guid: 014ee3039e3cac34eae0f16117ab1d9c
   - enabled: 1
-    path: Assets/Stage 2/Scene/Level 2.unity
+    path: Assets/Stage 2/Level 2/Level 2.unity
     guid: 26b2e0395e649f84fbf613b9f9099ba7
   - enabled: 1
-    path: Assets/Stage 2/Scene/Level 3.unity
+    path: Assets/Stage 2/Level 3/Level 3.unity
     guid: 310ffec366cd0994ab0ff0a926df13c0
   - enabled: 1
-    path: Assets/Menus/Piano Minigame.unity
+    path: Assets/Extra Levels/Piano Minigame.unity
     guid: 3102a74c47ea64945882d1a882803632
+  - enabled: 1
+    path: Assets/Stage 3/Scene/Meat-Market-Sort.unity
+    guid: feb5b0697a0072242acb2c7ec71c1413
