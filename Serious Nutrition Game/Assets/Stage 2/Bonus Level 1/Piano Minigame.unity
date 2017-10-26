@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 144823447}
   - component: {fileID: 144823448}
   - component: {fileID: 144823449}
+  - component: {fileID: 144823450}
   m_Layer: 0
   m_Name: White Key (2)
   m_TagString: Untagged
@@ -260,6 +261,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!61 &144823450
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 144823446}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.58, y: 7.62}
+    newSize: {x: 1.58, y: 7.62}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.58, y: 7.62}
+  m_EdgeRadius: 0
 --- !u!4 &161758873 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4946274493294450, guid: 08caef3cbbe36d84b8c2e629532a512e,
@@ -655,6 +681,7 @@ GameObject:
   - component: {fileID: 501074700}
   - component: {fileID: 501074701}
   - component: {fileID: 501074702}
+  - component: {fileID: 501074703}
   m_Layer: 0
   m_Name: White Key
   m_TagString: Untagged
@@ -797,6 +824,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!61 &501074703
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501074699}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.58, y: 7.62}
+    newSize: {x: 1.58, y: 7.62}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.58, y: 7.62}
+  m_EdgeRadius: 0
 --- !u!1 &553448821
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,6 +859,7 @@ GameObject:
   - component: {fileID: 553448822}
   - component: {fileID: 553448823}
   - component: {fileID: 553448824}
+  - component: {fileID: 553448825}
   m_Layer: 0
   m_Name: White Key (1)
   m_TagString: Untagged
@@ -949,6 +1002,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!61 &553448825
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553448821}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.58, y: 7.62}
+    newSize: {x: 1.58, y: 7.62}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.58, y: 7.62}
+  m_EdgeRadius: 0
 --- !u!1001 &598938697
 Prefab:
   m_ObjectHideFlags: 0
@@ -1281,6 +1359,7 @@ GameObject:
   - component: {fileID: 798331858}
   - component: {fileID: 798331859}
   - component: {fileID: 798331860}
+  - component: {fileID: 798331861}
   m_Layer: 0
   m_Name: White Key (3)
   m_TagString: Untagged
@@ -1423,6 +1502,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!61 &798331861
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 798331857}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.58, y: 7.62}
+    newSize: {x: 1.58, y: 7.62}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.58, y: 7.62}
+  m_EdgeRadius: 0
 --- !u!1 &826409263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,6 +2162,7 @@ GameObject:
   - component: {fileID: 1255214471}
   - component: {fileID: 1255214472}
   - component: {fileID: 1255214473}
+  - component: {fileID: 1255214474}
   m_Layer: 0
   m_Name: White Key (7)
   m_TagString: Untagged
@@ -2200,6 +2305,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!61 &1255214474
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1255214470}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.58, y: 7.62}
+    newSize: {x: 1.58, y: 7.62}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.58, y: 7.62}
+  m_EdgeRadius: 0
 --- !u!1 &1289461196
 GameObject:
   m_ObjectHideFlags: 0
@@ -2596,6 +2726,7 @@ GameObject:
   - component: {fileID: 1612247397}
   - component: {fileID: 1612247398}
   - component: {fileID: 1612247399}
+  - component: {fileID: 1612247400}
   m_Layer: 0
   m_Name: White Key (6)
   m_TagString: Untagged
@@ -2738,6 +2869,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!61 &1612247400
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1612247396}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.58, y: 7.62}
+    newSize: {x: 1.58, y: 7.62}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.58, y: 7.62}
+  m_EdgeRadius: 0
 --- !u!1 &1625727436
 GameObject:
   m_ObjectHideFlags: 0
@@ -3129,6 +3285,7 @@ GameObject:
   - component: {fileID: 1844055768}
   - component: {fileID: 1844055769}
   - component: {fileID: 1844055770}
+  - component: {fileID: 1844055771}
   m_Layer: 0
   m_Name: White Key (4)
   m_TagString: Untagged
@@ -3271,6 +3428,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!61 &1844055771
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1844055767}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.58, y: 7.62}
+    newSize: {x: 1.58, y: 7.62}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.58, y: 7.62}
+  m_EdgeRadius: 0
 --- !u!1 &1844516950
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,6 +3558,7 @@ GameObject:
   - component: {fileID: 1859704243}
   - component: {fileID: 1859704244}
   - component: {fileID: 1859704245}
+  - component: {fileID: 1859704246}
   m_Layer: 0
   m_Name: White Key (5)
   m_TagString: Untagged
@@ -3518,6 +3701,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!61 &1859704246
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859704242}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.58, y: 7.62}
+    newSize: {x: 1.58, y: 7.62}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.58, y: 7.62}
+  m_EdgeRadius: 0
 --- !u!4 &1888442564 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4849699449296356, guid: 2e916dee433651241b9d4e4917661be5,
@@ -3647,6 +3855,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b57ff47f2484844e88f420c3451b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keys:
+  - {fileID: 501074699}
+  - {fileID: 553448821}
+  - {fileID: 144823446}
+  - {fileID: 798331857}
+  - {fileID: 1844055767}
+  - {fileID: 1859704242}
+  - {fileID: 1612247396}
+  - {fileID: 1255214470}
   foodSprites:
   - {fileID: 1822037585748320, guid: 007c2f3fb5720e34196c924d16021554, type: 2}
   - {fileID: 1413008312608784, guid: 727da1ff424976541ae351ddb98b9b8a, type: 2}
