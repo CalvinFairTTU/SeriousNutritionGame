@@ -54,11 +54,11 @@ public class CarMovement : MonoBehaviour {
         }
     }
 
-    void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.tag == "LowerWall" || col.tag == "UpperWall" || col.tag == "LeftWall" || col.tag == "RightWall")
-        {
-            target = new Vector2(this.transform.position.x, this.transform.position.y);
-        }        
-    }
+    //void OnTriggerStay2D(Collider2D col)
+    //{
+    //    if (col.tag == "LowerWall" || col.tag == "UpperWall" || col.tag == "LeftWall" || col.tag == "RightWall")
+    //    {
+    //        target = new Vector2(this.transform.position.x, this.transform.position.y);
+    //    }        
+    //}
 }
