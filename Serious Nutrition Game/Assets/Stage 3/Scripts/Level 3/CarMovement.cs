@@ -30,7 +30,7 @@ public class CarMovement : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (!RectTransformUtility.RectangleContainsScreenPoint(RT, Input.mousePosition, cam))
+            if (!RectTransformUtility.RectangleContainsScreenPoint(RT, Input.mousePosition, cam) && Camera.main.pixelRect.Contains(Input.mousePosition))
             {
                 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 offset = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
@@ -52,5 +52,13 @@ public class CarMovement : MonoBehaviour {
         {
             ;
         }
+    }
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.tag == "LowerWall" || col.tag == "UpperWall" || col.tag == "LeftWall" || col.tag == "RightWall")
+        {
+            target = new Vector2(this.transform.position.x, this.transform.position.y);
+        }        
     }
 }

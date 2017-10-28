@@ -18,7 +18,7 @@ public class S3LS : MonoBehaviour {
 
     public void playLevelThree()
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(18);
     }
 
     public void back()
