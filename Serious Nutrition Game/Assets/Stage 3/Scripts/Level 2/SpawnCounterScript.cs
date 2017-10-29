@@ -3,22 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class SpawnCounterScript : MonoBehaviour {
-
-    private int destCounter;
-    //private int check;
-    private int waitCycle;
-    public int limit;
-    public int setWaitCycle;
+    
+    public Slider ProgressBar;
+    public AudioSource gameAudio;
+    public AudioClip goodSound;
+    public AudioClip badSound;
+    public int waitExitCycles;
     
 
-	// Use this for initialization
-	void Start ()
+    private int destCounter;
+    private float progressPoints;
+    private int exitCounter;
+
+
+
+    // Use this for initialization
+    void Start ()
     {
         this.destCounter = 0;
-        waitCycle = setWaitCycle;
-        Debug.Log("Start() destCounter = " + this.destCounter);
+        progressPoints = 0f;
+        ProgressBar.value = progressPoints;
+        exitCounter = 0;
     }
 	
 	public int GetCounter()
@@ -26,10 +34,64 @@ public class SpawnCounterScript : MonoBehaviour {
         return this.destCounter;
     }
 
-    public void DecrementCounter()
+    public void DecrementCounter(Collider2D food,string box,string boxTag)
     {
         this.destCounter -= 1;
-        Debug.Log("DecrementCounter() destCounter = " + this.destCounter);
+        Debug.Log("DecrementCounter() destCounter = " + this.destCounter + " on " + box);
+        switch (box)
+        {
+            case "catchBox":
+                gameAudio.volume = 0.8f;
+                gameAudio.clip = badSound;
+                gameAudio.Play();
+                if (progressPoints > 0f)
+                {
+                   progressPoints -= 0.05f;
+                }
+                break;
+            case "goodBox":
+                if (boxTag == food.tag)
+                {
+                    gameAudio.volume = 0.8f;
+                    gameAudio.clip = goodSound;
+                    gameAudio.Play();
+                    progressPoints += 0.05f;
+                }
+                else
+                {
+                    gameAudio.volume = 0.8f;
+                    gameAudio.clip = badSound;
+                    gameAudio.Play();
+                    if (progressPoints > 0f)
+                    {
+                        progressPoints -= 0.05f;
+                    }
+                }
+                break;            
+            case "badBox":
+                if (food.tag != "Bad_Food")
+                {
+                    gameAudio.volume = 0.8f;
+                    gameAudio.clip = badSound;
+                    gameAudio.Play();
+                    if (progressPoints > 0f)
+                    {
+                        progressPoints -= 0.05f;
+                    }
+                }
+                else
+                {
+                    gameAudio.volume = 0.8f;
+                    gameAudio.clip = goodSound;
+                    gameAudio.Play();
+                    progressPoints += 0.05f;
+                }
+                break;
+            default:
+                break;
+        }
+        Debug.Log("progressPoints = " + progressPoints);
+        ProgressBar.value = progressPoints;
     }
 
     public void IncrementCounter()
@@ -44,18 +106,20 @@ public class SpawnCounterScript : MonoBehaviour {
         Debug.Log("SetCounter(" + target + ") destCounter = " + this.destCounter);        
     }
     
-    //void LateUpdate()
-    //{
-    //    check = this.GetCounter();
-    //    Debug.Log("waitCycle = " + waitCycle);
-    //    if (check == 0 && waitCycle > 0)
-    //    {
-    //        waitCycle--;           
-    //    }
-    //    else if (check == 0 && waitCycle == 0)
-    //    {
-    //        this.SetCounter(limit);
-    //        waitCycle = setWaitCycle;
-    //    }
-    //}
+    public float GetPoints()
+    {
+        return this.progressPoints;
+    }
+
+    void LateUpdate()
+    {
+        if (progressPoints >= 1 && exitCounter < waitExitCycles)
+        {
+            exitCounter++;
+        }
+        else if (progressPoints >= 1 && exitCounter >= waitExitCycles)
+        {
+            SceneManager.LoadSceneAsync(3);
+        }
+    }
 }

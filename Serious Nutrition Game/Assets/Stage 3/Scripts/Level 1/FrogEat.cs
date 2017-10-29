@@ -9,9 +9,10 @@ public class FrogEat : MonoBehaviour {
     public Slider progressBar;
     public AudioClip goodSound;
     public AudioClip badSound;
+
     AudioSource gameAudio;
-    private float progressPoints;
-    
+
+    private float progressPoints;    
    
 
     // Use this for initialization
@@ -46,7 +47,6 @@ public class FrogEat : MonoBehaviour {
         progressBar.value = progressPoints;
         if (progressBar.value >= 1f)
         {
-            Debug.Log("Victory!");
             gameObject.GetComponent<FrogWins>().SetVictory();
         }
     }

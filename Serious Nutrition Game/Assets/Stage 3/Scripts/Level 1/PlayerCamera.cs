@@ -15,15 +15,13 @@ public class PlayerCamera : MonoBehaviour
     private Vector3 offset;
     private Vector3 newOffset;
     private Vector3 adjustment;
-    //private float zAxis;
-    
+        
 
     // Use this for initialization
     void Start()
     {
         offset = transform.position - player.transform.position;
         transform.position = player.transform.position + offset;
-        //zAxis = offset.z;
         adjustment = new Vector3();
     }
 
@@ -49,6 +47,5 @@ public class PlayerCamera : MonoBehaviour
             adjustment.y = newOffset.y + BoxDimY;
         }
         transform.position = transform.position + adjustment;
-        //transform.position = player.transform.position + offset;
     }
 }
