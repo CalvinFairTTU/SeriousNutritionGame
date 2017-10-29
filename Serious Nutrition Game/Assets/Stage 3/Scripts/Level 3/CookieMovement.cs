@@ -8,12 +8,12 @@ public class CookieMovement : MonoBehaviour {
     public Rigidbody2D rb2d;
     
     private cookieState state;
-    private float sum;
     private float speed2;
     private int randomNum;
 
     enum cookieState
     {
+        INITIAL,
         LEFT,
         LEFTUP,
         LEFTDOWN,
@@ -28,8 +28,7 @@ public class CookieMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        randomNum = Random.Range(0, 7);
-        SetStateFromRandom(randomNum);
+        this.state = cookieState.INITIAL;
         speed2 = speed / Mathf.Sqrt(2);
     }
 	
@@ -39,6 +38,10 @@ public class CookieMovement : MonoBehaviour {
         Debug.Log("state = " + this.state);
         switch(this.state)
         {
+            case cookieState.INITIAL:
+                randomNum = Random.Range(0, 7);
+                SetStateFromRandom(randomNum);
+                break;
             case cookieState.LEFT:
                 rb2d.velocity = Vector2.left * speed;
                 break;
@@ -305,14 +308,5 @@ public class CookieMovement : MonoBehaviour {
         Debug.Log("New State = " + this.state);
         return;
     }
-
-    private bool ChangeState()
-    {
-        sum = (Mathf.Abs(this.gameObject.transform.position.x) + Mathf.Abs(this.gameObject.transform.position.y))/10000;
-        if (Random.Range(0,7) <= sum)
-        {
-            return true;
-        }
-        return false;
-    }
+   
 }
