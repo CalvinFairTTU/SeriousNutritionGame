@@ -6,7 +6,7 @@ public class FridgeSpawn : MonoBehaviour {
     // Spawn settings.
     public Transform[] spawn_location;
     public GameObject[] good_foods;
-    public GameObject[] bad_foods;
+    //public GameObject[] bad_foods;
     public GameObject[] food_To_Spawn;
 
     //int score = 0;
