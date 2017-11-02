@@ -35,7 +35,7 @@ public class CookieMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-        Debug.Log("state = " + this.state);
+        //Debug.Log("state = " + this.state);
         switch(this.state)
         {
             case cookieState.INITIAL:
@@ -68,7 +68,7 @@ public class CookieMovement : MonoBehaviour {
                 break;
             case cookieState.BUMPED:
                 randomNum = (int)Random.Range(0, 7);
-                Debug.Log("randonNum = " + randomNum);
+                //Debug.Log("randonNum = " + randomNum);
                 SetStateFromRandom(randomNum);
                 break;
             default:
@@ -269,43 +269,34 @@ public class CookieMovement : MonoBehaviour {
         switch(num)
         {
             case 0:
-                Debug.Log("0");
                 this.state = cookieState.LEFT;
                 break;
             case 1:
-                Debug.Log("1");
                 this.state = cookieState.LEFTUP;
                 break;
             case 2:
-                Debug.Log("2");
                 this.state = cookieState.LEFTDOWN;
                 break;
             case 3:
-                Debug.Log("3");
                 this.state = cookieState.RIGHT;
                 break;
             case 4:
-                Debug.Log("4");
                 this.state = cookieState.RIGHTUP;
                 break;
             case 5:
-                Debug.Log("5");
                 this.state = cookieState.RIGHTDOWN;
                 break;
             case 6:
-                Debug.Log("6");
                 this.state = cookieState.UP;
                 break;
             case 7:
-                Debug.Log("7");
                 this.state = cookieState.DOWN;
                 break;
             default:
-                Debug.Log("def");
                 this.state = cookieState.BUMPED;
                 break;
         }
-        Debug.Log("New State = " + this.state);
+        //Debug.Log("New State = " + this.state);
         return;
     }
    

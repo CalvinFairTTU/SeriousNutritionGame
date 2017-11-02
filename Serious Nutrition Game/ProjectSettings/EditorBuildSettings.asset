@@ -80,7 +80,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Stage 3/Scene/Meat-Market-Sort.unity
     guid: feb5b0697a0072242acb2c7ec71c1413
-  - enabled: 1
+  - enabled: 0
     path: 
     guid: 8ce93f44f1a32f84193f705fc4764c71
   - enabled: 1
