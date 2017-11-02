@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CarEats : MonoBehaviour {
 
-    //public Slider progressBar;
+    //public GameObject ProgressBar;
 
     private float progressPoints;
 
@@ -24,6 +24,10 @@ public class CarEats : MonoBehaviour {
             {
                 progressPoints -= 0.05f;
             }
+            else if (progressPoints < 0f)
+            {
+                progressPoints = 0f;
+            }
             Debug.Log("progressPoints = " + progressPoints);
         }
         else if (col.tag == "GoodFood")
@@ -32,5 +36,6 @@ public class CarEats : MonoBehaviour {
             Debug.Log("progressPoints = " + progressPoints);
             col.gameObject.SetActive(false);
         }
+        
     }
 }

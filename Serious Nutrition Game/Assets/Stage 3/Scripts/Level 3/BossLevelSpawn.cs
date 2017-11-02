@@ -9,9 +9,8 @@ public class BossLevelSpawn : MonoBehaviour {
     public GameObject boss;
 
     private GameObject SpawnedFood;
-    private float PlayerXoffset, PlayerYoffset;
-    private float BossXoffset,BossYoffset;
     private Vector2 toPlayer, toBoss;
+    private float offsetPlayerX, offsetPlayerY, offsetBossX, offsetBossY;
 
     enum Sstates
     {
@@ -49,14 +48,30 @@ public class BossLevelSpawn : MonoBehaviour {
                 }
                 break;
             case Sstates.NOFOOD:
-                toPlayer = player.transform.position;
-                toBoss = boss.transform.position;
+                toPlayer = player.transform.position - transform.position;
+                toBoss = boss.transform.position - transform.position;
 
+                offsetPlayerX = Mathf.Abs(toPlayer.x);
+                offsetBossX = Mathf.Abs(toBoss.x);
+
+                offsetPlayerY = Mathf.Abs(toPlayer.y);
+                offsetBossY = Mathf.Abs(toBoss.y);
+
+                if (offsetPlayerX > offsetBossX && offsetPlayerY > offsetBossY)
+                {
+                    SpawnedFood = Instantiate(foods[Random.Range(0, foods.Length)], transform.position, transform.rotation) as GameObject;
+                    this.state = Sstates.FOODSPAWNED;
+                    Debug.Log("state = " + this.state);
+                }
                 break;
             case Sstates.FINAL:
+                if (!SpawnedFood.Equals(null))
+                {
+                    Destroy(SpawnedFood);
+                }
                 break;
             default:
                 break;
         }
-	}
+	}    
 }
