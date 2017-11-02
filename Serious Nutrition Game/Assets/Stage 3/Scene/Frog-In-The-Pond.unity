@@ -5707,7 +5707,7 @@ MonoBehaviour:
   - {fileID: 1457151136460714, guid: a769fed072abe0940b8542f2f201eea2, type: 2}
   - {fileID: 1817745559789122, guid: dde5c1344f28fdd40be1f850ac3d6616, type: 2}
   minWaitSpawn: 50
-  maxWaitSpawn: 10
+  maxWaitSpawn: 100
   minWaitDestroy: 400
   maxWaitDestroy: 500
   initialWaitRange: 20
