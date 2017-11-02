@@ -1484,12 +1484,12 @@ SpriteRenderer:
   m_SortingLayerID: -98363617
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: aa4f6cfea31ea1c4e96cdfc76a5b0623, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bbb8f878d149bec4aa82ebbc7c4ddad5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 18.35, y: 9.93}
+  m_Size: {x: 18.33, y: 9.91}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1663,12 +1663,12 @@ SpriteRenderer:
   m_SortingLayerID: -1678293315
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3dd1044e85952bd4f8a30e878b126aaf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db1427b518b285848aa04448fc910562, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6, y: 2.97}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1694,11 +1694,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1431405303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd45330402f39043b0dde2b734ede7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 299a035f807ea4c41b6601c308de4c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  targetCatch: 0.2
+  targetCatch: 1
   rb2d: {fileID: 1431405308}
   PauseButton: {fileID: 629239898}
   cam: {fileID: 740941784}
@@ -1719,7 +1719,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 6, y: 2.97}
-    newSize: {x: 6, y: 2.97}
+    newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1828,7 +1828,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 6, y: 2.97}
-    newSize: {x: 6, y: 2.97}
+    newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -2184,7 +2184,7 @@ GameObject:
   - component: {fileID: 2107051613}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: BadFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2221,7 +2221,7 @@ SpriteRenderer:
   m_SortingLayerID: -1678293315
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f8cffad2aba3c7f43a073725a4dc8353, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 898adba5c80250a47be2ba49c99a7a16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2376,8 +2376,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2107051608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d78e854a054f3fb4295edad6545a9ddb, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e717996f1fef5e40ba414291b59a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.5
   rb2d: {fileID: 2107051612}
