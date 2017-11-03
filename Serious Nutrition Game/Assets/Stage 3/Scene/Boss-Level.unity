@@ -2198,7 +2198,6 @@ GameObject:
   - component: {fileID: 1431405305}
   - component: {fileID: 1431405304}
   - component: {fileID: 1431405308}
-  - component: {fileID: 1431405307}
   - component: {fileID: 1431405309}
   - component: {fileID: 1431405306}
   - component: {fileID: 1431405310}
@@ -2280,95 +2279,6 @@ MonoBehaviour:
   rb2d: {fileID: 1431405308}
   PauseButton: {fileID: 629239898}
   cam: {fileID: 740941784}
---- !u!60 &1431405307
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1431405303}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 2.97}
-    newSize: {x: 5.12, y: 5.12}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.3199999, y: -1.265}
-      - {x: 1.35, y: -1.285}
-      - {x: 1.5, y: -1.3349999}
-      - {x: 1.87, y: -1.345}
-      - {x: 2.07, y: -1.3149999}
-      - {x: 2.24, y: -1.285}
-      - {x: 2.46, y: -1.1949999}
-      - {x: 2.6299999, y: -1.0749999}
-      - {x: 2.78, y: -0.91499996}
-      - {x: 2.9299998, y: -0.645}
-      - {x: 3, y: -0.39499998}
-      - {x: 3, y: 0.315}
-      - {x: 2.99, y: 0.385}
-      - {x: 2.96, y: 0.525}
-      - {x: 2.9199998, y: 0.645}
-      - {x: 2.83, y: 0.84499997}
-      - {x: 2.6299999, y: 1.0749999}
-      - {x: 2.46, y: 1.185}
-      - {x: 2.33, y: 1.255}
-      - {x: 2.07, y: 1.3249999}
-      - {x: 1.86, y: 1.345}
-      - {x: 1.5, y: 1.3349999}
-      - {x: 1.4, y: 1.3149999}
-      - {x: 1.3199999, y: 1.275}
-      - {x: 0.69, y: 1.265}
-      - {x: 0.64, y: 1.385}
-      - {x: 0.59999996, y: 1.4649999}
-      - {x: 0.56, y: 1.485}
-      - {x: 0.39999998, y: 1.485}
-      - {x: 0.35999998, y: 1.4549999}
-      - {x: 0.35999998, y: 1.395}
-      - {x: 0.38, y: 1.285}
-      - {x: 0.39999998, y: 1.265}
-      - {x: -0.62, y: 1.265}
-      - {x: -0.63, y: 1.275}
-      - {x: -1.31, y: 1.3149999}
-      - {x: -1.77, y: 1.3249999}
-      - {x: -1.91, y: 1.3149999}
-      - {x: -2.25, y: 1.275}
-      - {x: -2.44, y: 1.235}
-      - {x: -2.82, y: 1.135}
-      - {x: -2.8999999, y: 1.055}
-      - {x: -2.96, y: 0.91499996}
-      - {x: -3, y: 0.66499996}
-      - {x: -3, y: -0.575}
-      - {x: -2.99, y: -0.66499996}
-      - {x: -2.95, y: -0.945}
-      - {x: -2.8999999, y: -1.055}
-      - {x: -2.81, y: -1.135}
-      - {x: -2.3899999, y: -1.235}
-      - {x: -2, y: -1.3149999}
-      - {x: -1.77, y: -1.3349999}
-      - {x: -1.55, y: -1.3249999}
-      - {x: -1.31, y: -1.3149999}
-      - {x: -0.97999996, y: -1.295}
-      - {x: -0.63, y: -1.275}
-      - {x: -0.62, y: -1.265}
-      - {x: 0.39, y: -1.265}
-      - {x: 0.35999998, y: -1.355}
-      - {x: 0.35999998, y: -1.4649999}
-      - {x: 0.39999998, y: -1.485}
-      - {x: 0.56, y: -1.485}
-      - {x: 0.61, y: -1.4549999}
-      - {x: 0.64, y: -1.385}
-      - {x: 0.69, y: -1.265}
 --- !u!50 &1431405308
 Rigidbody2D:
   serializedVersion: 4
@@ -2490,6 +2400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressBar: {fileID: 844752934}
+  boss: {fileID: 2107051608}
+  waitExit: 30
 --- !u!1 &1573665643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,7 +2882,7 @@ Transform:
   m_GameObject: {fileID: 2107051608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.2, y: -0.02, z: 53.04297}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6

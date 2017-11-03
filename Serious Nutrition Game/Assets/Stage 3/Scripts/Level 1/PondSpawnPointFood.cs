@@ -59,7 +59,7 @@ public class PondSpawnPointFood : MonoBehaviour {
                 {
                     state = Mstates.BUBBLING;
                     cycleCounter = 0;
-                    Anim.SetInteger("Rippling", 1);
+                    Anim.SetInteger("Ripple", 1);
                     Debug.Log("BUBBLING on " + this.name);
                 }
                 if (progressPoints >= 1f)
@@ -98,7 +98,7 @@ public class PondSpawnPointFood : MonoBehaviour {
                 }
                 else
                 {
-                    Anim.SetInteger("Rippling", 0);
+                    Anim.SetInteger("Ripple", 0);
                     SpawnedFood = Instantiate(foods[Random.Range(0, foods.Length)], transform.position, transform.rotation) as GameObject;
                     state = Mstates.FOODSPAWNED;
                     cycleCounter = 0;
@@ -118,7 +118,7 @@ public class PondSpawnPointFood : MonoBehaviour {
                 }
                 else if (cycleCounter >= minWaitSpawn)
                 {
-                    Anim.SetInteger("Rippling", 1);
+                    Anim.SetInteger("Ripple", 1);
                     state = Mstates.BUBBLING;
                     cycleCounter = 0;
                     Debug.Log("BUBBLING on " + this.name);
