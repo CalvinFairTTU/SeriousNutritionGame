@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarEats : MonoBehaviour {
 
-    //public GameObject ProgressBar;
+    public Slider progressBar;
 
     private float progressPoints;
 
@@ -32,10 +33,10 @@ public class CarEats : MonoBehaviour {
         }
         else if (col.tag == "GoodFood")
         {
-            progressPoints += 0.2f;
+            progressPoints += 0.05f;
             Debug.Log("progressPoints = " + progressPoints);
             col.gameObject.SetActive(false);
         }
-        
+        progressBar.value = progressPoints;
     }
 }
