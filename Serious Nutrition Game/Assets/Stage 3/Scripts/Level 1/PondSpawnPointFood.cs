@@ -144,52 +144,6 @@ public class PondSpawnPointFood : MonoBehaviour {
                 break;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //    if (SpawnedFood.Equals(null))
-        //    {
-        //        if (cycleCounter < WaitCyclesSpawn)
-        //        {
-        //            cycleCounter++;
-        //        }
-        //        else
-        //        {
-        //            SpawnedFood = Instantiate(foods[Random.Range(0, foods.Length)], transform.position, transform.rotation) as GameObject;
-        //            cycleCounter = 0;
-        //        }
-        //    }
-        //    else if (SpawnedFood.activeSelf == false)
-        //    {
-        //        Destroy(SpawnedFood);
-        //        cycleCounter = 0;
-        //    }
-        //    else
-        //    {
-        //        if (cycleCounter < WaitCyclesDestroy)
-        //        {
-        //            cycleCounter++;
-        //        }
-        //        else
-        //        {
-        //            Destroy(SpawnedFood);
-        //            cycleCounter = 0;
-        //        }
-        //    }
-        //}
     }
 }
 
