@@ -2483,7 +2483,7 @@ MonoBehaviour:
   progressBar: {fileID: 844752934}
   boss: {fileID: 2107051608}
   waitExit: 30
-  Audio: {fileID: 1431405307}
+  BumpWait: 20
   GoodSound: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   BadSound: {fileID: 8300000, guid: 79be64ae9f91a46f387ffafd52cac8b9, type: 3}
 --- !u!1 &1573665643
