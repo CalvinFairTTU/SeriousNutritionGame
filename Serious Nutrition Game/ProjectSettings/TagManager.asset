@@ -57,6 +57,9 @@ TagManager:
   - name: Background
     uniqueID: 4196603679
     locked: 0
+  - name: Foreground
+    uniqueID: 1422644535
+    locked: 0
   - name: NE Assets
     uniqueID: 1569499485
     locked: 0
@@ -69,9 +72,6 @@ TagManager:
   - name: Flash
     uniqueID: 1308299317
     locked: 0
-  - name: SE
+  - name: Background
     uniqueID: 1832332095
-    locked: 0
-  - name: Text
-    uniqueID: 1422644535
     locked: 0
