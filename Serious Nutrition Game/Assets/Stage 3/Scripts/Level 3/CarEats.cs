@@ -9,20 +9,23 @@ public class CarEats : MonoBehaviour {
     public Slider progressBar;
     public GameObject boss;
     public int waitExit;
-
+    public AudioClip GoodSound,BadSound;
+    
     private float progressPoints;
     private Transform BossTransform;
     private int cycleCounter;
     private Vector3 scaleTracker;
+    private AudioSource Audio;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         progressPoints = 0f;
         Debug.Log("progressPoints = " + progressPoints);
         cycleCounter = 0;
         BossTransform = boss.GetComponent<Transform>();
         scaleTracker = BossTransform.localScale;
+        Audio = gameObject.GetComponent<AudioSource>();
         Debug.Log("ScaleTracker = " + scaleTracker);
     }
 
@@ -33,6 +36,8 @@ public class CarEats : MonoBehaviour {
         {
             if (progressPoints > 0f)
             {
+                Audio.volume = 0.8f;
+                Audio.clip = BadSound;
                 progressPoints -= 0.05f;
             }
             else if (progressPoints < 0f)
@@ -40,9 +45,12 @@ public class CarEats : MonoBehaviour {
                 progressPoints = 0f;
             }
             Debug.Log("progressPoints = " + progressPoints);
+            Audio.Play();
         }
         else if (col.tag == "GoodFood")
         {
+            Audio.volume = 0.8f;
+            Audio.clip = GoodSound;
             progressPoints += 0.05f;
             Debug.Log("progressPoints = " + progressPoints);
             col.gameObject.SetActive(false);
@@ -52,6 +60,7 @@ public class CarEats : MonoBehaviour {
                 scaleTracker = BossTransform.localScale;
             }
             Debug.Log("ScaleTracker = " + scaleTracker);
+            Audio.Play();
         }
         progressBar.value = progressPoints;
     }
