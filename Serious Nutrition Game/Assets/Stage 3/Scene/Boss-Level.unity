@@ -332,6 +332,7 @@ MonoBehaviour:
   - {fileID: 1011951952435582, guid: 158c866c6541ed1459b317a035672de7, type: 2}
   player: {fileID: 1431405303}
   boss: {fileID: 2107051608}
+  minRangeSpawn: 5
 --- !u!1 &307447345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,6 +1751,7 @@ MonoBehaviour:
   - {fileID: 1011951952435582, guid: 158c866c6541ed1459b317a035672de7, type: 2}
   player: {fileID: 1431405303}
   boss: {fileID: 2107051608}
+  minRangeSpawn: 5
 --- !u!1 &1262373199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,6 +1861,7 @@ MonoBehaviour:
   - {fileID: 1011951952435582, guid: 158c866c6541ed1459b317a035672de7, type: 2}
   player: {fileID: 1431405303}
   boss: {fileID: 2107051608}
+  minRangeSpawn: 5
 --- !u!1 &1277326218
 GameObject:
   m_ObjectHideFlags: 0
@@ -2482,8 +2485,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 844752934}
   boss: {fileID: 2107051608}
-  waitExit: 30
-  BumpWait: 20
+  waitExit: 10
+  BumpWait: 10
   GoodSound: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   BadSound: {fileID: 8300000, guid: 79be64ae9f91a46f387ffafd52cac8b9, type: 3}
 --- !u!1 &1573665643
@@ -2822,6 +2825,7 @@ MonoBehaviour:
   - {fileID: 1011951952435582, guid: 158c866c6541ed1459b317a035672de7, type: 2}
   player: {fileID: 1431405303}
   boss: {fileID: 2107051608}
+  minRangeSpawn: 5
 --- !u!1 &2042968656
 GameObject:
   m_ObjectHideFlags: 0

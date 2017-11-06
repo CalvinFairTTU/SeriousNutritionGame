@@ -21,13 +21,11 @@ public class CarEats : MonoBehaviour {
     void Start ()
     {
         progressPoints = 0f;
-        Debug.Log("progressPoints = " + progressPoints);
         cycleCounter = 0;
         BossTransform = boss.GetComponent<Transform>();
         scaleTracker = BossTransform.localScale;
         Audio = gameObject.GetComponent<AudioSource>();
         bumpCycleCounter = 0;
-        Debug.Log("ScaleTracker = " + scaleTracker);
     }
 
     // Update is called once per frame
@@ -49,12 +47,10 @@ public class CarEats : MonoBehaviour {
                 }
                 Audio.Play();
                 bumpCycleCounter = BumpWait;
-                Debug.Log("progressPoints = " + progressPoints + " bumpCycleCounter = " + bumpCycleCounter);
             }
             else
             {
                 bumpCycleCounter--;
-                Debug.Log(" bumpCycleCounter = " + bumpCycleCounter);
             }
             
         }
@@ -63,15 +59,14 @@ public class CarEats : MonoBehaviour {
             Audio.volume = 0.8f;
             Audio.clip = GoodSound;
             progressPoints += 0.05f;
-            Debug.Log("progressPoints = " + progressPoints);
             col.gameObject.SetActive(false);
             if (scaleTracker.x > 0.2)
             {
                 BossTransform.localScale -= new Vector3(0.1f, 0.1f, 0);
                 scaleTracker = BossTransform.localScale;
             }
-            Debug.Log("ScaleTracker = " + scaleTracker);
             Audio.Play();
+            bumpCycleCounter = 0;
         }
         progressBar.value = progressPoints;
     }

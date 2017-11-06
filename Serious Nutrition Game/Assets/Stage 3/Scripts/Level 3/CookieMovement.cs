@@ -22,7 +22,6 @@ public class CookieMovement : MonoBehaviour {
         RIGHTDOWN,
         UP,
         DOWN,
-        BUMPED,
         RANDOM
     };
        
@@ -36,22 +35,35 @@ public class CookieMovement : MonoBehaviour {
     private cookieState[] UP =          { cookieState.RANDOM,   cookieState.RANDOM,     cookieState.RIGHTUP,    cookieState.LEFTUP      };
     private cookieState[] DOWN =        { cookieState.RANDOM,   cookieState.RANDOM,     cookieState.RIGHTDOWN,  cookieState.LEFTDOWN    };
 
+    private cookieState[] general = { cookieState.LEFT, cookieState.LEFTUP, cookieState.LEFTDOWN, cookieState.RIGHT, cookieState.RIGHTUP, cookieState.RIGHTDOWN, cookieState.UP, cookieState.DOWN };
+    private cookieState[] forLEFTonLeftWall = { cookieState.RIGHT, cookieState.RIGHTUP, cookieState.RIGHTDOWN, cookieState.RIGHT, cookieState.RIGHTUP, cookieState.RIGHTDOWN, cookieState.RIGHT, cookieState.RIGHT };
+    private cookieState[] forLEFTonRightWall = { cookieState.LEFT, cookieState.LEFTUP, cookieState.LEFTDOWN, cookieState.LEFT, cookieState.LEFTUP, cookieState.LEFTDOWN, cookieState.LEFT, cookieState.LEFT };
+    private cookieState[] forRIGHTonLeftWall = { cookieState.RIGHT, cookieState.RIGHTUP, cookieState.RIGHTDOWN, cookieState.RIGHT, cookieState.RIGHTUP, cookieState.RIGHTDOWN, cookieState.RIGHT, cookieState.RIGHT };
+    private cookieState[] forRIGHTonRightWall = { cookieState.LEFT, cookieState.LEFTUP, cookieState.LEFTDOWN, cookieState.LEFT, cookieState.LEFTUP, cookieState.LEFTDOWN, cookieState.LEFT, cookieState.LEFT };
+    private cookieState[] forUPonLowerWall = { cookieState.LEFTUP, cookieState.LEFTUP, cookieState.LEFTUP, cookieState.RIGHTUP, cookieState.RIGHTUP, cookieState.RIGHTUP, cookieState.UP, cookieState.UP };
+    private cookieState[] forUPonUpperWall = { cookieState.LEFTDOWN, cookieState.LEFTDOWN, cookieState.LEFTDOWN, cookieState.RIGHTDOWN, cookieState.RIGHTDOWN, cookieState.RIGHTDOWN, cookieState.DOWN, cookieState.DOWN };
+    private cookieState[] forDOWNonLowerWall = { cookieState.LEFTUP, cookieState.LEFTUP, cookieState.LEFTUP, cookieState.RIGHTUP, cookieState.RIGHTUP, cookieState.RIGHTUP, cookieState.UP, cookieState.UP };
+    private cookieState[] forDOWNonUpperWall = { cookieState.LEFTDOWN, cookieState.LEFTDOWN, cookieState.LEFTDOWN, cookieState.RIGHTDOWN, cookieState.RIGHTDOWN, cookieState.RIGHTDOWN, cookieState.DOWN, cookieState.DOWN };
+
+    private cookieState[] selector;
+   
     // Use this for initialization
     void Start ()
     {
         this.state = cookieState.INITIAL;
         speed2 = speed / Mathf.Sqrt(2);
+        selector = general;
     }
 	
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-        //Debug.Log("state = " + this.state);
+        Debug.Log("state = " + state);
         switch(this.state)
         {
             case cookieState.INITIAL:
-                randomNum = Random.Range(0, 7);
-                SetStateFromRandom(randomNum);
+                randomNum = (int)Random.Range(0, 7.999999f);
+                SetStateFromRandom(randomNum,selector);
                 break;
             case cookieState.LEFT:
                 rb2d.velocity = Vector2.left * speed;
@@ -77,15 +89,9 @@ public class CookieMovement : MonoBehaviour {
             case cookieState.DOWN:
                 rb2d.velocity = Vector2.down * speed;
                 break;
-            case cookieState.BUMPED:
-                randomNum = (int)Random.Range(0, 7.999999f);
-                //Debug.Log("randonNum = " + randomNum);
-                SetStateFromRandom(randomNum);
-                break;
             case cookieState.RANDOM:
                 randomNum = (int)Random.Range(0, 7.999999f);
-                //Debug.Log("randonNum = " + randomNum);
-                SetStateFromRandom(randomNum);
+                SetStateFromRandom(randomNum,selector);
                 break;
             default:
                 break;
@@ -99,7 +105,7 @@ public class CookieMovement : MonoBehaviour {
        {
             AvoidPlayer(col.gameObject);
        }
-        else
+        else if (col.tag != "GoodFood")
         {
             switch (col.tag)
             {
@@ -118,60 +124,45 @@ public class CookieMovement : MonoBehaviour {
             switch(state)
             {
                 case cookieState.LEFT: state = LEFT[colIndex];
+                    if (colIndex == 2) { selector = forLEFTonLeftWall; }
+                    else if (colIndex == 3) { selector = forLEFTonRightWall; }
+                    else { selector = general; }
                     break;
                 case cookieState.LEFTUP: state = LEFTUP[colIndex];
                     break;
                 case cookieState.LEFTDOWN: state = LEFTDOWN[colIndex];
                     break;
                 case cookieState.RIGHT: state = RIGHT[colIndex];
+                    if (colIndex == 2) { selector = forRIGHTonLeftWall; }
+                    else if (colIndex == 3) { selector = forRIGHTonRightWall; }
+                    else { selector = general; }
                     break;
                 case cookieState.RIGHTUP: state = RIGHTUP[colIndex];
                     break;
                 case cookieState.RIGHTDOWN: state = RIGHTDOWN[colIndex];
                     break;
                 case cookieState.UP: state = UP[colIndex];
+                    if (colIndex == 0) { selector = forUPonLowerWall; }
+                    else if (colIndex == 1) { selector = forUPonUpperWall; }
+                    else { selector = general; }
                     break;
                 case cookieState.DOWN: state = DOWN[colIndex];
+                    if (colIndex == 0) { selector = forDOWNonLowerWall; }
+                    else if (colIndex == 1) { selector = forDOWNonUpperWall; }
+                    else { selector = general; }
                     break;
                 default: state = cookieState.RANDOM;
+                    selector = general;
                     break;
             }
         }
+        Debug.Log("collision with: " + col.tag + " state = " + state);
     }
 
-    private void SetStateFromRandom(int num)
+    private void SetStateFromRandom(int num, cookieState[] selection)
     {
-        switch(num)
-        {
-            case 0:
-                this.state = cookieState.LEFT;
-                break;
-            case 1:
-                this.state = cookieState.LEFTUP;
-                break;
-            case 2:
-                this.state = cookieState.LEFTDOWN;
-                break;
-            case 3:
-                this.state = cookieState.RIGHT;
-                break;
-            case 4:
-                this.state = cookieState.RIGHTUP;
-                break;
-            case 5:
-                this.state = cookieState.RIGHTDOWN;
-                break;
-            case 6:
-                this.state = cookieState.UP;
-                break;
-            case 7:
-                this.state = cookieState.DOWN;
-                break;
-            default:
-                this.state = cookieState.BUMPED;
-                break;
-        }
-        //Debug.Log("New State = " + this.state);
+        this.state = selection[num];
+        Debug.Log("selector = " + selector + " num = " + num + " selector[num] = " + this.state);
         return;
     }
     
