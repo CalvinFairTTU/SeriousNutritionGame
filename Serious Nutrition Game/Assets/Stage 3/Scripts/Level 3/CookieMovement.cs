@@ -58,7 +58,6 @@ public class CookieMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-        Debug.Log("state = " + state);
         switch(this.state)
         {
             case cookieState.INITIAL:
@@ -156,13 +155,11 @@ public class CookieMovement : MonoBehaviour {
                     break;
             }
         }
-        Debug.Log("collision with: " + col.tag + " state = " + state);
     }
 
     private void SetStateFromRandom(int num, cookieState[] selection)
     {
         this.state = selection[num];
-        Debug.Log("selector = " + selector + " num = " + num + " selector[num] = " + this.state);
         return;
     }
     
