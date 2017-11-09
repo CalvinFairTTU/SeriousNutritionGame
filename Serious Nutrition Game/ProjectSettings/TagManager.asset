@@ -72,6 +72,9 @@ TagManager:
   - name: Player
     uniqueID: 2616673981
     locked: 0
+  - name: Food
+    uniqueID: 122026991
+    locked: 0
   - name: Flash
     uniqueID: 1308299317
     locked: 0
