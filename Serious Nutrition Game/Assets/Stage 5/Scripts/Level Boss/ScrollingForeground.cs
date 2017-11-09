@@ -6,8 +6,19 @@ public class ScrollingForeground : MonoBehaviour {
 
     public float speed = 0.3f;
 
+	private bool move = false;
+	private Collider2D colObj;
+
     void OnTriggerStay2D(Collider2D col) {
-        col.transform.Translate(-speed * Time.deltaTime, 0, 0);
-        col.transform.Translate(0, .001f, 0);
-    }
+		move = true;
+
+		colObj = col;
+	}
+
+	void Update()
+	{
+		if (move) {
+			colObj.transform.Translate(-speed* Time.deltaTime, 0, 0);
+		}
+	}
 }

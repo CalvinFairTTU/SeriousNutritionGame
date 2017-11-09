@@ -45,3 +45,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1229114901
+    locked: 0
+  - name: Foreground
+    uniqueID: 2037914233
+    locked: 0
+  - name: Foods
+    uniqueID: 4133033223
+    locked: 0
