@@ -35,15 +35,15 @@ public class CookieMovement : MonoBehaviour {
     private cookieState[] UP =          { cookieState.RANDOM,   cookieState.RANDOM,     cookieState.RIGHTUP,    cookieState.LEFTUP      };
     private cookieState[] DOWN =        { cookieState.RANDOM,   cookieState.RANDOM,     cookieState.RIGHTDOWN,  cookieState.LEFTDOWN    };
 
-    private cookieState[] general = { cookieState.LEFT, cookieState.LEFTUP, cookieState.LEFTDOWN, cookieState.RIGHT, cookieState.RIGHTUP, cookieState.RIGHTDOWN, cookieState.UP, cookieState.DOWN };
-    private cookieState[] forLEFTonLeftWall = { cookieState.RIGHT, cookieState.RIGHTUP, cookieState.RIGHTDOWN, cookieState.RIGHT, cookieState.RIGHTUP, cookieState.RIGHTDOWN, cookieState.RIGHT, cookieState.RIGHT };
-    private cookieState[] forLEFTonRightWall = { cookieState.LEFT, cookieState.LEFTUP, cookieState.LEFTDOWN, cookieState.LEFT, cookieState.LEFTUP, cookieState.LEFTDOWN, cookieState.LEFT, cookieState.LEFT };
-    private cookieState[] forRIGHTonLeftWall = { cookieState.RIGHT, cookieState.RIGHTUP, cookieState.RIGHTDOWN, cookieState.RIGHT, cookieState.RIGHTUP, cookieState.RIGHTDOWN, cookieState.RIGHT, cookieState.RIGHT };
-    private cookieState[] forRIGHTonRightWall = { cookieState.LEFT, cookieState.LEFTUP, cookieState.LEFTDOWN, cookieState.LEFT, cookieState.LEFTUP, cookieState.LEFTDOWN, cookieState.LEFT, cookieState.LEFT };
-    private cookieState[] forUPonLowerWall = { cookieState.LEFTUP, cookieState.LEFTUP, cookieState.LEFTUP, cookieState.RIGHTUP, cookieState.RIGHTUP, cookieState.RIGHTUP, cookieState.UP, cookieState.UP };
-    private cookieState[] forUPonUpperWall = { cookieState.LEFTDOWN, cookieState.LEFTDOWN, cookieState.LEFTDOWN, cookieState.RIGHTDOWN, cookieState.RIGHTDOWN, cookieState.RIGHTDOWN, cookieState.DOWN, cookieState.DOWN };
-    private cookieState[] forDOWNonLowerWall = { cookieState.LEFTUP, cookieState.LEFTUP, cookieState.LEFTUP, cookieState.RIGHTUP, cookieState.RIGHTUP, cookieState.RIGHTUP, cookieState.UP, cookieState.UP };
-    private cookieState[] forDOWNonUpperWall = { cookieState.LEFTDOWN, cookieState.LEFTDOWN, cookieState.LEFTDOWN, cookieState.RIGHTDOWN, cookieState.RIGHTDOWN, cookieState.RIGHTDOWN, cookieState.DOWN, cookieState.DOWN };
+    private cookieState[] general =             { cookieState.LEFT,     cookieState.LEFTUP,     cookieState.LEFTDOWN,   cookieState.RIGHT,      cookieState.RIGHTUP,    cookieState.RIGHTDOWN,  cookieState.UP,     cookieState.DOWN    };
+    private cookieState[] forLEFTonLeftWall =   { cookieState.RIGHT,    cookieState.RIGHTUP,    cookieState.RIGHTDOWN,  cookieState.RIGHT,      cookieState.RIGHTUP,    cookieState.RIGHTDOWN,  cookieState.RIGHT,  cookieState.RIGHT   };
+    private cookieState[] forLEFTonRightWall =  { cookieState.LEFT,     cookieState.LEFTUP,     cookieState.LEFTDOWN,   cookieState.LEFT,       cookieState.LEFTUP,     cookieState.LEFTDOWN,   cookieState.LEFT,   cookieState.LEFT    };
+    private cookieState[] forRIGHTonLeftWall =  { cookieState.RIGHT,    cookieState.RIGHTUP,    cookieState.RIGHTDOWN,  cookieState.RIGHT,      cookieState.RIGHTUP,    cookieState.RIGHTDOWN,  cookieState.RIGHT,  cookieState.RIGHT   };
+    private cookieState[] forRIGHTonRightWall = { cookieState.LEFT,     cookieState.LEFTUP,     cookieState.LEFTDOWN,   cookieState.LEFT,       cookieState.LEFTUP,     cookieState.LEFTDOWN,   cookieState.LEFT,   cookieState.LEFT    };
+    private cookieState[] forUPonLowerWall =    { cookieState.LEFTUP,   cookieState.LEFTUP,     cookieState.LEFTUP,     cookieState.RIGHTUP,    cookieState.RIGHTUP,    cookieState.RIGHTUP,    cookieState.UP,     cookieState.UP      };
+    private cookieState[] forUPonUpperWall =    { cookieState.LEFTDOWN, cookieState.LEFTDOWN,   cookieState.LEFTDOWN,   cookieState.RIGHTDOWN,  cookieState.RIGHTDOWN,  cookieState.RIGHTDOWN,  cookieState.DOWN,   cookieState.DOWN    };
+    private cookieState[] forDOWNonLowerWall =  { cookieState.LEFTUP,   cookieState.LEFTUP,     cookieState.LEFTUP,     cookieState.RIGHTUP,    cookieState.RIGHTUP,    cookieState.RIGHTUP,    cookieState.UP,     cookieState.UP      };
+    private cookieState[] forDOWNonUpperWall =  { cookieState.LEFTDOWN, cookieState.LEFTDOWN,   cookieState.LEFTDOWN,   cookieState.RIGHTDOWN,  cookieState.RIGHTDOWN,  cookieState.RIGHTDOWN,  cookieState.DOWN,   cookieState.DOWN    };
 
     private cookieState[] selector;
    
