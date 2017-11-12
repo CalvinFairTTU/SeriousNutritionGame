@@ -44,7 +44,8 @@ public class DestroyingObjectsScript : MonoBehaviour
 			{
 				if (progressBar.value > 0f)
 				{
-					progressBar.value -= 0.05f;
+					Debug.Log("it hit");
+					progressBar.value += 0.5f;
 				}
 			}
 		}
@@ -58,4 +59,5 @@ public class DestroyingObjectsScript : MonoBehaviour
 			//gameObject.GetComponent<EdgeCollider2D> ().enabled = false;
 		}
 	}
+
 }

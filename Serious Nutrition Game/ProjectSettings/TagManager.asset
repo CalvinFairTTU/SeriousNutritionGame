@@ -5,26 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Good_Food
-  - Bad_Food
   - GoodFood
-<<<<<<< HEAD
   - BadFood
-=======
-  - For_Good_Food
-  - For_Bad_Food
-  - Chicken
-  - Fish
-  - Turkey
-  - Beef
-  - Pork
-  - CatchBox
-  - PauseController
-  - Background
-  - UpperWall
-  - LowerWall
-  - LeftWall
-  - RightWall
->>>>>>> master
+  - Bad_Food
+  - DestroyingZone
   layers:
   - Default
   - TransparentFX
@@ -61,13 +45,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 1229114901
-    locked: 0
-  - name: Foreground
-    uniqueID: 2037914233
-    locked: 0
-  - name: Foods
-    uniqueID: 4133033223
     locked: 0

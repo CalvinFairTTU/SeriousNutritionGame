@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrollingForeground : MonoBehaviour {
+public class ScrollingForeground : MonoBehaviour
+{
 
-    public float speed;
+	public float speed;
 
 	private bool move = false;
 	private Collider2D colObj;
 
-    void OnTriggerStay2D(Collider2D col) {
+	void OnTriggerStay2D(Collider2D col)
+	{
 		move = true;
 
 		colObj = col;
@@ -17,8 +19,16 @@ public class ScrollingForeground : MonoBehaviour {
 
 	void Update()
 	{
-		if (move) {
-			colObj.transform.Translate(-speed* Time.deltaTime, 0, 0);
+		if (move)
+		{
+			if (!colObj.gameObject.Equals(null))
+			{
+				colObj.transform.Translate(-speed * Time.deltaTime, 0, 0);
+			}
 		}
+
 	}
 }
+
+
+// The hazelnut is being accessed here after its being destroyed, figrue out a way aroundit by using Set Actie to Fasle
