@@ -11,18 +11,21 @@ public class PondSpawnPointFood : MonoBehaviour {
     public Slider progressBar;
     public GameObject player;
     public float minSpawnRange;
+    public GameObject Bubbler;
 
     private float progressPoints;
-    private int WaitCyclesSpawn, WaitCyclesDestroy, initialWait;
+    private int WaitCyclesSpawn, WaitCyclesDestroy, initialWait, WaitCyclesBubbling;
     private GameObject SpawnedFood;
     private int cycleCounter;
     private Vector2 trackPlayer;
     private float hypotenuse;
+    private Animator Anim;
 
     enum Mstates
     {
         INITIAL,
         NOFOOD,
+        BUBBLING,
         FOODSPAWNED,
         FINAL
     };
@@ -34,10 +37,12 @@ public class PondSpawnPointFood : MonoBehaviour {
     {
         state = Mstates.INITIAL;
         cycleCounter = 0;
-        initialWait = Random.Range(1, initialWaitRange);
+        initialWait = Random.Range(100, initialWaitRange);
         WaitCyclesSpawn = Random.Range(minWaitSpawn, maxWaitSpawn + 1);
         WaitCyclesDestroy = Random.Range(minWaitDestroy, maxWaitDestroy + 1);
+        WaitCyclesBubbling = Random.Range(100, 200 + 1);
         progressPoints = progressBar.value;
+        Anim = Bubbler.GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -52,9 +57,10 @@ public class PondSpawnPointFood : MonoBehaviour {
                 }
                 else
                 {
-                    SpawnedFood = Instantiate(foods[Random.Range(0, foods.Length)], transform.position, transform.rotation) as GameObject;
-                    state = Mstates.FOODSPAWNED;
+                    state = Mstates.BUBBLING;
                     cycleCounter = 0;
+                    Anim.SetInteger("Ripple", 1);
+                    Debug.Log("BUBBLING on " + this.name);
                 }
                 if (progressPoints >= 1f)
                 {
@@ -85,6 +91,24 @@ public class PondSpawnPointFood : MonoBehaviour {
                 }
                 break;
 
+            case Mstates.BUBBLING:
+                if (cycleCounter < WaitCyclesBubbling)
+                {
+                    cycleCounter++;
+                }
+                else
+                {
+                    Anim.SetInteger("Ripple", 0);
+                    SpawnedFood = Instantiate(foods[Random.Range(0, foods.Length)], transform.position, transform.rotation) as GameObject;
+                    state = Mstates.FOODSPAWNED;
+                    cycleCounter = 0;
+                }
+                if (progressPoints >= 1f)
+                {
+                    state = Mstates.FINAL;
+                }
+                break;
+
             case Mstates.NOFOOD:
                 trackPlayer = new Vector2(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y);
                 hypotenuse = Mathf.Sqrt((trackPlayer.x * trackPlayer.x) + (trackPlayer.y * trackPlayer.y));
@@ -94,9 +118,10 @@ public class PondSpawnPointFood : MonoBehaviour {
                 }
                 else if (cycleCounter >= minWaitSpawn)
                 {
-                    SpawnedFood = Instantiate(foods[Random.Range(0, foods.Length)], transform.position, transform.rotation) as GameObject;
-                    state = Mstates.FOODSPAWNED;
+                    Anim.SetInteger("Ripple", 1);
+                    state = Mstates.BUBBLING;
                     cycleCounter = 0;
+                    Debug.Log("BUBBLING on " + this.name);
                 }
                 if (progressPoints >= 1f)
                 {
@@ -119,52 +144,6 @@ public class PondSpawnPointFood : MonoBehaviour {
                 break;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //    if (SpawnedFood.Equals(null))
-        //    {
-        //        if (cycleCounter < WaitCyclesSpawn)
-        //        {
-        //            cycleCounter++;
-        //        }
-        //        else
-        //        {
-        //            SpawnedFood = Instantiate(foods[Random.Range(0, foods.Length)], transform.position, transform.rotation) as GameObject;
-        //            cycleCounter = 0;
-        //        }
-        //    }
-        //    else if (SpawnedFood.activeSelf == false)
-        //    {
-        //        Destroy(SpawnedFood);
-        //        cycleCounter = 0;
-        //    }
-        //    else
-        //    {
-        //        if (cycleCounter < WaitCyclesDestroy)
-        //        {
-        //            cycleCounter++;
-        //        }
-        //        else
-        //        {
-        //            Destroy(SpawnedFood);
-        //            cycleCounter = 0;
-        //        }
-        //    }
-        //}
     }
 }
 

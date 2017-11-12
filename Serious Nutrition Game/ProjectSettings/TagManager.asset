@@ -7,7 +7,24 @@ TagManager:
   - Good_Food
   - Bad_Food
   - GoodFood
+<<<<<<< HEAD
   - BadFood
+=======
+  - For_Good_Food
+  - For_Bad_Food
+  - Chicken
+  - Fish
+  - Turkey
+  - Beef
+  - Pork
+  - CatchBox
+  - PauseController
+  - Background
+  - UpperWall
+  - LowerWall
+  - LeftWall
+  - RightWall
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
