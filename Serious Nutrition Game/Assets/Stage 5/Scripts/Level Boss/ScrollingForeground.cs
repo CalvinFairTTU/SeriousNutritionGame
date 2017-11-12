@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScrollingForeground : MonoBehaviour {
 
-    public float speed = 0.3f;
+    public float speed;
 
 	private bool move = false;
 	private Collider2D colObj;
