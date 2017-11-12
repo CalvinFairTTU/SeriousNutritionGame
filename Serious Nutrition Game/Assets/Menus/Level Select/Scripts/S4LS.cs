@@ -4,21 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class S3LS : MonoBehaviour {
+public class S4LS : MonoBehaviour {
 
-	public void playLevelOne()
+    public void playLevelOne()
     {
         SceneManager.LoadSceneAsync("Frog-In-The-Pond");
     }
 
     public void playLevelTwo()
     {
-        SceneManager.LoadSceneAsync("Meat-Market-Sort");
+        SceneManager.LoadSceneAsync("Level2");
     }
 
     public void playLevelThree()
     {
-        SceneManager.LoadSceneAsync("Boss-Level");
+        SceneManager.LoadSceneAsync("Level3");
     }
 
     public void back()
