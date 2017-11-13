@@ -17,6 +17,11 @@ TagManager:
   - Pork
   - CatchBox
   - PauseController
+  - Background
+  - UpperWall
+  - LowerWall
+  - LeftWall
+  - RightWall
   layers:
   - Default
   - TransparentFX
