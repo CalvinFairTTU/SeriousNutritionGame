@@ -34,6 +34,7 @@ public class ActiveFood : MonoBehaviour {
 
     void OnMouseDown ()
     {
+        this.name = "slapped";
         gameAudio.volume = 0.8f;
 
         if (this.tag == "GoodFood")
@@ -41,14 +42,14 @@ public class ActiveFood : MonoBehaviour {
             gameAudio.clip = goodSound;
 
             if (progressPoints < 1f)
-                progressPoints += 0.05f;
+                progressPoints += 0.10f;
         }
         else if (this.tag == "BadFood")
         {
             gameAudio.clip = badSound;
 
             if (progressPoints > 0f)
-                progressPoints -= 0.05f;
+                progressPoints -= 0.10f;
         }
 
         gameAudio.Play();
@@ -61,5 +62,11 @@ public class ActiveFood : MonoBehaviour {
         {
             //this.GetComponent<WinLevel>().wi
         }
+    }
+
+    void OnDestroy ()
+    {
+        if (tmp != null)
+            Destroy(tmp);
     }
 }

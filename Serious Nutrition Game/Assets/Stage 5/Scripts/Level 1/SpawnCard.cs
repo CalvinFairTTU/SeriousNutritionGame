@@ -39,8 +39,12 @@ public class SpawnCard : MonoBehaviour {
 	void Update () {
 		if (turn == Turns.ComputerTurn)
         {
-            foodIndex = Random.Range(0, 12);
-            activeFood = Instantiate(foods[foodIndex], spawnPoint.position, spawnPoint.rotation);
+            if (activeFood != null)
+            {
+                Destroy(activeFood);
+            }
+
+            SpawnFood();
             turn = Turns.ActiveFromComputer;
             StartCoroutine(Wait());
         }
@@ -55,11 +59,16 @@ public class SpawnCard : MonoBehaviour {
                     Destroy(activeFood);
             }
 
-            foodIndex = Random.Range(0, 12);
-            activeFood = Instantiate(foods[foodIndex], spawnPoint.position, spawnPoint.rotation);
+            SpawnFood();
             turn = Turns.ActiveFromPlayer;
             StartCoroutine(Wait());
         }
+    }
+
+    void SpawnFood ()
+    {
+        foodIndex = Random.Range(0, 12);
+        activeFood = Instantiate(foods[foodIndex], spawnPoint.position, spawnPoint.rotation);
     }
 
     IEnumerator Wait ()
@@ -78,12 +87,11 @@ public class SpawnCard : MonoBehaviour {
         }
         else if(turn == Turns.ActiveFromComputer)
         {
-            yield return new WaitForSeconds(2f);
+            turn = Turns.PlayerTurn;
+            yield return new WaitForSeconds(5f);
 
             if (activeFood != null)
                 StartCoroutine(ComputerSlap());
-            
-            turn = Turns.PlayerTurn;
         }
 
         yield return null;
@@ -93,29 +101,30 @@ public class SpawnCard : MonoBehaviour {
     {
         if (Random.Range(0, 3) == 0)
         {
-            if (activeFood != null)
+            if (activeFood != null && activeFood.name != "slapped")
             {
                 tmp = Instantiate(computerSlap, new Vector3(3.89f, 1), activeFood.transform.rotation);
                 yield return new WaitForSeconds(1f);
                 Destroy(tmp);
 
-                yield return new WaitForSeconds(2f);
-                if(activeFood != null)
-                    Destroy(activeFood);
-
-                if (activeFood.tag == "GoodFood")
+                if (activeFood != null && activeFood.tag == "GoodFood")
                 {
                     gameAudio.clip = badSound;
 
                     if (progressPoints > 0f)
-                        progressPoints -= 0.05f;
+                        progressPoints -= 0.10f;
                 }
-                else if (activeFood.tag == "BadFood")
+                else if (activeFood != null &&  activeFood.tag == "BadFood")
                 {
                     gameAudio.clip = goodSound;
 
                     if (progressPoints < 1f)
-                        progressPoints += 0.05f;
+                        progressPoints += 0.10f;
+                }
+
+                if (activeFood != null)
+                {
+                    Destroy(activeFood);
                 }
 
                 gameAudio.Play();
