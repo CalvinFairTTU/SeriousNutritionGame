@@ -422,12 +422,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 228990159}
-        m_MethodName: openSettings
+      - m_Target: {fileID: 228990158}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -492,11 +492,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 228990158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: cd4d6a0b66e61e545aaa68488ef227e7, type: 3}
-=======
-  m_Script: {fileID: 11500000, guid: e46ff689235140149874c6adfa1cf3d8, type: 3}
->>>>>>> master
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
