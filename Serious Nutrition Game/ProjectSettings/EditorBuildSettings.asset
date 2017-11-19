@@ -8,15 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Menus/MainMenu.unity
     guid: d43b07ecf28f7144c919234ccab971f6
-  - enabled: 0
-    path: Assets/Scenes/Level_Selector.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Demo.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Level1.unity
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Menus/Level Select/S1LS.unity
     guid: 5fdbc43aef47fc34c8d8253707f32249
@@ -41,18 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Stage 3/Scene/Frog-In-The-Pond.unity
     guid: 2013b09160f1f884dac137d126019d49
-  - enabled: 0
-    path: Assets/Menus/MainMenu.unity
-    guid: d43b07ecf28f7144c919234ccab971f6
-  - enabled: 0
-    path: Assets/Scenes/Level_Selector.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Demo.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Level1.unity
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Menus/Level Select/S1LS.unity
     guid: 5fdbc43aef47fc34c8d8253707f32249
@@ -80,9 +59,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Stage 3/Scene/Meat-Market-Sort.unity
     guid: feb5b0697a0072242acb2c7ec71c1413
-  - enabled: 0
-    path: 
-    guid: 8ce93f44f1a32f84193f705fc4764c71
   - enabled: 1
     path: Assets/Stage 3/Scene/Boss-Level.unity
-    guid: 34f17409261592c46b71ca410a473b12
+    guid: 8a6945e714f478c449dac136c6b17459
