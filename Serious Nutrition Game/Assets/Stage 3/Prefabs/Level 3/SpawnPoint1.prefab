@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4485018586745548}
-  - component: {fileID: 114770274214379864}
   - component: {fileID: 212949388753661750}
+  - component: {fileID: 114913684140293388}
   m_Layer: 0
   m_Name: SpawnPoint1
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114770274214379864
+--- !u!114 &114913684140293388
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -49,18 +49,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1084154694689462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9c4d57805dc17e4a81c39c959e518bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 57b619fadcee89f469d02990b48f38ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foods: []
-  minWaitSpawn: 0
-  maxWaitSpawn: 0
-  minWaitDestroy: 0
-  maxWaitDestroy: 0
-  initialWaitRange: 0
-  progressBar: {fileID: 0}
+  foods:
+  - {fileID: 1011951952435582, guid: 3b386b3fcf72193408b22f041ea37fb0, type: 2}
+  - {fileID: 1228830487920626, guid: 9f76a047e1d9c4f4db079c3310840860, type: 2}
+  - {fileID: 1651508588669410, guid: 9f1d28d3e712b994ca51799a96f678ea, type: 2}
+  - {fileID: 1608052996170624, guid: 06692ae01b9e30741ad3783f0f415d5a, type: 2}
+  - {fileID: 1324499107284842, guid: e82dd904ae604f340b6762b3362a1e45, type: 2}
+  - {fileID: 1444988997260586, guid: 8bc9cdbffb730d14eacc93d9f30fe99a, type: 2}
+  - {fileID: 1378673379059978, guid: 0e73fb7db66a22e4580c9930a22a5a00, type: 2}
+  - {fileID: 1484353281812676, guid: 8c9f6db2e1e99d64980bcc6eacc185da, type: 2}
+  - {fileID: 1442899900881520, guid: 5912aed6b03a05b4287869ee5e684b0f, type: 2}
+  - {fileID: 1595076470947340, guid: 9a0b2bd0842176b48803f9d5e402dd23, type: 2}
   player: {fileID: 0}
-  minSpawnRange: 0
+  boss: {fileID: 0}
+  minRangeSpawn: 5
 --- !u!212 &212949388753661750
 SpriteRenderer:
   m_ObjectHideFlags: 1
