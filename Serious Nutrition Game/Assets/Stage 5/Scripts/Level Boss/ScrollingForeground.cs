@@ -19,7 +19,7 @@ public class ScrollingForeground : MonoBehaviour
 
 	void Update()
 	{
-		if (move)
+		if (move && colObj.isActiveAndEnabled)
 		{
 			if (!colObj.gameObject.Equals(null))
 			{
@@ -27,8 +27,7 @@ public class ScrollingForeground : MonoBehaviour
 			}
 		}
 
+
 	}
 }
 
-
-// The hazelnut is being accessed here after its being destroyed, figrue out a way aroundit by using Set Actie to Fasle

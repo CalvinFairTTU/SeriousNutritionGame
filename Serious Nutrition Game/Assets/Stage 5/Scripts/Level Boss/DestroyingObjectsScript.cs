@@ -50,7 +50,8 @@ public class DestroyingObjectsScript : MonoBehaviour
 			}
 		}
 
-		Destroy(food.gameObject);
+		food.gameObject.SetActive(false);
+
 
 		if (progressBar.value >= 1f)
 		{
