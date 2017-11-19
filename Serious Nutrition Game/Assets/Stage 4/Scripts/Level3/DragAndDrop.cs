@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
+/*
 public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 
 	public static GameObject itemBeingDragged;
@@ -32,20 +34,19 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
 	public void OnEndDrag (PointerEventData eventData)
 	{
-		/*
 		itemBeingDragged = null;
 		if (transform.parent != startParent) {
 			transform.position = startPosition;
 		}
-		*/
+
 	}
 
 	#endregion
 
 }
+*/
 
 
-/*
 public class DragAndDrop : MonoBehaviour {
 
 	void OnMouseDrag() {
@@ -54,4 +55,3 @@ public class DragAndDrop : MonoBehaviour {
 		transform.position = objPos;
 	}
 }
-*/
