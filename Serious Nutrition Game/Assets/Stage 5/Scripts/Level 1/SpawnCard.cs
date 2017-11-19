@@ -107,27 +107,27 @@ public class SpawnCard : MonoBehaviour {
                 yield return new WaitForSeconds(1f);
                 Destroy(tmp);
 
-                if (activeFood != null && activeFood.tag == "GoodFood")
-                {
-                    gameAudio.clip = badSound;
+                //if (activeFood != null && activeFood.tag == "GoodFood")
+                //{
+                //    gameAudio.clip = badSound;
 
-                    if (progressPoints > 0f)
-                        progressPoints -= 0.10f;
-                }
-                else if (activeFood != null &&  activeFood.tag == "BadFood")
-                {
-                    gameAudio.clip = goodSound;
+                //    if (progressPoints > 0f)
+                //        progressPoints -= 0.10f;
+                //}
+                //else if (activeFood != null &&  activeFood.tag == "BadFood")
+                //{
+                //    gameAudio.clip = goodSound;
 
-                    if (progressPoints < 1f)
-                        progressPoints += 0.10f;
-                }
+                //    if (progressPoints < 1f)
+                //        progressPoints += 0.10f;
+                //}
 
                 if (activeFood != null)
                 {
                     Destroy(activeFood);
                 }
 
-                gameAudio.Play();
+                //gameAudio.Play();
             }
         }
 
