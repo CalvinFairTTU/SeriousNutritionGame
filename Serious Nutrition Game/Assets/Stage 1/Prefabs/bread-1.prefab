@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212825838371873866}
   - component: {fileID: 61456142604797970}
   - component: {fileID: 50233532100010536}
-  - component: {fileID: 114362471887032598}
+  - component: {fileID: 114838508181516216}
   m_Layer: 0
   m_Name: bread-1
   m_TagString: Good_Food
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
---- !u!114 &114362471887032598
+--- !u!114 &114838508181516216
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1433529005648486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f49bcc11af9e15a438be0cb4ea9bc355, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c280132082854243b08e55b45cf4c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212825838371873866

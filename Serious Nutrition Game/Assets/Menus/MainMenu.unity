@@ -184,7 +184,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1099001336}
-        m_MethodName: loadStage3
+        m_MethodName: LoadStageThree
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -305,7 +305,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1099001336}
-        m_MethodName: quitGame
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -497,7 +497,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1099001336}
-        m_MethodName: loadStage1
+        m_MethodName: LoadStageOne
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -618,7 +618,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1099001336}
-        m_MethodName: loadStage4
+        m_MethodName: LoadStageFour
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -739,7 +739,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1099001336}
-        m_MethodName: loadStage2
+        m_MethodName: LoadStageTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -890,7 +890,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 397909530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b31dba0167e4a7b478f143b8e6132459, type: 3}
+  m_Script: {fileID: 11500000, guid: e02d5bb27aeb2ef49871502a7dec73fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &397909536
@@ -901,7 +901,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 397909530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b31dba0167e4a7b478f143b8e6132459, type: 3}
+  m_Script: {fileID: 11500000, guid: e02d5bb27aeb2ef49871502a7dec73fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &643752675
@@ -980,7 +980,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1099001336}
-        m_MethodName: loadStage5
+        m_MethodName: LoadStageFive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1099001335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b31dba0167e4a7b478f143b8e6132459, type: 3}
+  m_Script: {fileID: 11500000, guid: e02d5bb27aeb2ef49871502a7dec73fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1099001337
