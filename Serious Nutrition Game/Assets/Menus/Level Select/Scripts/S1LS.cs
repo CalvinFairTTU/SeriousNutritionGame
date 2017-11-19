@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class S3LS : MonoBehaviour {
 
-	public void playLevelOne()
+public class S1LS : MonoBehaviour {
+
+    public void playLevelOne()
     {
-        SceneManager.LoadSceneAsync("Frog-In-The-Pond");
+        SceneManager.LoadSceneAsync("level1");
     }
 
     public void playLevelTwo()
@@ -25,5 +26,4 @@ public class S3LS : MonoBehaviour {
     {
         SceneManager.LoadSceneAsync("MainMenu");
     }
-
 }
