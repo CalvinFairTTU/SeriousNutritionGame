@@ -667,7 +667,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1105421647}
+      - m_Target: {fileID: 0}
         m_MethodName: playBonusLevelOne
         m_Mode: 1
         m_Arguments:
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1105421646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93c2a627d5f3cef49a92a83f0d6fe6a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 985f4d33edcac7b458a5171d1826a3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1105421648

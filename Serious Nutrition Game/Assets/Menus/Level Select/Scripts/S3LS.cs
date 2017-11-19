@@ -8,22 +8,22 @@ public class S3LS : MonoBehaviour {
 
 	public void playLevelOne()
     {
-        SceneManager.LoadSceneAsync(8);
+        SceneManager.LoadSceneAsync("Frog-In-The-Pond");
     }
 
     public void playLevelTwo()
     {
-        SceneManager.LoadSceneAsync(17);
+        SceneManager.LoadSceneAsync("Meat-Market-Sort");
     }
 
     public void playLevelThree()
     {
-        SceneManager.LoadSceneAsync(18);
+        SceneManager.LoadSceneAsync("Boss-Level");
     }
 
     public void back()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 
 }

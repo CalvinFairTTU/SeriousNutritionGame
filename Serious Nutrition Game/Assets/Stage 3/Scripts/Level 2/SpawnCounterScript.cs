@@ -119,7 +119,7 @@ public class SpawnCounterScript : MonoBehaviour {
         }
         else if (progressPoints >= 1 && exitCounter >= waitExitCycles)
         {
-            SceneManager.LoadSceneAsync(3);
+            SceneManager.LoadSceneAsync("S3LS");
         }
     }
 }

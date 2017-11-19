@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212343166372154130}
   - component: {fileID: 61551189538018626}
   - component: {fileID: 50335708448124600}
-  - component: {fileID: 114654965600494990}
+  - component: {fileID: 114554504354690016}
   m_Layer: 0
   m_Name: ice-cream-9
   m_TagString: Bad_Food
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
---- !u!114 &114654965600494990
+--- !u!114 &114554504354690016
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1457267498637450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f49bcc11af9e15a438be0cb4ea9bc355, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c280132082854243b08e55b45cf4c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212343166372154130
