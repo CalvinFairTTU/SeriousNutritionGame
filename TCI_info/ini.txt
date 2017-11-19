@@ -1,0 +1,129 @@
+[Unity]
+title=Unity 2017.1.1f1
+description=Unity Editor
+url=MacEditorInstaller/Unity.pkg
+md5=9a20ebbc85005791cd6f12909f27081d
+install=true
+mandatory=false
+size=896239645
+installedsize=2340485000
+version=2017.1.1f1
+[Documentation]
+title=Documentation
+description=Unity 5 Documentation
+url=MacDocumentationInstaller/Documentation.pkg
+md5=bca3345b376b7a8499ed34b59aa08359
+install=true
+mandatory=false
+size=274749470
+installedsize=490109000
+[StandardAssets]
+title=Standard Assets
+description=Unity Standard Assets for easily getting started building projects in Unity
+url=MacStandardAssetsInstaller/StandardAssets.pkg
+md5=a534ae11281e24583fe4e021e87e10be
+install=true
+mandatory=false
+size=189323304
+installedsize=184838000
+[Example]
+title=Example Project
+description=Unity 5 Example Project
+url=MacExampleProjectInstaller/Examples.pkg
+md5=ef257a6a4ac944f2403a28bc1f785e94
+install=false
+mandatory=false
+size=309753882
+installedsize=520326000
+[Android]
+title=Android Build Support
+description=Allows building your Unity projects for the Android platform
+url=MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2017.1.1f1.pkg
+md5=bfb14b93ef8a0ae9ad815b5838b4ae23
+install=false
+mandatory=false
+size=159389720
+installedsize=395385000
+requires_unity=true
+[iOS]
+title=iOS Build Support
+description=Allows building your Unity projects for the iOS platform
+url=MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2017.1.1f1.pkg
+md5=c8a340ec46a0a2bbeb81507bf43005de
+install=false
+mandatory=false
+size=1136977955
+installedsize=2626078000
+requires_unity=true
+[AppleTV]
+title=tvOS Build Support
+description=Allows building your Unity projects for the AppleTV platform
+url=MacEditorTargetInstaller/UnitySetup-AppleTV-Support-for-Editor-2017.1.1f1.pkg
+md5=fcf71747340df8744e500d8036c619a4
+install=false
+mandatory=false
+size=389920801
+installedsize=955068000
+requires_unity=true
+[Linux]
+title=Linux Build Support
+description=Allows building your Unity projects for the Linux platform
+url=MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-2017.1.1f1.pkg
+md5=e15dbcaf156684569561f00705382032
+install=false
+mandatory=false
+size=193546272
+installedsize=547749000
+requires_unity=true
+[Samsung-TV]
+title=SamsungTV Build Support
+description=Allows building your Unity projects for the Samsung-TV platform
+url=MacEditorTargetInstaller/UnitySetup-Samsung-TV-Support-for-Editor-2017.1.1f1.pkg
+md5=d11c9f290acf5e9b157bdc040ceb7b90
+install=false
+mandatory=false
+size=42362913
+installedsize=119514000
+requires_unity=true
+[Tizen]
+title=Tizen Build Support
+description=Allows building your Unity projects for the Tizen platform
+url=MacEditorTargetInstaller/UnitySetup-Tizen-Support-for-Editor-2017.1.1f1.pkg
+md5=a03cebe48cd65b065246e88073ee9ed8
+install=false
+mandatory=false
+size=84666395
+installedsize=210290000
+requires_unity=true
+[WebGL]
+title=WebGL Build Support
+description=Allows building your Unity projects for the WebGL platform
+url=MacEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-2017.1.1f1.pkg
+md5=50874157d7a88432408a6f84b4e0556f
+install=false
+mandatory=false
+size=276408350
+installedsize=706035000
+requires_unity=true
+[Windows]
+title=Windows Build Support
+description=Allows building your Unity projects for the Windows platform
+url=MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-2017.1.1f1.pkg
+md5=0b2ce2c6e3d09b320d97dbc5a3265bf8
+install=false
+mandatory=false
+size=212191271
+installedsize=787134000
+requires_unity=true
+[Facebook-Games]
+title=Facebook Gameroom Build Support
+description=Allows building your Unity projects for the Facebook-Games platform
+url=MacEditorTargetInstaller/UnitySetup-Facebook-Games-Support-for-Editor-2017.1.1f1.pkg
+md5=a4786ddee9c3e20c322cfca765d60484
+install=false
+mandatory=false
+size=40986642
+installedsize=92984000
+requires_unity=true
+optsync_webgl=WebGL
+optsync_windows=Windows
