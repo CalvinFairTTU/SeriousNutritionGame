@@ -22,7 +22,11 @@ GameObject:
   - component: {fileID: 212675210111190346}
   - component: {fileID: 61974167698299344}
   - component: {fileID: 50894364505401266}
+<<<<<<< HEAD
   - component: {fileID: 114426354642507002}
+=======
+  - component: {fileID: 114476134358818162}
+>>>>>>> master
   m_Layer: 0
   m_Name: pretzel
   m_TagString: Good_Food
@@ -88,7 +92,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!114 &114426354642507002
+=======
+--- !u!114 &114476134358818162
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +104,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1740189676010624}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 93b4e41d691274640a4e4a149f61904c, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 2c280132082854243b08e55b45cf4c71, type: 3}
+>>>>>>> master
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212675210111190346

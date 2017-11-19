@@ -22,7 +22,11 @@ GameObject:
   - component: {fileID: 212226334065612450}
   - component: {fileID: 61642880480177252}
   - component: {fileID: 50357242146551544}
+<<<<<<< HEAD
   - component: {fileID: 114373743850734126}
+=======
+  - component: {fileID: 114678412477081758}
+>>>>>>> master
   m_Layer: 0
   m_Name: can
   m_TagString: Bad_Food
@@ -88,7 +92,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!114 &114373743850734126
+=======
+--- !u!114 &114678412477081758
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +104,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1406294672469832}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 93b4e41d691274640a4e4a149f61904c, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 2c280132082854243b08e55b45cf4c71, type: 3}
+>>>>>>> master
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212226334065612450
