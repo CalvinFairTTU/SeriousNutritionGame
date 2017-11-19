@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212571734913809726}
   - component: {fileID: 61474549074483284}
   - component: {fileID: 50217386100033712}
-  - component: {fileID: 114717024761952804}
+  - component: {fileID: 114261939193871348}
   m_Layer: 0
   m_Name: pizza-1
   m_TagString: Bad_Food
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
---- !u!114 &114717024761952804
+--- !u!114 &114261939193871348
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1338379612826938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f49bcc11af9e15a438be0cb4ea9bc355, type: 3}
+  m_Script: {fileID: 11500000, guid: 93b4e41d691274640a4e4a149f61904c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212571734913809726
