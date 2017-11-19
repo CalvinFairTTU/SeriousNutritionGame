@@ -50,6 +50,7 @@ public class DestroyingObjectsScript : MonoBehaviour
 			}
 		}
 
+		print("colided");
 		food.gameObject.SetActive(false);
 
 

@@ -5,29 +5,16 @@ using UnityEngine;
 public class ScrollingForeground : MonoBehaviour
 {
 
-	public float speed;
+	public float speed = 0.3f;
 
-	private bool move = false;
-	private Collider2D colObj;
 
 	void OnTriggerStay2D(Collider2D col)
 	{
-		move = true;
+		//col.transform.Translate(-speed * Time.deltaTime, 0, 0);
+		//col.transform.Translate(0, .001f, 0);
 
-		colObj = col;
-	}
+		Rigidbody2D body = col.attachedRigidbody;
 
-	void Update()
-	{
-		if (move && colObj.isActiveAndEnabled)
-		{
-			if (!colObj.gameObject.Equals(null))
-			{
-				colObj.transform.Translate(-speed * Time.deltaTime, 0, 0);
-			}
-		}
-
-
+		body.AddForce(Vector2.left, 0);
 	}
 }
-
