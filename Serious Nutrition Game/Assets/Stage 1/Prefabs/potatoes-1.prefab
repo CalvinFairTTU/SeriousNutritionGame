@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212938143040094332}
   - component: {fileID: 61739921214108670}
   - component: {fileID: 50662270275776188}
-  - component: {fileID: 114735172753758028}
+  - component: {fileID: 114882530778689052}
   m_Layer: 0
   m_Name: potatoes-1
   m_TagString: Good_Food
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
---- !u!114 &114735172753758028
+--- !u!114 &114882530778689052
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1845671535257308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f49bcc11af9e15a438be0cb4ea9bc355, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c280132082854243b08e55b45cf4c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212938143040094332
