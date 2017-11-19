@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212090124167471846}
   - component: {fileID: 61541136486384274}
   - component: {fileID: 50574063972345138}
-  - component: {fileID: 114066993920616914}
+  - component: {fileID: 114707925548466652}
   m_Layer: 0
   m_Name: candy
   m_TagString: Bad_Food
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
---- !u!114 &114066993920616914
+--- !u!114 &114707925548466652
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1113161342464940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f49bcc11af9e15a438be0cb4ea9bc355, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c280132082854243b08e55b45cf4c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212090124167471846
