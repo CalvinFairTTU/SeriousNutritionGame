@@ -5,11 +5,11 @@ using System.Collections;
 
 public class FrogTest1 {
 
-    [UnityTest]
-    public IEnumerator _Spawned_Food_Located_At_Spawn_Point()
-    {
-        var spawnpoint = new GameObject().AddComponent<SpawnPoint1>();
-    }
+    //[UnityTest]
+    //public IEnumerator _Spawned_Food_Located_At_Spawn_Point()
+    //{
+    //    var spawnpoint = new GameObject().AddComponent<SpawnPoint1>();
+    //}
 
 
 
