@@ -1,27 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using System.IO;
 
-public class PondSpawnPointFood : MonoBehaviour {
+
+public class TestablePondSpawnPoint : MonoBehaviour {
 
     public GameObject[] foods;
     public int minWaitSpawn, maxWaitSpawn, minWaitDestroy, maxWaitDestroy, initialWaitRange;
-    public Slider progressBar;
-    public GameObject player;
-    public float minSpawnRange;
-    public GameObject Bubbler;
+    //public Slider progressBar;
+    //public GameObject player;
+    //public float minSpawnRange;
+    //public GameObject Bubbler;
 
     private float progressPoints;
     private int WaitCyclesSpawn, WaitCyclesDestroy, initialWait, WaitCyclesBubbling;
     private GameObject SpawnedFood;
     private int cycleCounter;
-    private Vector2 trackPlayer;
-    private float hypotenuse;
-    private Animator Anim;
+    //private Vector2 trackPlayer;
+    //private float hypotenuse;
+    //private Animator Anim;
 
-    enum Mstates
+    public enum Mstates
     {
         INITIAL,
         NOFOOD,
@@ -30,10 +29,11 @@ public class PondSpawnPointFood : MonoBehaviour {
         FINAL
     };
 
-    private Mstates state;
+    public Mstates state;
 
+    
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         state = Mstates.INITIAL;
         cycleCounter = 0;
@@ -41,13 +41,13 @@ public class PondSpawnPointFood : MonoBehaviour {
         WaitCyclesSpawn = GetValueFromRange(minWaitSpawn, maxWaitSpawn + 1);
         WaitCyclesDestroy = GetValueFromRange(minWaitDestroy, maxWaitDestroy + 1);
         WaitCyclesBubbling = GetValueFromRange(100, 200 + 1);
-        progressPoints = progressBar.value;
-        Anim = Bubbler.GetComponent<Animator>();
+        progressPoints = 0;
+        //Anim = Bubbler.GetComponent<Animator>();
     }
 
     private void FixedUpdate()
     {
-        progressPoints = progressBar.value;
+        //progressPoints = progressBar.value;
         switch (state)
         {
             case Mstates.INITIAL:
@@ -59,7 +59,7 @@ public class PondSpawnPointFood : MonoBehaviour {
                 {
                     state = Mstates.BUBBLING;
                     cycleCounter = 0;
-                    Anim.SetInteger("Ripple", 1);
+                    //Anim.SetInteger("Ripple", 1);
                 }
                 if (progressPoints >= 1f)
                 {
@@ -97,7 +97,7 @@ public class PondSpawnPointFood : MonoBehaviour {
                 }
                 else
                 {
-                    Anim.SetInteger("Ripple", 0);
+                    //Anim.SetInteger("Ripple", 0);
                     SpawnedFood = Instantiate(foods[Random.Range(0, foods.Length)], transform.position, transform.rotation) as GameObject;
                     state = Mstates.FOODSPAWNED;
                     cycleCounter = 0;
@@ -109,15 +109,15 @@ public class PondSpawnPointFood : MonoBehaviour {
                 break;
 
             case Mstates.NOFOOD:
-                trackPlayer = new Vector2(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y);
-                hypotenuse = Mathf.Sqrt((trackPlayer.x * trackPlayer.x) + (trackPlayer.y * trackPlayer.y));
-                if (cycleCounter < WaitCyclesSpawn && hypotenuse >= minSpawnRange)
+                //trackPlayer = new Vector2(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y);
+                //hypotenuse = Mathf.Sqrt((trackPlayer.x * trackPlayer.x) + (trackPlayer.y * trackPlayer.y));
+                if (cycleCounter < WaitCyclesSpawn/* && hypotenuse >= minSpawnRange*/)
                 {
                     cycleCounter++;
                 }
                 else if (cycleCounter >= minWaitSpawn)
                 {
-                    Anim.SetInteger("Ripple", 1);
+                    //Anim.SetInteger("Ripple", 1);
                     state = Mstates.BUBBLING;
                     cycleCounter = 0;
                 }
@@ -148,6 +148,18 @@ public class PondSpawnPointFood : MonoBehaviour {
     {
         return (int)Random.Range(lowerBound, upperBound); ;
     }
+
+    public int getWaitCycleSpawn()
+    {
+        return WaitCyclesSpawn;
+    }
+    public void setWaitCycleSpawn(int value)
+    {
+        this.WaitCyclesSpawn = value;
+    }
+    public GameObject getSpawnedFood()
+    {
+        return this.SpawnedFood;
+    }
+    
 }
-
-
