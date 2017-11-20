@@ -11,37 +11,42 @@ public class FrogTest1 {
     {
         var prefabSP = new GameObject().AddComponent<TestablePondSpawnPoint>();
         yield return null;
-        Assert.GreaterOrEqual(prefabSP.getWaitCycleSpawn(), prefabSP.minWaitSpawn);
+        Debug.Log("WaitCycleSpawn = " + prefabSP.timer.getWaitCycleSpawn());
+        Debug.Log("minWaitCycleSpawn = " + prefabSP.timer.getMinWaitCycleSpawn());
+        Debug.Log("maxWaitCycleSpawn = " + prefabSP.timer.getMaxWaitCycleSpawn());
+        Assert.GreaterOrEqual(prefabSP.timer.getWaitCycleSpawn(), prefabSP.timer.getMinWaitCycleSpawn());
     }
 
-    //[UnityTest]
-    //public IEnumerator _Spawned_Food_Located_At_X_Of_Spawn_Point()
-    //{
-    //    var prefabSP = new GameObject().AddComponent<TestablePondSpawnPoint>();
-
-    //    Debug.Log("Waiting");
-    //    yield return new WaitWhile(() => prefabSP.state != TestablePondSpawnPoint.Mstates.FOODSPAWNED);
-    //    Debug.Log("Done");
-
-    //    var spawnedfood = prefabSP.getSpawnedFood();
-    //    var x = prefabSP.transform.position.x;
-    //    var X = spawnedfood.transform.position.x;
-    //    Assert.AreEqual(x,X);
-    //}
-
     [UnityTest]
-    public IEnumerator _Spawned_Food_Located_At_Y_Of_Spawn_Point()
+    public IEnumerator _State_Is_Initial_At_Start()
     {
         var prefabSP = new GameObject().AddComponent<TestablePondSpawnPoint>();
-        var prefab = Resources.Load("Tests/Stage3/FrogLevel/TestObjects/testfoods/Bacon.prefab");
+        yield return null;
+        Assert.AreEqual(prefabSP.state, TestablePondSpawnPoint.Mstates.INITIAL);
+    }
 
-        var spawnedfood = new GameObject().AddComponent(prefab.GetType());
-        spawnedfood.transform.position = new Vector3(prefabSP.transform.position.x, prefabSP.transform.position.y,0);
+    [UnityTest]
+    public IEnumerator _State_Transition_To_Bubbling_After_Initial_Wait()
+    {
+        var prefabSP = new GameObject().AddComponent<TestablePondSpawnPoint>();
+        var state = prefabSP.state;
 
-        yield return new WaitForSeconds(1);
-        float y = prefabSP.transform.position.y;
-        float Y = spawnedfood.transform.position.y;
-        Assert.AreEqual(y, Y);
+        yield return new WaitUntil(()=> state != TestablePondSpawnPoint.Mstates.INITIAL);
+
+        Assert.AreEqual(state, TestablePondSpawnPoint.Mstates.BUBBLING);
+    }
+
+    [UnityTest]
+    public IEnumerator _State_Transition_To_FOODSPAWNED_After_Bubbling()
+    {
+        var prefabSP = new GameObject().AddComponent<TestablePondSpawnPoint>();
+        var state = prefabSP.state;
+        var spawnedfood = prefabSP.getSpawnedFood();
+
+        yield return new WaitUntil(()=> spawnedfood == true);
+        yield return null;
+
+        Assert.AreEqual(state, TestablePondSpawnPoint.Mstates.FOODSPAWNED);
     }
 
     [TearDown]

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212434667212522888}
   - component: {fileID: 114705079569622608}
   m_Layer: 0
-  m_Name: TestableSpawnPoint
+  m_Name: TestableSpawnPointPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,11 +54,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foods:
   - {fileID: 1011951952435582, guid: d1e26137744a8fe429bac7247bce39dc, type: 2}
-  minWaitSpawn: 50
-  maxWaitSpawn: 100
-  minWaitDestroy: 400
-  maxWaitDestroy: 500
-  initialWaitRange: 20
+  minWaitSpawn: 5
+  maxWaitSpawn: 10
+  minWaitDestroy: 40
+  maxWaitDestroy: 50
+  initialWaitRange: 5
   state: 0
 --- !u!212 &212434667212522888
 SpriteRenderer:
