@@ -150,9 +150,9 @@ MonoBehaviour:
   testStartedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 185191362}
-        m_MethodName: TestStarted
-        m_Mode: 0
+      - m_Target: {fileID: 185191361}
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: 
@@ -306,8 +306,8 @@ MonoBehaviour:
     sceneBased: 0
     originalScene: Assets/InitTestScene636467133149291869.unity
     bootstrapScene: Assets/InitTestScene636467630664281690.unity
-    resultFilePath: 
-    isBatchModeRun: 0
+    resultFilePath: Assets/test.log
+    isBatchModeRun: 1
 --- !u!4 &185191364
 Transform:
   m_ObjectHideFlags: 0
