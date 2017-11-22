@@ -17,15 +17,15 @@
         [UnityTest]
         public IEnumerator _WaitCycleSpawn_GE_to_MinWaitSpawn()
         {
-            var prefabSP = new GameObject().AddComponent<TestablePondSpawnPoint>();
+            var prefabSP = new GameObject("_WaitCycleSpawn_GE_to_MinWaitSpawn").AddComponent<TestablePondSpawnPoint>();
             yield return null;
             Assert.GreaterOrEqual(prefabSP.timer.getWaitCycleSpawn(), prefabSP.timer.getMinWaitCycleSpawn());
         }
 
         [UnityTest]
-        public IEnumerator _State_Is_Initial_At_Start()
+        public IEnumerator _State_Is_INITIAL_At_Start()
         {
-            var prefabSP1 = new GameObject().AddComponent<TestablePondSpawnPoint>();
+            var prefabSP1 = new GameObject("_State_Is_INITIAL_At_Start").AddComponent<TestablePondSpawnPoint>();
             yield return null;
             Assert.AreEqual(prefabSP1.state, TestablePondSpawnPoint.Mstates.INITIAL);
         }
@@ -33,7 +33,7 @@
         [UnityTest]
         public IEnumerator _State_Transition_To_Bubbling_After_Initial_Wait()
         {
-            var prefabSP2 = new GameObject().AddComponent<TestablePondSpawnPoint>();
+            var prefabSP2 = new GameObject("_State_Transition_To_Bubbling_After_Initial_Wait").AddComponent<TestablePondSpawnPoint>();
             if (prefabSP2.state != TestablePondSpawnPoint.Mstates.INITIAL)
             {
                 prefabSP2.state = TestablePondSpawnPoint.Mstates.INITIAL;
@@ -42,19 +42,18 @@
             while (state != TestablePondSpawnPoint.Mstates.INITIAL)
             {
                 yield return null;
+                state = prefabSP2.state;
             }
-            yield return null;
             Assert.AreEqual(prefabSP2.state, TestablePondSpawnPoint.Mstates.BUBBLING);
         }
 
         [UnityTest]
         public IEnumerator _State_Transition_To_FOODSPAWNED_After_Bubbling()
         {
-            var prefabSP3 = new GameObject().AddComponent<TestablePondSpawnPoint>();
+            var prefabSP3 = new GameObject("_State_Transition_To_FOODSPAWNED_After_Bubbling").AddComponent<TestablePondSpawnPoint>();
 
             while (prefabSP3.getSpawnedFood() != true)
             {
-                yield return null;
                 yield return null;
             }
             Assert.AreEqual(prefabSP3.state, TestablePondSpawnPoint.Mstates.FOODSPAWNED);
@@ -66,6 +65,7 @@
             foreach (var go in GameObject.FindObjectsOfType<TestablePondSpawnPoint>())
             {
                 Object.DestroyImmediate(go);
+                Debug.Log("Object destroyed");
             }
             return;
         }

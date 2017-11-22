@@ -1,15 +1,17 @@
-﻿using UnityEngine;
+﻿namespace Test
+{
+
+using UnityEngine;
 using UnityEngine.TestTools;
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace FrogTest
-{
+
     [TestFixture]
     public class FrogTest1
     {
-
+        
         [UnityTest]
         public IEnumerator _WaitCycleSpawn_GE_to_MinWaitSpawn()
         {

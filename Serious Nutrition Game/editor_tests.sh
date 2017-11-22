@@ -6,8 +6,8 @@ D:/Programs/programs/Unity/Editor/Unity.exe \
 -projectPath=$(pwd) \
 -batchmode \
 -nographics \
--runEditorTests \
--editorTestsResultFile \
--editorTestsVerboseLog
+-executeMethod Test.FrogTest1._WaitCycleSpawn_GE_to_MinWaitSpawn \
+-resultFilePath=$(pwd)/temp.xml \
+-exit
 
 echo "Finished..."

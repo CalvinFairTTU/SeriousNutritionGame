@@ -11,7 +11,8 @@ hello_world \
 -exit \
 -batchmode \
 -logFile \
--executeMethod testNamespace.testComLineClass.printParamsMethod
+-executeMethod testNamespace.testComLineClass.printParamsMethod 
+
 
 
 
