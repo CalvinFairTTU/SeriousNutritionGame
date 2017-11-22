@@ -6,13 +6,14 @@ using System.Collections.Generic;
 
 namespace FrogTest
 {
+    [TestFixture]
     public class FrogTest1
     {
 
         [UnityTest]
         public IEnumerator _WaitCycleSpawn_GE_to_MinWaitSpawn()
         {
-            var prefabSP = new GameObject().AddComponent<TestablePondSpawnPoint>();
+            var prefabSP = new GameObject(" _WaitCycleSpawn_GE_to_MinWaitSpawn").AddComponent<TestablePondSpawnPoint>();
             yield return null;
             Debug.Log("WaitCycleSpawn = " + prefabSP.timer.getWaitCycleSpawn());
             Debug.Log("minWaitCycleSpawn = " + prefabSP.timer.getMinWaitCycleSpawn());
@@ -23,7 +24,7 @@ namespace FrogTest
         [UnityTest]
         public IEnumerator _State_Is_Initial_At_Start()
         {
-            var prefabSP = new GameObject().AddComponent<TestablePondSpawnPoint>();
+            var prefabSP = new GameObject("_State_Is_Initial_At_Start").AddComponent<TestablePondSpawnPoint>();
             yield return null;
             Assert.AreEqual(prefabSP.state, TestablePondSpawnPoint.Mstates.INITIAL);
         }
@@ -31,25 +32,22 @@ namespace FrogTest
         [UnityTest]
         public IEnumerator _State_Transition_To_Bubbling_After_Initial_Wait()
         {
-            var prefabSP = new GameObject().AddComponent<TestablePondSpawnPoint>();
-            var state = prefabSP.state;
+            var prefabSP = new GameObject("_State_Transition_To_Bubbling_After_Initial_Wait").AddComponent<TestablePondSpawnPoint>();
 
-            yield return new WaitUntil(() => state != TestablePondSpawnPoint.Mstates.INITIAL);
+            yield return new WaitUntil(() => prefabSP.state != TestablePondSpawnPoint.Mstates.INITIAL);
 
-            Assert.AreEqual(state, TestablePondSpawnPoint.Mstates.BUBBLING);
+            Assert.AreEqual(prefabSP.state, TestablePondSpawnPoint.Mstates.BUBBLING);
         }
 
         [UnityTest]
         public IEnumerator _State_Transition_To_FOODSPAWNED_After_Bubbling()
         {
-            var prefabSP = new GameObject().AddComponent<TestablePondSpawnPoint>();
-            var state = prefabSP.state;
-            var spawnedfood = prefabSP.getSpawnedFood();
+            var prefabSP = new GameObject("_State_Transition_To_FOODSPAWNED_After_Bubbling").AddComponent<TestablePondSpawnPoint>();
 
-            yield return new WaitUntil(() => spawnedfood == true);
+            yield return new WaitUntil(() => prefabSP.getSpawnedFood() == true);
             yield return null;
 
-            Assert.AreEqual(state, TestablePondSpawnPoint.Mstates.FOODSPAWNED);
+            Assert.AreEqual(prefabSP.state, TestablePondSpawnPoint.Mstates.FOODSPAWNED);
         }
 
         [TearDown]
@@ -58,6 +56,7 @@ namespace FrogTest
             foreach (var go in GameObject.FindObjectsOfType<TestablePondSpawnPoint>())
             {
                 Object.Destroy(go);
+                Debug.Log("Object Destroyed");
             }
             return;
         }
