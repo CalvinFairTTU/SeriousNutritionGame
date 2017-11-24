@@ -9,38 +9,44 @@
     [TestFixture]
     public class FrogTestC
     {
+        public GameObject prefabSP2;
+        public TestablePondSpawnPoint script;
+
         public FrogTestC()
         {
 
         }
 
-        [UnityTest]
-        public IEnumerator _State_Transition_To_BUBBLING_After_Initial_Wait()
+        [SetUp]
+        public void PriorTo()
         {
-            GameObject prefabSP2 = new GameObject("_State_Transition_To_BUBBLING_After_Initial_Wait");
-            TestablePondSpawnPoint script = prefabSP2.AddComponent<TestablePondSpawnPoint>();
-
+            prefabSP2 = new GameObject("_State_Transition_To_BUBBLING_After_Initial_Wait");
+            script = prefabSP2.AddComponent<TestablePondSpawnPoint>();
             if (script.state != TestablePondSpawnPoint.Mstates.INITIAL)
             {
                 Debug.Log("In _State_Transition_To_BUBBLING_After_Initial_Wait: state = " + script.state);
                 script.state = TestablePondSpawnPoint.Mstates.INITIAL;
             }
-            var state = script.state;
-            while (state != TestablePondSpawnPoint.Mstates.INITIAL)
+        }
+
+        [UnityTest]
+        public IEnumerator _State_Transition_To_BUBBLING_After_Initial_Wait()
+        {
+            while (script.state == TestablePondSpawnPoint.Mstates.INITIAL)
             {
                 yield return null;
-                state = script.state;
             }
+            Debug.Log("state = " + script.state);
             Assert.AreEqual(script.state, TestablePondSpawnPoint.Mstates.BUBBLING);
         }
 
         [TearDown]
         public void TearDown()
         {
-            foreach (var go in GameObject.FindObjectsOfType<TestablePondSpawnPoint>())
+            foreach (var go in GameObject.FindObjectsOfType<GameObject>())
             {
                 Object.DestroyImmediate(go);
-                Debug.Log("Object destroyed");
+                Debug.Log("Object destroyed after _State_Transition_To_BUBBLING_After_Initial_Wait");
             }
             return;
         }
