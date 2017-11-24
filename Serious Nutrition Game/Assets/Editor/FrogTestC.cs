@@ -15,20 +15,23 @@
         }
 
         [UnityTest]
-        public IEnumerator _State_Transition_To_Bubbling_After_Initial_Wait()
+        public IEnumerator _State_Transition_To_BUBBLING_After_Initial_Wait()
         {
-            var prefabSP2 = new GameObject("_State_Transition_To_Bubbling_After_Initial_Wait").AddComponent<TestablePondSpawnPoint>();
-            if (prefabSP2.state != TestablePondSpawnPoint.Mstates.INITIAL)
+            GameObject prefabSP2 = new GameObject("_State_Transition_To_BUBBLING_After_Initial_Wait");
+            TestablePondSpawnPoint script = prefabSP2.AddComponent<TestablePondSpawnPoint>();
+
+            if (script.state != TestablePondSpawnPoint.Mstates.INITIAL)
             {
-                prefabSP2.state = TestablePondSpawnPoint.Mstates.INITIAL;
+                Debug.Log("In _State_Transition_To_BUBBLING_After_Initial_Wait: state = " + script.state);
+                script.state = TestablePondSpawnPoint.Mstates.INITIAL;
             }
-            var state = prefabSP2.state;
+            var state = script.state;
             while (state != TestablePondSpawnPoint.Mstates.INITIAL)
             {
                 yield return null;
-                state = prefabSP2.state;
+                state = script.state;
             }
-            Assert.AreEqual(prefabSP2.state, TestablePondSpawnPoint.Mstates.BUBBLING);
+            Assert.AreEqual(script.state, TestablePondSpawnPoint.Mstates.BUBBLING);
         }
 
         [TearDown]

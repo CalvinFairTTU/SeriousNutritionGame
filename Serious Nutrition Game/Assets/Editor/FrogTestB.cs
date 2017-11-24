@@ -17,9 +17,12 @@
         [UnityTest]
         public IEnumerator _State_Is_INITIAL_At_Start()
         {
-            var prefabSP1 = new GameObject("_State_Is_INITIAL_At_Start").AddComponent<TestablePondSpawnPoint>();
+            GameObject prefabSP1 = new GameObject("_State_Is_INITIAL_At_Start");
+            TestablePondSpawnPoint script = prefabSP1.AddComponent<TestablePondSpawnPoint>();
+
             yield return null;
-            Assert.AreEqual(prefabSP1.state, TestablePondSpawnPoint.Mstates.INITIAL);
+
+            Assert.AreEqual(script.state, TestablePondSpawnPoint.Mstates.INITIAL);
         }
 
         [TearDown]
@@ -28,7 +31,7 @@
             foreach (var go in GameObject.FindObjectsOfType<TestablePondSpawnPoint>())
             {
                 Object.DestroyImmediate(go);
-                Debug.Log("Object destroyed");
+                Debug.Log("Object destroyed after _State_Is_INITIAL_At_Start");
             }
             return;
         }

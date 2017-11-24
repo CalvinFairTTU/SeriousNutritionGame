@@ -17,13 +17,14 @@
         [UnityTest]
         public IEnumerator _State_Transition_To_FOODSPAWNED_After_Bubbling()
         {
-            var prefabSP3 = new GameObject("_State_Transition_To_FOODSPAWNED_After_Bubbling").AddComponent<TestablePondSpawnPoint>();
+            GameObject prefabSP3 = new GameObject("_State_Transition_To_FOODSPAWNED_After_Bubbling");
+            TestablePondSpawnPoint script = prefabSP3.AddComponent<TestablePondSpawnPoint>();
 
-            while (prefabSP3.getSpawnedFood() != true)
+            while (script.getSpawnedFood() != true)
             {
                 yield return null;
             }
-            Assert.AreEqual(prefabSP3.state, TestablePondSpawnPoint.Mstates.FOODSPAWNED);
+            Assert.AreEqual(script.state, TestablePondSpawnPoint.Mstates.FOODSPAWNED);
         }
 
         [TearDown]

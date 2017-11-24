@@ -17,9 +17,12 @@
         [UnityTest]
         public IEnumerator _WaitCycleSpawn_GE_to_MinWaitSpawn()
         {
-            var prefabSP = new GameObject("_WaitCycleSpawn_GE_to_MinWaitSpawn").AddComponent<TestablePondSpawnPoint>();
+            GameObject prefabSP = new GameObject("_WaitCycleSpawn_GE_to_MinWaitSpawn");
+            TestablePondSpawnPoint script = prefabSP.AddComponent<TestablePondSpawnPoint>();
+
             yield return null;
-            Assert.GreaterOrEqual(prefabSP.timer.getWaitCycleSpawn(), prefabSP.timer.getMinWaitCycleSpawn());
+
+            Assert.GreaterOrEqual(script.timer.getWaitCycleSpawn(), script.timer.getMinWaitCycleSpawn());
         }
 
 
@@ -29,7 +32,7 @@
             foreach (var go in GameObject.FindObjectsOfType<TestablePondSpawnPoint>())
             {
                 Object.DestroyImmediate(go);
-                Debug.Log("Object destroyed");
+                Debug.Log("Object destroyed after _WaitCycleSpawn_GE_to_MinWaitSpawn");
             }
             return;
         }
