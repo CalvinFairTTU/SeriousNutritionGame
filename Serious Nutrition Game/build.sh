@@ -16,7 +16,9 @@ echo "Running tests..."
 
 echo "Tests finished..."
 
+find -name *.xml
 cat TestResults*.xml
+cat $(pwd)/tests.xml
 
 #build script only runs after successful tests
 
