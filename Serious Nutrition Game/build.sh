@@ -10,7 +10,7 @@ echo "Running tests..."
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -runTests \
 -projectPath=$(pwd) \
--testResults=$(pwd)/tests.xml \
+-testResults \
 -testPlatform playmode  \
 -batchmode
 
