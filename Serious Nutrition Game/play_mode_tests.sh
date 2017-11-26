@@ -9,6 +9,14 @@ D:/Programs/programs/Unity/Editor/Unity.exe \
 -testPlatform playmode  \
 -batchmode
 
+if [ $? -eq 0 ]
+then
+  echo Tests exited with success.
+else
+  echo $?
+  echo Tests exited with one or more errors.
+fi
+
 echo "Finished..."
 
 cat TestResults*.xml

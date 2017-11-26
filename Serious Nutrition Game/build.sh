@@ -14,11 +14,17 @@ echo "Running tests..."
 -testPlatform playmode  \
 -batchmode
 
-echo "Tests finished..."
+if [ $? -eq 0 ]
+then
+  echo All tests passed...
+else
+  echo $?
+  echo One or more tests failed.
+fi
 
-find -name *.xml
-cat TestResults*.xml
-cat $(pwd)/tests.xml
+# find -name *.xml
+# cat TestResults*.xml
+# cat $(pwd)/tests.xml
 
 #build script only runs after successful tests
 

@@ -38,6 +38,13 @@ public class HippoTestA {
         Assert.AreEqual(script.whereToSpawn.x, script.food.transform.position.x);
     }
 
+    //[UnityTest]
+    //public IEnumerator _Force_Fail()
+    //{
+    //    yield return null;
+    //    Assert.Fail();
+    //}
+
     [TearDown]
     public void AfterEveryTest()
     {
