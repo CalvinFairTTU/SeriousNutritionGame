@@ -8,9 +8,7 @@ public class SpawnScript : MonoBehaviour {
     public GameObject[] good_food;
     public GameObject[] bad_food;
     public GameObject[] foodToSpawn;
-
-    int score = 0;
-
+    
     void Start() {
         spawnFruit();
     }
