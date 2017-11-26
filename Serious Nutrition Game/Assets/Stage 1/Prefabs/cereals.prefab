@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212170379568864828}
   - component: {fileID: 61953559275579398}
   - component: {fileID: 50447541158890792}
-  - component: {fileID: 114739528433276390}
+  - component: {fileID: 114439530459025840}
   m_Layer: 0
   m_Name: cereals
   m_TagString: Good_Food
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
---- !u!114 &114739528433276390
+--- !u!114 &114439530459025840
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1711330687339312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f49bcc11af9e15a438be0cb4ea9bc355, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c280132082854243b08e55b45cf4c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212170379568864828
