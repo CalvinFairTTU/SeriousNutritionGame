@@ -20,7 +20,6 @@ public class HippoTestA {
     {
         HT = new GameObject("HippoTestGO");
         script = HT.AddComponent<TestableSpawner>();
-        T = Time.time;
     }
 
     [UnityTest]
