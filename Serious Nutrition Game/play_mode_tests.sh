@@ -7,7 +7,8 @@ D:/Programs/programs/Unity/Editor/Unity.exe \
 -projectPath=$(pwd) \
 -testResults=$(pwd)/tests.xml \
 -testPlatform playmode  \
--batchmode
+-batchmode \
+-nographics
 
 if [ $? -eq 0 ]
 then

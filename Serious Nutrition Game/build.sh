@@ -12,7 +12,8 @@ echo "Running tests..."
 -projectPath=$(pwd) \
 -testResults \
 -testPlatform playmode  \
--batchmode
+-batchmode \
+-nographics
 
 if [ $? -eq 0 ]
 then

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-suite type="TestSuite" id="1000" name="UnityTestFramework" fullname="UnityTestFramework" runstate="Runnable" testcasecount="9" result="Passed" start-time="2017-11-26 18:14:04Z" end-time="2017-11-26 18:14:15Z" duration="10.893377" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="9">
+  <test-suite type="Assembly" id="1013" name="Assembly-CSharp.dll" fullname="D:/MyDocuments/SE2_GitHub_Repository/SeriousNutritionGame/Serious Nutrition Game/Library/ScriptAssemblies/Assembly-CSharp.dll" runstate="Runnable" testcasecount="9" result="Passed" start-time="2017-11-26 18:14:04Z" end-time="2017-11-26 18:14:15Z" duration="10.851941" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="9">
+    <properties>
+      <property name="_PID" value="7684" />
+      <property name="_APPDOMAIN" value="Unity Child Domain" />
+    </properties>
+    <test-suite type="TestFixture" id="1006" name="HippoTestA" fullname="HippoTestA" classname="HippoTestA" runstate="Runnable" testcasecount="2" result="Passed" start-time="2017-11-26 18:14:04Z" end-time="2017-11-26 18:14:04Z" duration="0.215848" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="2">
+      <test-case id="1008" name="_Spawns_Food_At_Given_X" fullname="HippoTestA._Spawns_Food_At_Given_X" methodname="_Spawns_Food_At_Given_X" classname="HippoTestA" runstate="Runnable" seed="1417141893" result="Passed" start-time="2017-11-26 18:14:04Z" end-time="2017-11-26 18:14:04Z" duration="0.071560" asserts="1">
+        <properties>
+          <property name="_JOINTYPE" value="UnityCombinatorial" />
+        </properties>
+        <output><![CDATA[pos = (-10.0, 0.0, 0.0)
+Destroying object: 0.2306702 (UnityEngine.GameObject)
+Destroying object: HippoTestGO (UnityEngine.GameObject)
+]]></output>
+      </test-case>
+      <test-case id="1007" name="_Waits_Until_NextSpawn_To_Create_Object" fullname="HippoTestA._Waits_Until_NextSpawn_To_Create_Object" methodname="_Waits_Until_NextSpawn_To_Create_Object" classname="HippoTestA" runstate="Runnable" seed="1825553490" result="Passed" start-time="2017-11-26 18:14:04Z" end-time="2017-11-26 18:14:04Z" duration="0.086511" asserts="1">
+        <properties>
+          <property name="_JOINTYPE" value="UnityCombinatorial" />
+        </properties>
+        <output><![CDATA[pos = (-10.0, 0.0, 0.0)
+Destroying object: 0.3301657 (UnityEngine.GameObject)
+Destroying object: HippoTestGO (UnityEngine.GameObject)
+]]></output>
+      </test-case>
+    </test-suite>
+    <test-suite type="TestSuite" id="1014" name="Test" fullname="Test" runstate="Runnable" testcasecount="4" result="Passed" start-time="2017-11-26 18:14:04Z" end-time="2017-11-26 18:14:06Z" duration="1.226039" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+      <test-suite type="TestFixture" id="1001" name="FrogTest1" fullname="Test.FrogTest1" classname="Test.FrogTest1" runstate="Runnable" testcasecount="4" result="Passed" start-time="2017-11-26 18:14:04Z" end-time="2017-11-26 18:14:06Z" duration="1.192820" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+        <test-case id="1003" name="_State_Is_Initial_At_Start" fullname="Test.FrogTest1._State_Is_Initial_At_Start" methodname="_State_Is_Initial_At_Start" classname="Test.FrogTest1" runstate="Runnable" seed="157575760" result="Passed" start-time="2017-11-26 18:14:04Z" end-time="2017-11-26 18:14:05Z" duration="0.051934" asserts="1">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[Destroying object: _State_Is_Initial_At_Start (UnityEngine.GameObject)
+]]></output>
+        </test-case>
+        <test-case id="1004" name="_State_Transition_To_Bubbling_After_Initial_Wait" fullname="Test.FrogTest1._State_Transition_To_Bubbling_After_Initial_Wait" methodname="_State_Transition_To_Bubbling_After_Initial_Wait" classname="Test.FrogTest1" runstate="Runnable" seed="1058008154" result="Passed" start-time="2017-11-26 18:14:05Z" end-time="2017-11-26 18:14:05Z" duration="0.200689" asserts="1">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[Destroying object: _State_Transition_To_Bubbling_After_Initial_Wait (UnityEngine.GameObject)
+]]></output>
+        </test-case>
+        <test-case id="1005" name="_State_Transition_To_FOODSPAWNED_After_Bubbling" fullname="Test.FrogTest1._State_Transition_To_FOODSPAWNED_After_Bubbling" methodname="_State_Transition_To_FOODSPAWNED_After_Bubbling" classname="Test.FrogTest1" runstate="Runnable" seed="2089930704" result="Passed" start-time="2017-11-26 18:14:05Z" end-time="2017-11-26 18:14:06Z" duration="0.763716" asserts="1">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[Destroying object: _State_Transition_To_FOODSPAWNED_After_Bubbling (UnityEngine.GameObject)
+]]></output>
+        </test-case>
+        <test-case id="1002" name="_WaitCycleSpawn_GE_to_MinWaitSpawn" fullname="Test.FrogTest1._WaitCycleSpawn_GE_to_MinWaitSpawn" methodname="_WaitCycleSpawn_GE_to_MinWaitSpawn" classname="Test.FrogTest1" runstate="Runnable" seed="840091494" result="Passed" start-time="2017-11-26 18:14:06Z" end-time="2017-11-26 18:14:06Z" duration="0.051981" asserts="1">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[WaitCycleSpawn = 20
+minWaitCycleSpawn = 10
+maxWaitCycleSpawn = 50
+Destroying object:  _WaitCycleSpawn_GE_to_MinWaitSpawn (UnityEngine.GameObject)
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+    <test-suite type="TestSuite" id="1015" name="WhackTest" fullname="WhackTest" runstate="Runnable" testcasecount="3" result="Passed" start-time="2017-11-26 18:14:06Z" end-time="2017-11-26 18:14:15Z" duration="9.326893" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="3">
+      <test-suite type="TestFixture" id="1009" name="WhackASnackTestA" fullname="WhackTest.WhackASnackTestA" classname="WhackTest.WhackASnackTestA" runstate="Runnable" testcasecount="3" result="Passed" start-time="2017-11-26 18:14:06Z" end-time="2017-11-26 18:14:15Z" duration="9.293926" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="3">
+        <test-case id="1010" name="_Instantiates_Object_To_Transform_In_Array_X" fullname="WhackTest.WhackASnackTestA._Instantiates_Object_To_Transform_In_Array_X" methodname="_Instantiates_Object_To_Transform_In_Array_X" classname="WhackTest.WhackASnackTestA" runstate="Runnable" seed="646220493" result="Passed" start-time="2017-11-26 18:14:06Z" end-time="2017-11-26 18:14:09Z" duration="3.057248" asserts="1">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[Destroying object: New Game Object (UnityEngine.GameObject)
+Destroying object: 3 (UnityEngine.GameObject)
+Destroying object: 2 (UnityEngine.GameObject)
+Destroying object: 1 (UnityEngine.GameObject)
+Destroying object: 0 (UnityEngine.GameObject)
+Destroying object: _Instantiates_Object_To_Transform_In_Array (UnityEngine.GameObject)
+]]></output>
+        </test-case>
+        <test-case id="1011" name="_Instantiates_Object_To_Transform_In_Array_Y" fullname="WhackTest.WhackASnackTestA._Instantiates_Object_To_Transform_In_Array_Y" methodname="_Instantiates_Object_To_Transform_In_Array_Y" classname="WhackTest.WhackASnackTestA" runstate="Runnable" seed="548614132" result="Passed" start-time="2017-11-26 18:14:09Z" end-time="2017-11-26 18:14:12Z" duration="3.090742" asserts="1">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[Destroying object: New Game Object (UnityEngine.GameObject)
+Destroying object: 3 (UnityEngine.GameObject)
+Destroying object: 2 (UnityEngine.GameObject)
+Destroying object: 1 (UnityEngine.GameObject)
+Destroying object: 0 (UnityEngine.GameObject)
+Destroying object: _Instantiates_Object_To_Transform_In_Array (UnityEngine.GameObject)
+]]></output>
+        </test-case>
+        <test-case id="1012" name="_Instantiates_Object_To_Transform_In_Array_Z" fullname="WhackTest.WhackASnackTestA._Instantiates_Object_To_Transform_In_Array_Z" methodname="_Instantiates_Object_To_Transform_In_Array_Z" classname="WhackTest.WhackASnackTestA" runstate="Runnable" seed="1318151799" result="Passed" start-time="2017-11-26 18:14:12Z" end-time="2017-11-26 18:14:15Z" duration="3.073564" asserts="1">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[Destroying object: New Game Object (UnityEngine.GameObject)
+Destroying object: 3 (UnityEngine.GameObject)
+Destroying object: 2 (UnityEngine.GameObject)
+Destroying object: 1 (UnityEngine.GameObject)
+Destroying object: 0 (UnityEngine.GameObject)
+Destroying object: _Instantiates_Object_To_Transform_In_Array (UnityEngine.GameObject)
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-suite>

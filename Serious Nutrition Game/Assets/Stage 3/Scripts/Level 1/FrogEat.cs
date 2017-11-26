@@ -10,7 +10,7 @@ public class FrogEat : MonoBehaviour {
     public AudioClip goodSound;
     public AudioClip badSound;
 
-    AudioSource gameAudio;
+    private AudioSource gameAudio;
 
     private float progressPoints;    
    
@@ -50,8 +50,7 @@ public class FrogEat : MonoBehaviour {
             gameObject.GetComponent<FrogWins>().SetVictory();
         }
     }
-
-    
+        
 }
 
 
