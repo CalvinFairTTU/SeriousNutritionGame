@@ -4,18 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SpawnCard : MonoBehaviour {
-    public GameObject[] foods;
-    public Transform spawnPoint;
-    public GameObject computerSlap;
-    public AudioClip goodSound;
-    public AudioClip badSound;
-
-    private GameObject tmp;
-    private AudioSource gameAudio;
-    private float progressPoints;
-    private Slider progressBar;
-    private int foodIndex;
-    private GameObject activeFood;
 
     public enum Turns
     {
@@ -25,18 +13,32 @@ public class SpawnCard : MonoBehaviour {
         ActiveFromComputer
     };
 
+    public GameObject[] foods;
+    public GameObject computerSlap;
+    public Transform spawnPoint;
+    public AudioClip goodSound;
+    public AudioClip badSound;
+
+    private GameObject tmp;
+    private GameObject activeFood;
+    private int foodIndex;
+    private float timer;
     private Turns turn;
 
 	// Use this for initialization
-	void Start () {
-        gameAudio = this.GetComponent<AudioSource>();
-        progressBar = Slider.FindObjectOfType<Slider>();
-        progressPoints = progressBar.value;
+	void Start ()
+    {
+        timer = 0f;
         turn = Turns.PlayerTurn;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        timer += Time.deltaTime;
+        print(timer);
+
+        // Computer's Turn
 		if (turn == Turns.ComputerTurn)
         {
             if (activeFood != null)
@@ -44,6 +46,7 @@ public class SpawnCard : MonoBehaviour {
                 Destroy(activeFood);
             }
 
+            timer = 0f;
             SpawnFood();
             turn = Turns.ActiveFromComputer;
             StartCoroutine(Wait());
@@ -52,6 +55,7 @@ public class SpawnCard : MonoBehaviour {
 
     void OnMouseDown ()
     {
+        // Player's Turn
         if (turn == Turns.PlayerTurn)
         {
             if (activeFood != null)
@@ -59,6 +63,7 @@ public class SpawnCard : MonoBehaviour {
                     Destroy(activeFood);
             }
 
+            timer = 0f;
             SpawnFood();
             turn = Turns.ActiveFromPlayer;
             StartCoroutine(Wait());
@@ -81,14 +86,10 @@ public class SpawnCard : MonoBehaviour {
                 StartCoroutine(ComputerSlap());
             else
                 turn = Turns.ComputerTurn;
-
-            if(activeFood != null)
-                Destroy(activeFood);
         }
         else if(turn == Turns.ActiveFromComputer)
         {
             turn = Turns.PlayerTurn;
-            yield return new WaitForSeconds(5f);
 
             if (activeFood != null)
                 StartCoroutine(ComputerSlap());
@@ -101,33 +102,16 @@ public class SpawnCard : MonoBehaviour {
     {
         if (Random.Range(0, 3) == 0)
         {
-            if (activeFood != null && activeFood.name != "slapped")
+            if (activeFood != null && activeFood.name != "slapped" && timer > 4f)
             {
                 tmp = Instantiate(computerSlap, new Vector3(3.89f, 1), activeFood.transform.rotation);
                 yield return new WaitForSeconds(1f);
                 Destroy(tmp);
 
-                //if (activeFood != null && activeFood.tag == "GoodFood")
-                //{
-                //    gameAudio.clip = badSound;
-
-                //    if (progressPoints > 0f)
-                //        progressPoints -= 0.10f;
-                //}
-                //else if (activeFood != null &&  activeFood.tag == "BadFood")
-                //{
-                //    gameAudio.clip = goodSound;
-
-                //    if (progressPoints < 1f)
-                //        progressPoints += 0.10f;
-                //}
-
                 if (activeFood != null)
                 {
                     Destroy(activeFood);
                 }
-
-                //gameAudio.Play();
             }
         }
 

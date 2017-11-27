@@ -14,14 +14,16 @@ public class ActiveFood : MonoBehaviour {
     private Slider progressBar;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         gameAudio = this.GetComponent<AudioSource>();
         progressBar = Slider.FindObjectOfType<Slider>();
         progressPoints = progressBar.value;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 
