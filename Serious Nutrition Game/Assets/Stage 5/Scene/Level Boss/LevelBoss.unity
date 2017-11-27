@@ -253,8 +253,8 @@ GameObject:
   m_Component:
   - component: {fileID: 300878748}
   - component: {fileID: 300878747}
-  - component: {fileID: 300878749}
   - component: {fileID: 300878750}
+  - component: {fileID: 300878749}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
