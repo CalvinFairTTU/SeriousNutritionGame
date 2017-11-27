@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		Debug.Log("toushced");
+		Debug.Log("touched");
 
 		if (this.transform.position.y == 1)
 		{
