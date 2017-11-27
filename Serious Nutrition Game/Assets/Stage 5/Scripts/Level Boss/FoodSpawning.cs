@@ -6,8 +6,8 @@ public class FoodSpawning : MonoBehaviour {
 
 public GameObject[] foods;
 public float dropSpeed;
-private float minSpawnTime = 1.5f;
-private float maxSpawnTime = 3f;
+private float minSpawnTime = 2f;
+private float maxSpawnTime = 4f;
 
 	void Start()
 	{

@@ -10,11 +10,10 @@ public class ScrollingForeground : MonoBehaviour
 
 	void OnTriggerStay2D(Collider2D col)
 	{
-		//col.transform.Translate(-speed * Time.deltaTime, 0, 0);
-		//col.transform.Translate(0, .001f, 0);
+        col.transform.Translate(-speed * Time.deltaTime, 0, 0);
+        col.transform.Translate(-0.05f, .001f, 0);
 
-		Rigidbody2D body = col.attachedRigidbody;
-
-		body.AddForce(Vector2.left, 0);
+        //Rigidbody2D body = col.attachedRigidbody;
+        //body.AddForce(Vector2.left, 0);
 	}
 }
