@@ -25,8 +25,6 @@ public class TrashCanScript : MonoBehaviour {
 
 		if (progressBar.value >= 1f) {
 			Debug.Log ("You won the game!");
-			//gameObject.GetComponent<WinGame> ().Win ();
-			//gameObject.GetComponent<EdgeCollider2D> ().enabled = false;
 		}
     }
 }

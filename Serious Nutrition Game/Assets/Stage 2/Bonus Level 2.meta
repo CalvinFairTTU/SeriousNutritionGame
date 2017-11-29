@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Serious Nutrition Game/Assets/Stage 2/Bonus Level 2.meta
 guid: bedb2bba49de7c14c821544669b7c560
 folderAsset: yes
 timeCreated: 1508885343
+=======
+guid: 92975f2c948594af581d67464e7b40bc
+folderAsset: yes
+timeCreated: 1510196713
+>>>>>>> master:Serious Nutrition Game/Assets/Stage 5/Assets/Level 2/Food Sprites/Good Foods/Materials.meta
 licenseType: Free
 DefaultImporter:
   userData: 
