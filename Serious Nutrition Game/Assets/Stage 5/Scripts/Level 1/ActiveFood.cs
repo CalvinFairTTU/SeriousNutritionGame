@@ -20,12 +20,6 @@ public class ActiveFood : MonoBehaviour {
         progressBar = Slider.FindObjectOfType<Slider>();
         progressPoints = progressBar.value;
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
     IEnumerator Slap ()
     {

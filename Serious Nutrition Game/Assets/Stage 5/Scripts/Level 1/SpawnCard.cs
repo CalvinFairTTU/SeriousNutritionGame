@@ -16,13 +16,9 @@ public class SpawnCard : MonoBehaviour {
     public GameObject[] foods;
     public GameObject computerSlap;
     public Transform spawnPoint;
-    public AudioClip goodSound;
-    public AudioClip badSound;
 
     private GameObject tmp;
     private GameObject activeFood;
-    private Animator animator;
-    private AnimationClip clip;
     private int foodIndex;
     private float timer;
     private Turns turn;
