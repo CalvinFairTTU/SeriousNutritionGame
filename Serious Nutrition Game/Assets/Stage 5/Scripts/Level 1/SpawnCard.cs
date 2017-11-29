@@ -21,6 +21,8 @@ public class SpawnCard : MonoBehaviour {
 
     private GameObject tmp;
     private GameObject activeFood;
+    private Animator animator;
+    private AnimationClip clip;
     private int foodIndex;
     private float timer;
     private Turns turn;
