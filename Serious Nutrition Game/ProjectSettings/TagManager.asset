@@ -5,23 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Good_Food
-  - Bad_Food
-  - BadFood
   - GoodFood
-  - For_Good_Food
-  - For_Bad_Food
-  - Chicken
-  - Fish
-  - Turkey
-  - Beef
-  - Pork
-  - CatchBox
-  - PauseController
-  - Background
-  - UpperWall
-  - LowerWall
-  - LeftWall
-  - RightWall
+  - BadFood
+  - Bad_Food
+  - DestroyingZone
   layers:
   - Default
   - TransparentFX
@@ -31,9 +18,9 @@ TagManager:
   - UI
   - 
   - 
-  - Background
-  - Objects
-  - UI Objects
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -59,30 +46,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 4196603679
-    locked: 0
-  - name: Foreground 02
-    uniqueID: 1366203289
-    locked: 0
-  - name: Foreground 01
-    uniqueID: 1865482195
-    locked: 0
-  - name: NE Assets
-    uniqueID: 1569499485
-    locked: 0
-  - name: UI
-    uniqueID: 3903362491
-    locked: 0
   - name: Player
-    uniqueID: 2616673981
+    uniqueID: 3507249795
     locked: 0
-  - name: Flash
-    uniqueID: 1308299317
+  - name: Food
+    uniqueID: 3982740969
     locked: 0
-  - name: SE
-    uniqueID: 1832332095
-    locked: 0
-  - name: Text
-    uniqueID: 1422644535
+  - name: Background
+    uniqueID: 1575207845
     locked: 0
