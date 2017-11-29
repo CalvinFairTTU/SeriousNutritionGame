@@ -36,11 +36,17 @@ public class GrowthShrinkScript : MonoBehaviour {
     }
 
     void growth() {
-        Debug.Log("Growth ray clicked.");
-        foodObj.transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
+        if(foodObj.transform.localScale != new Vector3(0.8f, 0.8f, 0.8f))
+        {
+            Debug.Log("Growth ray clicked.");
+            foodObj.transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
+        }
     }
     void shrink() {
-        Debug.Log("Shrink ray clicked.");
-        foodObj.transform.localScale -= new Vector3(0.2f, 0.2f, 0.2f);
+        if (foodObj.transform.localScale != new Vector3(0.2f, 0.2f, 0.2f))
+        {
+            Debug.Log("Shrink ray clicked.");
+            foodObj.transform.localScale -= new Vector3(0.2f, 0.2f, 0.2f);
+        }
     }
 }
