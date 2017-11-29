@@ -51,8 +51,8 @@ public class DestroyingObjectsScript : MonoBehaviour
 		}
 
 		print("colided");
-		food.gameObject.SetActive(false);
-
+        //food.gameObject.SetActive(false);
+        Destroy(food.gameObject);
 
 		if (progressBar.value >= 1f)
 		{
