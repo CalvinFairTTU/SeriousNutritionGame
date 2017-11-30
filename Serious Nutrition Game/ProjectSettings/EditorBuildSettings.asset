@@ -4,4 +4,81 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Menus/MainMenu.unity
+    guid: d43b07ecf28f7144c919234ccab971f6
+  - enabled: 1
+    path: Assets/Menus/Level Select/S1LS.unity
+    guid: 5fdbc43aef47fc34c8d8253707f32249
+  - enabled: 1
+    path: Assets/Menus/Level Select/S2LS.unity
+    guid: 88517ae6343abc24c81cf4230a28e5e2
+  - enabled: 1
+    path: Assets/Menus/Level Select/S3LS.unity
+    guid: 50e16a8a8fdc91a4cad7981767e75e5b
+  - enabled: 1
+    path: Assets/Menus/Level Select/S4LS.unity
+    guid: 07cdc3261b1d07644b8c15e24cdf36cb
+  - enabled: 1
+    path: Assets/Menus/Level Select/S5LS.unity
+    guid: 014ee3039e3cac34eae0f16117ab1d9c
+  - enabled: 1
+    path: Assets/Stage 2/Level 2/Level 2.unity
+    guid: 26b2e0395e649f84fbf613b9f9099ba7
+  - enabled: 1
+    path: Assets/Stage 2/Level 3/Level 3.unity
+    guid: 310ffec366cd0994ab0ff0a926df13c0
+  - enabled: 1
+    path: Assets/Stage 3/Scene/Frog-In-The-Pond.unity
+    guid: 2013b09160f1f884dac137d126019d49
+  - enabled: 1
+    path: Assets/Menus/Level Select/S1LS.unity
+    guid: 5fdbc43aef47fc34c8d8253707f32249
+  - enabled: 1
+    path: Assets/Menus/Level Select/S2LS.unity
+    guid: 88517ae6343abc24c81cf4230a28e5e2
+  - enabled: 1
+    path: Assets/Menus/Level Select/S3LS.unity
+    guid: 50e16a8a8fdc91a4cad7981767e75e5b
+  - enabled: 1
+    path: Assets/Menus/Level Select/S4LS.unity
+    guid: 07cdc3261b1d07644b8c15e24cdf36cb
+  - enabled: 1
+    path: Assets/Menus/Level Select/S5LS.unity
+    guid: 014ee3039e3cac34eae0f16117ab1d9c
+  - enabled: 1
+    path: Assets/Stage 2/Level 2/Level 2.unity
+    guid: 26b2e0395e649f84fbf613b9f9099ba7
+  - enabled: 1
+    path: Assets/Stage 2/Level 3/Level 3.unity
+    guid: 310ffec366cd0994ab0ff0a926df13c0
+  - enabled: 1
+    path: Assets/Extra Levels/Piano Minigame.unity
+    guid: 3102a74c47ea64945882d1a882803632
+  - enabled: 1
+    path: Assets/Stage 3/Scene/Meat-Market-Sort.unity
+    guid: feb5b0697a0072242acb2c7ec71c1413
+  - enabled: 1
+    path: Assets/Stage 3/Scene/Boss-Level.unity
+    guid: 8a6945e714f478c449dac136c6b17459
+  - enabled: 1
+<<<<<<< HEAD
+    path: Assets/Stage 5/Scene/Level 2/WhackASnack.unity
+    guid: 4ce16bf54041af54cae090225ad7dbea
+  - enabled: 1
+    path: Assets/Stage 1/Scene/level1.unity
+    guid: fba30a8abe99318438fd6a2fb05db155
+  - enabled: 1
+    path: Assets/Stage 1/Scene/level3.unity
+    guid: 095de7c75cbec204ab4852a51385d367
+=======
+    path: Assets/Stage 4/Scenes/Level2.unity
+    guid: cf76f05ca6eb51a4d83b130f3beaabf7
+  - enabled: 1
+    path: Assets/Stage 4/Scenes/Level3.unity
+    guid: f5c16ba12aebd8247b379dc5b8dbcb46
+  - enabled: 1
+    path: Assets/Stage 4/Scenes/Level 1.unity
+    guid: 4a386180585e112409be87a82b1735aa
+>>>>>>> master
