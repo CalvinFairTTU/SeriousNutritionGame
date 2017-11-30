@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-/*
+
 public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 
 	public static GameObject itemBeingDragged;
 	public static bool IsOnPlate = false;
-	Vector2 startPosition;
+	Vector3 startPosition;
 	Transform startParent;
 
 	#region IBeginDragHandler implementation
@@ -18,6 +18,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 		itemBeingDragged = gameObject;
 		startPosition = transform.position;
 		startParent = transform.parent;
+		GetComponent<CanvasGroup> ().blocksRaycasts = false;
 	}
 	#endregion
 
@@ -35,7 +36,8 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 	public void OnEndDrag (PointerEventData eventData)
 	{
 		itemBeingDragged = null;
-		if (transform.parent != startParent) {
+		GetComponent<CanvasGroup> ().blocksRaycasts = true;
+		if (transform.parent == startParent) {
 			transform.position = startPosition;
 		}
 
@@ -44,9 +46,9 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 	#endregion
 
 }
-*/
 
 
+/*
 public class DragAndDrop : MonoBehaviour {
 
 	void OnMouseDrag() {
@@ -55,3 +57,4 @@ public class DragAndDrop : MonoBehaviour {
 		transform.position = objPos;
 	}
 }
+*/
