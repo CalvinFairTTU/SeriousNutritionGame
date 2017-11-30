@@ -132,12 +132,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1329679}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52e1f6caae81a9941863f9aa306a2ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 62d3888846c55c14eb9edc51b01df820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   foods:
-  - {fileID: 1693908366872418, guid: 43c33c5b00a7ad1469ffa8aece8dc553, type: 2}
   - {fileID: 1628176961094428, guid: 6b9e339b3d832de43b433dca142cc8e8, type: 2}
+  - {fileID: 1693908366872418, guid: 43c33c5b00a7ad1469ffa8aece8dc553, type: 2}
   spawnRate: 2
 --- !u!4 &1329681
 Transform:
@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1714961334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15ac22d49c5551642b5c2ed51e8aea51, type: 3}
+  m_Script: {fileID: 11500000, guid: 7809ce799947acf4d9a28229402f805a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jump_speed: 8
@@ -1602,7 +1602,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1714961334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4961934d568c83478d3d9fbe9d45983, type: 3}
+  m_Script: {fileID: 11500000, guid: 3665a81762efb80429646257c55668fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   progressBar: {fileID: 355521431}
