@@ -34,7 +34,6 @@ public class FoodBoxScript : MonoBehaviour {
             thisBox = "goodBox";
         }
         faceScript = face.GetComponent<SmileyFaceScript>();
-        Debug.Log("thisBox = " + thisBox + " on " + this);
     }
 
     private void OnTriggerStay2D(Collider2D food)

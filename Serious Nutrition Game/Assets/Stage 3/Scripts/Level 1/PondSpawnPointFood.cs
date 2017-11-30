@@ -37,10 +37,10 @@ public class PondSpawnPointFood : MonoBehaviour {
     {
         state = Mstates.INITIAL;
         cycleCounter = 0;
-        initialWait = Random.Range(100, initialWaitRange);
-        WaitCyclesSpawn = Random.Range(minWaitSpawn, maxWaitSpawn + 1);
-        WaitCyclesDestroy = Random.Range(minWaitDestroy, maxWaitDestroy + 1);
-        WaitCyclesBubbling = Random.Range(100, 200 + 1);
+        initialWait = GetValueFromRange(100, initialWaitRange);
+        WaitCyclesSpawn = GetValueFromRange(minWaitSpawn, maxWaitSpawn + 1);
+        WaitCyclesDestroy = GetValueFromRange(minWaitDestroy, maxWaitDestroy + 1);
+        WaitCyclesBubbling = GetValueFromRange(100, 200 + 1);
         progressPoints = progressBar.value;
         Anim = Bubbler.GetComponent<Animator>();
     }
@@ -60,7 +60,6 @@ public class PondSpawnPointFood : MonoBehaviour {
                     state = Mstates.BUBBLING;
                     cycleCounter = 0;
                     Anim.SetInteger("Ripple", 1);
-                    Debug.Log("BUBBLING on " + this.name);
                 }
                 if (progressPoints >= 1f)
                 {
@@ -121,7 +120,6 @@ public class PondSpawnPointFood : MonoBehaviour {
                     Anim.SetInteger("Ripple", 1);
                     state = Mstates.BUBBLING;
                     cycleCounter = 0;
-                    Debug.Log("BUBBLING on " + this.name);
                 }
                 if (progressPoints >= 1f)
                 {
@@ -144,6 +142,11 @@ public class PondSpawnPointFood : MonoBehaviour {
                 break;
         }
 
+    }
+
+    int GetValueFromRange(int lowerBound, int upperBound)
+    {
+        return (int)Random.Range(lowerBound, upperBound); ;
     }
 }
 
