@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-suite type="TestSuite" id="1000" name="UnityTestFramework" fullname="UnityTestFramework" runstate="Runnable" testcasecount="4" result="Passed" start-time="2017-11-24 21:58:52Z" end-time="2017-11-24 21:58:54Z" duration="1.137216" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+  <test-suite type="Assembly" id="1006" name="Assembly-CSharp.dll" fullname="D:/MyDocuments/SE2_GitHub_Repository/SeriousNutritionGame/Serious Nutrition Game/Library/ScriptAssemblies/Assembly-CSharp.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2017-11-24 21:58:52Z" end-time="2017-11-24 21:58:53Z" duration="1.093885" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+    <properties>
+      <property name="_PID" value="16952" />
+      <property name="_APPDOMAIN" value="Unity Child Domain" />
+    </properties>
+    <test-suite type="TestSuite" id="1007" name="Test" fullname="Test" runstate="Runnable" testcasecount="4" result="Passed" start-time="2017-11-24 21:58:52Z" end-time="2017-11-24 21:58:53Z" duration="1.077410" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+      <test-suite type="TestFixture" id="1001" name="FrogTest1" fullname="Test.FrogTest1" classname="Test.FrogTest1" runstate="Runnable" testcasecount="4" result="Passed" start-time="2017-11-24 21:58:52Z" end-time="2017-11-24 21:58:53Z" duration="1.044229" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+        <test-case id="1003" name="_State_Is_Initial_At_Start" fullname="Test.FrogTest1._State_Is_Initial_At_Start" methodname="_State_Is_Initial_At_Start" classname="Test.FrogTest1" runstate="Runnable" seed="203979107" result="Passed" start-time="2017-11-24 21:58:52Z" end-time="2017-11-24 21:58:52Z" duration="0.056615" asserts="1">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[Destroying object: _State_Is_Initial_At_Start (UnityEngine.GameObject)
+]]></output>
+        </test-case>
+        <test-case id="1004" name="_State_Transition_To_Bubbling_After_Initial_Wait" fullname="Test.FrogTest1._State_Transition_To_Bubbling_After_Initial_Wait" methodname="_State_Transition_To_Bubbling_After_Initial_Wait" classname="Test.FrogTest1" runstate="Runnable" seed="332275234" result="Passed" start-time="2017-11-24 21:58:53Z" end-time="2017-11-24 21:58:53Z" duration="0.168179" asserts="1">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[Destroying object: _State_Transition_To_Bubbling_After_Initial_Wait (UnityEngine.GameObject)
+]]></output>
+        </test-case>
+        <test-case id="1005" name="_State_Transition_To_FOODSPAWNED_After_Bubbling" fullname="Test.FrogTest1._State_Transition_To_FOODSPAWNED_After_Bubbling" methodname="_State_Transition_To_FOODSPAWNED_After_Bubbling" classname="Test.FrogTest1" runstate="Runnable" seed="516012869" result="Passed" start-time="2017-11-24 21:58:53Z" end-time="2017-11-24 21:58:53Z" duration="0.647748" asserts="1">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[Destroying object: _State_Transition_To_FOODSPAWNED_After_Bubbling (UnityEngine.GameObject)
+]]></output>
+        </test-case>
+        <test-case id="1002" name="_WaitCycleSpawn_GE_to_MinWaitSpawn" fullname="Test.FrogTest1._WaitCycleSpawn_GE_to_MinWaitSpawn" methodname="_WaitCycleSpawn_GE_to_MinWaitSpawn" classname="Test.FrogTest1" runstate="Runnable" seed="1998818852" result="Passed" start-time="2017-11-24 21:58:53Z" end-time="2017-11-24 21:58:53Z" duration="0.051739" asserts="1">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[WaitCycleSpawn = 42
+minWaitCycleSpawn = 10
+maxWaitCycleSpawn = 50
+Destroying object:  _WaitCycleSpawn_GE_to_MinWaitSpawn (UnityEngine.GameObject)
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-suite>

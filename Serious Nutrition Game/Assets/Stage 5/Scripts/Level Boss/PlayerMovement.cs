@@ -8,28 +8,23 @@ public class PlayerMovement : MonoBehaviour
 {
 
 	public int speed = 0;
-	public GameObject player;
+	Rigidbody2D player;
 	public Slider progressBar;
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector3 mouseCord = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Collider2D playerTouch = player.GetComponent<Collider2D>();
 
-            if (playerTouch.OverlapPoint(mouseCord) && player.transform.position.y == 1)
-            {
-                this.transform.position = new Vector3(-4.16f, -3.72f, 0);
-            }
-            if (playerTouch.OverlapPoint(mouseCord) && player.transform.position.y != 1)
-            {
-                this.transform.position = new Vector3(-4.16f, 1, 0);
-            }
-        }
-    }
+	// Use this for initialization
+	void Start()
+	{
 
-    void OnTriggerEnter2D(Collider2D food)
+	}
+
+
+	// Update is called once per frame
+	void Update()
+	{
+	}
+
+	void OnTriggerEnter2D(Collider2D food)
 	{
 		
 
@@ -50,8 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
 
 		Debug.Log("Collided");
-        //food.gameObject.SetActive(false);
-        Destroy(food.gameObject);
+		food.gameObject.SetActive(false);
+
 
 		if (progressBar.value >= 1f)
 		{

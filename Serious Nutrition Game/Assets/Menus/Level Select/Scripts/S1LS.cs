@@ -19,7 +19,7 @@ public class S1LS : MonoBehaviour {
 
     public void playLevelThree()
     {
-        SceneManager.LoadSceneAsync("Boss-Level");
+        SceneManager.LoadSceneAsync("level3");
     }
 
     public void back()

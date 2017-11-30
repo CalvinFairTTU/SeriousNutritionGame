@@ -5,6 +5,27 @@ project="SNG"
 
 #test scripts go here before the building
 
+echo "Running tests..."
+
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+-runTests \
+-projectPath=$(pwd) \
+-testResults \
+-testPlatform playmode  \
+-batchmode \
+-nographics
+
+if [ $? -eq 0 ]
+then
+  echo All tests passed...
+else
+  echo $?
+  echo One or more tests failed.
+fi
+
+# find -name *.xml
+# cat TestResults*.xml
+# cat $(pwd)/tests.xml
 
 #build script only runs after successful tests
 
