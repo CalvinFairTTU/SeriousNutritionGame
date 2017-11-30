@@ -8,7 +8,7 @@ public class S4LS : MonoBehaviour {
 
     public void playLevelOne()
     {
-        SceneManager.LoadSceneAsync("Frog-In-The-Pond");
+		SceneManager.LoadSceneAsync("Level 1");
     }
 
     public void playLevelTwo()
