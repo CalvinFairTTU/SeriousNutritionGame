@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212387609903195812}
   - component: {fileID: 61375589325544078}
   - component: {fileID: 50668877193691072}
-  - component: {fileID: 114053826961675106}
+  - component: {fileID: 114660640446799034}
   m_Layer: 0
   m_Name: asparagus
   m_TagString: Good_Food
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
---- !u!114 &114053826961675106
+--- !u!114 &114660640446799034
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1047530085406086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4db290335555b8d45913f8926e8cf0ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 93b4e41d691274640a4e4a149f61904c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212387609903195812
@@ -129,7 +129,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -312226327
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e5faf9cc7b52a2d48aa5407ed4691446, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

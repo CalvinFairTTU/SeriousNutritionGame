@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212504222151669284}
   - component: {fileID: 61329993602784352}
   - component: {fileID: 50363278794950210}
-  - component: {fileID: 114654948582022866}
+  - component: {fileID: 114897237512332730}
   m_Layer: 0
   m_Name: cauliflower
   m_TagString: Good_Food
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
---- !u!114 &114654948582022866
+--- !u!114 &114897237512332730
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1317997645266650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4db290335555b8d45913f8926e8cf0ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 93b4e41d691274640a4e4a149f61904c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212504222151669284
@@ -129,7 +129,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -312226327
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d772b4e152c34dc459612b9b2d459b85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
