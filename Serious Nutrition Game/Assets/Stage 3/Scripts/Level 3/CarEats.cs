@@ -75,7 +75,7 @@ public class CarEats : MonoBehaviour {
     {
         if (progressPoints >= 1f && cycleCounter >= waitExit)
         {            
-            SceneManager.LoadSceneAsync("S3LS");
+            //SceneManager.LoadSceneAsync("S3LS");
         }
         else if (progressPoints >= 1f)
         {
