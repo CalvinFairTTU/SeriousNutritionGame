@@ -1,7 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Serious Nutrition Game/Assets/Stage 3/Assets/Animation_Resources/Test_Scenes.meta~master
 guid: f00ebe0b79b5f354f8c53d367a17861c
+=======
+guid: 262173436bd9343e5b6f2ca156e5268e
+>>>>>>> master:Serious Nutrition Game/Assets/Stage 5/Assets/Level Boss/Food Sprites.meta
 folderAsset: yes
-timeCreated: 1511720966
+timeCreated: 1511673584
 licenseType: Free
 DefaultImporter:
   userData: 

@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: deb70afcd584cd6408e162471463ab4b
+folderAsset: yes
+timeCreated: 1510548834
+=======
 guid: e83a879794c3d3f43affec8cf54c44b3
 folderAsset: yes
 timeCreated: 1506874728
+>>>>>>> master
 licenseType: Free
 DefaultImporter:
   userData: 
