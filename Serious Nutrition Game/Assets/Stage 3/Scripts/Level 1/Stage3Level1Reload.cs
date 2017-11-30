@@ -8,7 +8,7 @@ public class Stage3Level1Reload : MonoBehaviour {
 
 	public void Run()
     {
-        SceneManager.LoadSceneAsync("S3LS");
+        //SceneManager.LoadSceneAsync("S3LS");
     }
 
 }

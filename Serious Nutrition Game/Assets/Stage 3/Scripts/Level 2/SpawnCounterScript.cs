@@ -37,7 +37,6 @@ public class SpawnCounterScript : MonoBehaviour {
     public void DecrementCounter(Collider2D food,string box,string boxTag)
     {
         this.destCounter -= 1;
-        Debug.Log("DecrementCounter() destCounter = " + this.destCounter + " on " + box);
         switch (box)
         {
             case "catchBox":
@@ -90,20 +89,17 @@ public class SpawnCounterScript : MonoBehaviour {
             default:
                 break;
         }
-        Debug.Log("progressPoints = " + progressPoints);
         ProgressBar.value = progressPoints;
     }
 
     public void IncrementCounter()
     {
         this.destCounter += 1;
-        Debug.Log("IncrementCounter() destCounter = " + this.destCounter);
     }
 
     public void SetCounter(int target)
     {
-        this.destCounter = target;
-        Debug.Log("SetCounter(" + target + ") destCounter = " + this.destCounter);        
+        this.destCounter = target;     
     }
     
     public float GetPoints()
@@ -119,7 +115,7 @@ public class SpawnCounterScript : MonoBehaviour {
         }
         else if (progressPoints >= 1 && exitCounter >= waitExitCycles)
         {
-            SceneManager.LoadSceneAsync("S3LS");
+            //SceneManager.LoadSceneAsync("S3LS");
         }
     }
 }
