@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  player: {fileID: 300878746}
   progressBar: {fileID: 863917572}
 --- !u!61 &300878750
 BoxCollider2D:
