@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50431170266672812}
   - component: {fileID: 61814235647316414}
   m_Layer: 0
-  m_Name: Pistachio
+  m_Name: pistachio
   m_TagString: Good_Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
