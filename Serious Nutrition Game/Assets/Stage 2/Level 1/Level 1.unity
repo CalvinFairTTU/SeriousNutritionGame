@@ -293,7 +293,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 335026913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1586b8929b43ca54994b8259e3ae233c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0facbe62dc30886439470bc524fa8fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   growthRay: {fileID: 2079985452}
@@ -824,7 +824,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 96392fe7e0cad814b8edf836ef8d2b17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6aadd82b6dc5314489ffc7e3d87243d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -922,7 +922,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f5ac2308014a45445b034a3d33a3da75, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a433f3a869073f40bc5b9a7f9b722c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1032,7 +1032,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1366203289
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d6505e5f479eea24c942e621752ec4a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1192,7 +1192,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 991997888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c14150d71c43bd49b994e4bee0a1c2f, type: 3}
+  m_Script: {fileID: 11500000, guid: dbfdb3593f4ab2b4aae7dfbb20a9824b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   foodItemOne: {fileID: 782853235}
@@ -1618,24 +1618,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1153590696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97092ca72920e39448128c300877350a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fa664efb63765e4b93e789bfd777312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   foods:
-  - {fileID: 1047530085406086, guid: f532efdd16ee4594982d639fdfbce276, type: 2}
-  - {fileID: 1977392548717456, guid: c9e7f9e624f6e404f840675f251f1f02, type: 2}
-  - {fileID: 1949597454984740, guid: 3be4f6df4d6546741831c0153cbf111a, type: 2}
-  - {fileID: 1634195015742322, guid: cd0ae8e2c767f704cadcad5b95ccab95, type: 2}
-  - {fileID: 1606112634846352, guid: 430b6911e6b8f224dbc635631e7eea8b, type: 2}
-  - {fileID: 1317997645266650, guid: f7ea7dcd50080224495fef77070e5918, type: 2}
-  - {fileID: 1886018041032210, guid: b7ac1f4fca88108488c751eb506412c4, type: 2}
-  - {fileID: 1150817896213926, guid: 049aae91f9a24284fb29c86491b5763b, type: 2}
-  - {fileID: 1059453447721254, guid: 19bb32998331cab44906ee0ed7214bf1, type: 2}
-  - {fileID: 1974985832830814, guid: fd5d43ef426c84046be2bc340549c35d, type: 2}
-  - {fileID: 1848285697762266, guid: 23ba4c75c8b153949af7089d00841efe, type: 2}
-  - {fileID: 1562553742989976, guid: 5b9173381dc445943ba98864b913f03a, type: 2}
-  - {fileID: 1621807773176332, guid: 6ad4c3355ba9ccb44bc49a24b3523a7a, type: 2}
-  - {fileID: 1758789075979878, guid: f2ed14d126939c54882a47e2fc1979e2, type: 2}
+  - {fileID: 1047530085406086, guid: 5d8275fa770d3764d9b54b425c40213c, type: 2}
+  - {fileID: 1977392548717456, guid: 6b8990e795ca1ef4581a14f0d7f156bd, type: 2}
+  - {fileID: 1949597454984740, guid: c39934af5b3c2f34cb5bbbddcaaacb23, type: 2}
+  - {fileID: 1634195015742322, guid: fda464f5cac012247805b77030ef700f, type: 2}
+  - {fileID: 1606112634846352, guid: 72f9b3ec25f8c364ea26a8f373e887c2, type: 2}
+  - {fileID: 1317997645266650, guid: 099180a11c343f7488e05dd403fcc8c8, type: 2}
+  - {fileID: 1886018041032210, guid: 2a2cb64025976ec48b4ae01893ae74d1, type: 2}
+  - {fileID: 1150817896213926, guid: d34d726b2ec992b4ca61f066400c87f2, type: 2}
+  - {fileID: 1059453447721254, guid: 851cefd4704981d48b167e8cfd44f6d9, type: 2}
+  - {fileID: 1974985832830814, guid: 0918e2b11d47c6546807c373bddc3323, type: 2}
+  - {fileID: 1562553742989976, guid: 0e1b0da1b3e5ef244872d3835920dc79, type: 2}
+  - {fileID: 1621807773176332, guid: 86626efc3e0131443908a6ac7e3957fc, type: 2}
+  - {fileID: 1758789075979878, guid: e053347bd5c66c340ab2cf2dc2b28ec9, type: 2}
   foodsOutLines: []
   spawnPoint: {fileID: 444296646}
   progressBar: {fileID: 991997891}
@@ -2066,7 +2065,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1366203289
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 48ca407f8bafab443bbb661b1293eb66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2241,9 +2240,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -98363617
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9ae198d4f36da5740afe3d101e12b318, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9f3c39f1d1aa89248b4fbe569fcd448f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2755,7 +2754,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1366203289
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f6c28dd3d05340f48be4ef7fdffeba97, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4015,7 +4014,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1c81bfbebb68df7428356d267d40ce3d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2da506baca11ca540a4ea3c0a5018512, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
