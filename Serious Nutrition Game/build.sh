@@ -28,8 +28,6 @@ fi
 # cat $(pwd)/tests.xml
 
 
-#build script only runs after successful tests
-
 echo "Attempting to build $project for Windows"
 # D:/Programs/programs/Unity/Editor/Unity.exe \
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \

@@ -2,9 +2,6 @@ language: generic
 
 os: osx
 
-# rvm:
-# - 2.1.2
-
 branches:
   only:
   - gh-pages
